@@ -3,9 +3,11 @@ import {
   BASEN, BAUARTEN, VOLUMENKLASSEN, leistungszahl, basisKurz, kosten, fmt,
   bauartLabel, luftbereich, kaeltemittelLaeuftAus, alsCsv, alsXlsx, alsPdf, herunterladen,
 } from './lib.js'
+import Starthilfe from './Starthilfe.jsx'
 
 const SPEICHER_SCHLUESSEL = 'bwwp-favoriten'
 const THEME_SCHLUESSEL = 'bwwp-theme'
+const START_SCHLUESSEL = 'bwwp-start-gesehen'
 
 function systemTheme() {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
@@ -85,6 +87,10 @@ export default function App() {
   const [hinweiseOffen, setHinweiseOffen] = useState(false)
   const [exportOffen, setExportOffen] = useState(false)
   const [kaelteWarnungOffen, setKaelteWarnungOffen] = useState(false)
+  // Startdialog nur beim ersten Besuch; localStorage kann in Privatfenstern werfen
+  const [starthilfeOffen, setStarthilfeOffen] = useState(() => {
+    try { return localStorage.getItem(START_SCHLUESSEL) !== 'ja' } catch { return true }
+  })
 
   useEffect(() => {
     const basePath = import.meta.env.BASE_URL
@@ -183,6 +189,17 @@ export default function App() {
     setNurFavoriten(a.filter.nurFavoriten)
   }
 
+  const starthilfeSchliessen = () => {
+    setStarthilfeOffen(false)
+    try { localStorage.setItem(START_SCHLUESSEL, 'ja') } catch { /* egal */ }
+  }
+
+  const starthilfeWaehlen = (id) => {
+    const a = ANSICHTEN.find((x) => x.id === id)
+    if (a) ansichtWaehlen(a)
+    starthilfeSchliessen()
+  }
+
   const sortieren = (spalte) =>
     setSortierung((s) => (s.spalte === spalte ? { spalte, ab: !s.ab } : { spalte, ab: true }))
 
@@ -208,8 +225,17 @@ export default function App() {
             <a href="https://github.com/" className="quelle-link">Daten ergänzen</a>
           </p>
         </div>
-        <ThemeSchieber theme={theme} onChange={setTheme} />
+        <div className="kopf-knoepfe">
+          <button className="hilfe-auf" onClick={() => setStarthilfeOffen(true)}
+            title="Bauart-Auswahl erneut öffnen">Bauart wählen</button>
+          <ThemeSchieber theme={theme} onChange={setTheme} />
+        </div>
       </header>
+
+      {starthilfeOffen && (
+        <Starthilfe zaehler={ansichtZaehler} onWaehlen={starthilfeWaehlen}
+          onSchliessen={starthilfeSchliessen} />
+      )}
 
       <section className="steuerung">
         <div className="feld">

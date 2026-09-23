@@ -31,7 +31,13 @@
         "flaeche_m2": 0.9
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.433
+      "scop_tabelle": 4.433,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "WLAN integriert, 2 Eingänge (SG Ready/EVU)",
+        "wifi": true,
+        "app": "OCHSNER EASY"
+      }
     },
     {
       "id": "stiebel-eltron-wwk-i-300-w-plus",
@@ -56,12 +62,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "W",
+        "flaeche_m2": 0.9
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.433
+      "scop_tabelle": 4.433,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "MyStiebel",
+        "anschluesse": "SG Ready (2 Eingänge), WLAN integriert"
+      }
     },
     {
       "id": "stiebel-eltron-wwk-i-200-plus",
@@ -86,12 +98,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.4
+      "scop_tabelle": 4.4,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "MyStiebel",
+        "anschluesse": "SG Ready (2 Eingänge), WLAN integriert"
+      }
     },
     {
       "id": "ochsner-europa-n-200-ca",
@@ -121,7 +139,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.393
+      "scop_tabelle": 4.393,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "WLAN integriert, 2 Eingänge (SG Ready/EVU)",
+        "wifi": true,
+        "app": "OCHSNER EASY"
+      }
     },
     {
       "id": "kronoterm-essenta-303",
@@ -146,14 +170,21 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.2
       },
       "scop_basis": "eta_wh",
       "eta_wh_a14": 163.0,
       "eta_wh_a7": 149.0,
-      "scop_tabelle": 4.3
+      "scop_tabelle": 4.3,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "modbus": true,
+        "anschluesse": "Modbus RTU (RS485), Bluetooth",
+        "app": "CLOUD.KRONOTERM (angekündigt)"
+      }
     },
     {
       "id": "ochsner-europa-n-300-ca",
@@ -183,7 +214,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.295
+      "scop_tabelle": 4.295,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "WLAN integriert, 2 Eingänge (SG Ready/EVU)",
+        "wifi": true,
+        "app": "OCHSNER EASY"
+      }
     },
     {
       "id": "stiebel-eltron-wwk-i-300-plus",
@@ -208,12 +245,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.295
+      "scop_tabelle": 4.295,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "MyStiebel",
+        "anschluesse": "SG Ready (2 Eingänge), WLAN integriert"
+      }
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-r-290",
@@ -238,12 +281,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.125
+      "scop_tabelle": 4.125,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "ViCare",
+        "anschluesse": "PV-Schaltkontakt, Niedertarif-Anschluss"
+      }
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-ze-300l",
@@ -268,12 +317,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.125
+      "scop_tabelle": 4.125,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": false,
+        "anschluesse": "PV-Schaltkontakt; Modbus nur für Energiezähler; nicht ViCare-fähig"
+      }
     },
     {
       "id": "viessmann-vitocal-262-a-t2h-ze-300l",
@@ -298,12 +352,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "T2H",
+        "flaeche_m2": 0.9
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.125
+      "scop_tabelle": 4.125,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": false,
+        "anschluesse": "PV-Schaltkontakt; Modbus nur für Energiezähler; nicht ViCare-fähig"
+      }
     },
     {
       "id": "austria-email-explorer-evo-3-270l",
@@ -333,7 +392,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.1
+      "scop_tabelle": 4.1,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "elco-aerotop-dhw-3-250",
@@ -363,7 +428,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 4.1
+      "scop_tabelle": 4.1,
+      "smart_home": {
+        "anschluesse": "PV-Schnittstelle",
+        "wifi": true,
+        "app": "REMOCON NET"
+      }
     },
     {
       "id": "elco-aerotop-dhw-3-250-sys",
@@ -393,7 +463,12 @@
         "flaeche_m2": 0.65
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 4.1
+      "scop_tabelle": 4.1,
+      "smart_home": {
+        "anschluesse": "PV-Schnittstelle",
+        "wifi": true,
+        "app": "REMOCON NET"
+      }
     },
     {
       "id": "boesch-mcb270-l",
@@ -418,12 +493,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.075
+      "scop_tabelle": 4.075,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion / SmartGrid-Ready"
+      }
     },
     {
       "id": "boesch-mcb270r-l",
@@ -448,12 +527,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
+        "vorhanden": true,
+        "variante": "R",
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.075
+      "scop_tabelle": 4.075,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion / SmartGrid-Ready"
+      }
     },
     {
       "id": "austria-email-explorer-evo-3-270l-wt",
@@ -483,7 +566,13 @@
         "flaeche_m2": 1.2
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.05
+      "scop_tabelle": 4.05,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "remko-rbw-302-pro-pv",
@@ -513,7 +602,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.91
+      "scop_tabelle": 3.91,
+      "smart_home": {
+        "wifi": "optional",
+        "anschluesse": "PV-Kontakt (1 Eingang), WiFi-Stick optional",
+        "app": "REMKO Smart-Web"
+      },
+      "sg_ready": false
     },
     {
       "id": "remko-rbw-302-pro-pv-s",
@@ -543,7 +638,13 @@
         "flaeche_m2": 1.5
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.91
+      "scop_tabelle": 3.91,
+      "smart_home": {
+        "wifi": "optional",
+        "anschluesse": "PV-Kontakt (1 Eingang), WiFi-Stick optional",
+        "app": "REMKO Smart-Web"
+      },
+      "sg_ready": false
     },
     {
       "id": "kermi-x-change-aqua-eco-l",
@@ -573,7 +674,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.91
+      "scop_tabelle": 3.91,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Smart-Grid- und PV-Eingang",
+        "modbus": true
+      }
     },
     {
       "id": "austria-email-ag-wpa-303-eco-2",
@@ -598,12 +704,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.2
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.9
+      "scop_tabelle": 3.9,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Schalteingang; Web-Modul Optitronic 2 optional"
+      }
     },
     {
       "id": "lg-therma-v-wh27str2-fa",
@@ -633,7 +743,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.9
+      "scop_tabelle": 3.9,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ",
+        "anschluesse": "SG-Eingänge SG1/SG2 (4 Zustände)"
+      },
+      "sg_ready": true
     },
     {
       "id": "ochsner-europa-333-genius",
@@ -658,12 +774,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.4
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.875
+      "scop_tabelle": 3.875,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Modbus (Gebäudeleittechnik), PV-Eigenstrom"
+      }
     },
     {
       "id": "vaillant-arostor-plus-vwl-b-260-6",
@@ -693,7 +814,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.86
+      "scop_tabelle": 3.86,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-/PV-Steckverbindung"
+      }
     },
     {
       "id": "lg-therma-v-wh27s-f5",
@@ -723,7 +848,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.85
+      "scop_tabelle": 3.85,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ"
+      }
     },
     {
       "id": "kronoterm-s-max-wp4-lf-502",
@@ -748,12 +877,19 @@
       "cop_a20": 3.85,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.76
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.85
+      "scop_tabelle": 3.85,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Web-Modul optional",
+        "wifi": "optional",
+        "app": "CLOUD.KRONOTERM"
+      }
     },
     {
       "id": "remeha-azorra-ace-250-h",
@@ -783,7 +919,13 @@
         "flaeche_m2": 0.93
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.84
+      "scop_tabelle": 3.84,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Remeha Home",
+        "anschluesse": "Smart-Grid-/PV-Kontakt (2 Eingänge)"
+      },
+      "sg_ready": true
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-260-u-02-306179",
@@ -813,7 +955,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.8
+      "scop_tabelle": 3.8,
+      "smart_home": {
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-260-u-02-s-306267",
@@ -843,7 +989,11 @@
         "flaeche_m2": 1.05
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.8
+      "scop_tabelle": 3.8,
+      "smart_home": {
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "elco-aerotop-dhw-3-200",
@@ -873,7 +1023,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.8
+      "scop_tabelle": 3.8,
+      "smart_home": {
+        "anschluesse": "PV-Schnittstelle",
+        "wifi": true,
+        "app": "REMOCON NET"
+      }
     },
     {
       "id": "panasonic-aquarea-p-dhw260ae5",
@@ -903,7 +1058,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.75
+      "scop_tabelle": 3.75,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Comfort Cloud",
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "austria-email-explorer-evo-3-200l",
@@ -933,7 +1094,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.75
+      "scop_tabelle": 3.75,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "hoval-combival-wpr-300",
@@ -958,12 +1125,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "R",
+        "flaeche_m2": 0.9
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.725
+      "scop_tabelle": 3.725,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": "optional",
+        "anschluesse": "PV / Smart Grid ready, LAN"
+      }
     },
     {
       "id": "panasonic-aquarea-p-dhw200ae5",
@@ -993,7 +1165,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.725
+      "scop_tabelle": 3.725,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Comfort Cloud",
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "kwb-empaair-220-kwb-empaair-220",
@@ -1048,12 +1226,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.7
+      "scop_tabelle": 3.7,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt"
+      },
+      "sg_ready": true
     },
     {
       "id": "panasonic-aquarea-p-dhw200cae5",
@@ -1080,10 +1262,16 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "C",
-        "flaeche_m2": null
+        "flaeche_m2": 1.05
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.7
+      "scop_tabelle": 3.7,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Comfort Cloud",
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "panasonic-aquarea-p-dhw260cae5",
@@ -1110,10 +1298,16 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "C",
-        "flaeche_m2": null
+        "flaeche_m2": 1.05
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.7
+      "scop_tabelle": 3.7,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Comfort Cloud",
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "styleboiler-futura-eco-x-200",
@@ -1143,7 +1337,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.69
+      "scop_tabelle": 3.69,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life",
+        "anschluesse": "Digitaleingang (PV)"
+      }
     },
     {
       "id": "styleboiler-futura-eco-x-1-wt-200-w",
@@ -1173,7 +1372,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.69
+      "scop_tabelle": 3.69,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life",
+        "anschluesse": "Digitaleingang (PV)"
+      }
     },
     {
       "id": "austria-email-wpa-450-eco",
@@ -1198,12 +1402,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.76
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.675
+      "scop_tabelle": 3.675,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Schalteingang; Optitronic Web-Modul optional"
+      }
     },
     {
       "id": "wolf-fhs-280-s",
@@ -1233,7 +1441,14 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.67
+      "scop_tabelle": 3.67,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "myWOLF",
+        "anschluesse": "Modbus RTU (RS485), PV-/Energiemanager-Kontakt, WOLF Link optional",
+        "modbus": true
+      }
     },
     {
       "id": "vaillant-arostor-plus-vwl-b-200-6",
@@ -1263,7 +1478,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.66
+      "scop_tabelle": 3.66,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-/PV-Steckverbindung"
+      }
     },
     {
       "id": "bosch-bw270-bw270",
@@ -1288,12 +1507,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.0
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.65
+      "scop_tabelle": 3.65,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Eingang"
+      }
     },
     {
       "id": "buderus-bw270-bw270",
@@ -1318,12 +1543,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.0
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.65
+      "scop_tabelle": 3.65,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Eingang"
+      }
     },
     {
       "id": "remeha-azorra-ace-200-e",
@@ -1353,7 +1584,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.64
+      "scop_tabelle": 3.64,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Remeha Home",
+        "anschluesse": "Smart-Grid-/PV-Kontakt (2 Eingänge)"
+      },
+      "sg_ready": true
     },
     {
       "id": "broetje-btw-200-b",
@@ -1383,7 +1620,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.63
+      "scop_tabelle": 3.63,
+      "smart_home": {
+        "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
+      },
+      "sg_ready": true
     },
     {
       "id": "broetje-btw-250-b",
@@ -1413,7 +1654,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.63
+      "scop_tabelle": 3.63,
+      "smart_home": {
+        "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
+      },
+      "sg_ready": true
     },
     {
       "id": "broetje-btw-s-200-b",
@@ -1440,10 +1685,14 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "S",
-        "flaeche_m2": null
+        "flaeche_m2": 0.93
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.63
+      "scop_tabelle": 3.63,
+      "smart_home": {
+        "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
+      },
+      "sg_ready": true
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-200-u-02-306209",
@@ -1473,7 +1722,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "smart_home": {
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-200-u-02-s-306268",
@@ -1503,7 +1756,11 @@
         "flaeche_m2": 1.05
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "smart_home": {
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "weishaupt-wwp-t-300-wa",
@@ -1529,11 +1786,17 @@
       "cop_unspezifisch": null,
       "waermetauscher": {
         "vorhanden": true,
-        "variante": null,
+        "variante": "WA",
         "flaeche_m2": 1.2
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "2 Smart-Grid-Eingänge (4 Zustände), Ausgang 2. Wärmeerzeuger",
+        "wifi": false,
+        "modbus": false
+      }
     },
     {
       "id": "austria-email-ag-ae-revolution-evo-3-240l-wt",
@@ -1563,7 +1826,13 @@
         "flaeche_m2": 1.2
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "kwb-empaair-300-r-kwb-empaair-300-r",
@@ -1618,12 +1887,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt"
+      },
+      "sg_ready": true
     },
     {
       "id": "stiebel-eltron-wwk-300-electronic-sol",
@@ -1648,12 +1921,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "SOL",
+        "flaeche_m2": 1.3
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt"
+      },
+      "sg_ready": true
     },
     {
       "id": "haier-hp200m7c-f9",
@@ -1683,7 +1960,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.55
+      "scop_tabelle": 3.55,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "aeg-wpt-220-el",
@@ -1713,7 +1996,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.55
+      "scop_tabelle": 3.55,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt (2. Solltemperatur)"
+      },
+      "sg_ready": true
     },
     {
       "id": "broetje-btw-s-250-b",
@@ -1740,10 +2027,14 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "S",
-        "flaeche_m2": null
+        "flaeche_m2": 0.93
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.54
+      "scop_tabelle": 3.54,
+      "smart_home": {
+        "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
+      },
+      "sg_ready": true
     },
     {
       "id": "aeg-wpt-300-el",
@@ -1773,7 +2064,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.51
+      "scop_tabelle": 3.51,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt (2. Solltemperatur)"
+      },
+      "sg_ready": true
     },
     {
       "id": "aeg-wpt-300-el-plus",
@@ -1800,10 +2095,14 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "plus",
-        "flaeche_m2": null
+        "flaeche_m2": 1.3
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.51
+      "scop_tabelle": 3.51,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt (2. Solltemperatur)"
+      },
+      "sg_ready": true
     },
     {
       "id": "haier-hp200m7-f9",
@@ -1833,7 +2132,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.5
+      "scop_tabelle": 3.5,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "lg-therma-v-wh20s-f5",
@@ -1863,7 +2168,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.5
+      "scop_tabelle": 3.5,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ"
+      }
     },
     {
       "id": "lg-therma-v-wh20str2-fa",
@@ -1893,7 +2202,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.5
+      "scop_tabelle": 3.5,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ",
+        "anschluesse": "SG-Eingänge SG1/SG2 (4 Zustände)"
+      },
+      "sg_ready": true
     },
     {
       "id": "viessmann-vitocal-262-a-t2h-r290",
@@ -1918,12 +2233,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "T2H",
+        "flaeche_m2": 0.8
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.475
+      "scop_tabelle": 3.475,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "ViCare",
+        "anschluesse": "PV-Schaltkontakt, Niedertarif-Anschluss"
+      }
     },
     {
       "id": "kermi-x-change-aqua-eco-xl",
@@ -1949,11 +2270,16 @@
       "cop_unspezifisch": null,
       "waermetauscher": {
         "vorhanden": true,
-        "variante": null,
-        "flaeche_m2": null
+        "variante": "XL",
+        "flaeche_m2": 0.84
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.47
+      "scop_tabelle": 3.47,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Smart-Grid- und PV-Eingang",
+        "modbus": true
+      }
     },
     {
       "id": "haier-hp250m7-f9",
@@ -1983,7 +2309,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.45
+      "scop_tabelle": 3.45,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "haier-hp250m7c-f9",
@@ -2013,7 +2345,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.45
+      "scop_tabelle": 3.45,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "daikin-altherma-m-hw-260-ekhhe260cv37",
@@ -2043,7 +2381,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.45
+      "scop_tabelle": 3.45,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Onecta",
+        "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
+      },
+      "sg_ready": true
     },
     {
       "id": "daikin-altherma-m-hw-260-biv-ekhhe260pcv37",
@@ -2073,7 +2417,13 @@
         "flaeche_m2": 0.72
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.45
+      "scop_tabelle": 3.45,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Onecta",
+        "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
+      },
+      "sg_ready": true
     },
     {
       "id": "boesch-mcb270",
@@ -2098,12 +2448,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.425
+      "scop_tabelle": 3.425,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion / SmartGrid-Ready"
+      }
     },
     {
       "id": "boesch-mcb270r",
@@ -2128,12 +2482,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
+        "vorhanden": true,
+        "variante": "R",
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.425
+      "scop_tabelle": 3.425,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion / SmartGrid-Ready"
+      }
     },
     {
       "id": "viessmann-vitocal-262-a-t2w-r290",
@@ -2158,12 +2516,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
+        "vorhanden": false,
+        "variante": "externer Speicher",
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.425
+      "scop_tabelle": 3.425,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "ViCare",
+        "anschluesse": "PV-Eigenstromnutzung"
+      }
     },
     {
       "id": "viessmann-vitocal-161-a-wwk-161-a02",
@@ -2188,12 +2552,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.4
+      "scop_tabelle": 3.4,
+      "smart_home": {
+        "anschluesse": "PV über Energiezähler (Modbus, Zubehör)"
+      },
+      "sg_ready": true
     },
     {
       "id": "viessmann-vitocal-161-a-wwks-161-a02",
@@ -2218,12 +2586,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "WWKS",
+        "flaeche_m2": 1.0
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.4
+      "scop_tabelle": 3.4,
+      "smart_home": {
+        "anschluesse": "PV über Energiezähler (Modbus, Zubehör), Solarregelung"
+      },
+      "sg_ready": true
     },
     {
       "id": "vaillant-arostor-plus-vwl-bm-260-6",
@@ -2253,7 +2625,11 @@
         "flaeche_m2": 1.05
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.375
+      "scop_tabelle": 3.375,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-/PV-Steckverbindung"
+      }
     },
     {
       "id": "daikin-altherma-m-hw-200-ekhhe200cv37",
@@ -2283,7 +2659,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.375
+      "scop_tabelle": 3.375,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Onecta",
+        "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
+      },
+      "sg_ready": true
     },
     {
       "id": "daikin-altherma-m-hw-200-biv-ekhhe200pcv37",
@@ -2313,7 +2695,13 @@
         "flaeche_m2": 0.72
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.375
+      "scop_tabelle": 3.375,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Onecta",
+        "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
+      },
+      "sg_ready": true
     },
     {
       "id": "junkers-bosch-compress-5000-dw-cs5001dw-260",
@@ -2343,7 +2731,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.35
+      "scop_tabelle": 3.35,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "junkers-bosch-compress-5000-dw-cs5001dw-260-c",
@@ -2373,7 +2767,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.35
+      "scop_tabelle": 3.35,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "buderus-wpt260-4-as-logatherm",
@@ -2403,7 +2803,13 @@
         "flaeche_m2": 1.2
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.35
+      "scop_tabelle": 3.35,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "herz-commotherm-bwp-300",
@@ -2428,12 +2834,15 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": true,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.335
+      "scop_tabelle": 3.335,
+      "smart_home": {
+        "anschluesse": "PV-Anbindung serienmäßig"
+      }
     },
     {
       "id": "kwb-empaair-300-ar-kwb-empaair-300-ar",
@@ -2488,12 +2897,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "SOL",
+        "flaeche_m2": 1.3
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.325
+      "scop_tabelle": 3.325,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt"
+      },
+      "sg_ready": true
     },
     {
       "id": "boesch-mcb200",
@@ -2518,12 +2931,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.3
+      "scop_tabelle": 3.3,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion / SmartGrid-Ready"
+      }
     },
     {
       "id": "stiebel-eltron-wwk-301-electronic",
@@ -2548,12 +2965,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.3
+      "scop_tabelle": 3.3,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt"
+      },
+      "sg_ready": true
     },
     {
       "id": "viessmann-vitocal-060-a-t0e-ze-250l",
@@ -2578,12 +2999,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.3
+      "scop_tabelle": 3.3,
+      "smart_home": {
+        "anschluesse": "Smart Grid über Anschluss-Set (Zubehör), Niedertarif",
+        "wifi": false
+      },
+      "sg_ready": true
     },
     {
       "id": "viessmann-vitocal-060-a-t0s-ze-250l",
@@ -2608,12 +3034,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "T0S",
+        "flaeche_m2": 1.0
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.3
+      "scop_tabelle": 3.3,
+      "smart_home": {
+        "anschluesse": "Smart Grid über Anschluss-Set (Zubehör), Niedertarif",
+        "wifi": false
+      },
+      "sg_ready": true
     },
     {
       "id": "alarko-flr-hwh-300c",
@@ -2643,7 +3074,14 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.25
+      "scop_tabelle": 3.25,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus",
+        "modbus": true,
+        "anschluesse": "SG-Port, RS485-Modbus"
+      }
     },
     {
       "id": "hisense-hi-water-ah-250u4gbb00",
@@ -2673,7 +3111,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.25
+      "scop_tabelle": 3.25,
+      "smart_home": {
+        "wifi": true,
+        "app": "ConnectLife",
+        "anschluesse": "SG-Ready-Eingang"
+      },
+      "sg_ready": true
     },
     {
       "id": "hisense-hi-water-ah-250u4gbc00",
@@ -2703,7 +3147,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.25
+      "scop_tabelle": 3.25,
+      "smart_home": {
+        "wifi": true,
+        "app": "ConnectLife",
+        "anschluesse": "SG-Ready-Eingang"
+      },
+      "sg_ready": true
     },
     {
       "id": "styleboiler-futura-eco-x-300",
@@ -2733,7 +3183,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.24
+      "scop_tabelle": 3.24,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life",
+        "anschluesse": "Digitaleingang (PV)"
+      }
     },
     {
       "id": "styleboiler-futura-eco-x-1-wt-300-w",
@@ -2763,7 +3218,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.24
+      "scop_tabelle": 3.24,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life",
+        "anschluesse": "Digitaleingang (PV)"
+      }
     },
     {
       "id": "hofman-energy-avarma-190-300-l",
@@ -2793,7 +3253,14 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.24
+      "scop_tabelle": 3.24,
+      "sg_ready": false,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life",
+        "modbus": true,
+        "anschluesse": "1 Schalteingang (Remote/PV), Modbus RS485"
+      }
     },
     {
       "id": "austria-email-ag-ae-revolution-evo-3-200l-wt",
@@ -2823,7 +3290,13 @@
         "flaeche_m2": 1.2
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.225
+      "scop_tabelle": 3.225,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "dimplex-dhw-301p",
@@ -2853,7 +3326,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.225
+      "scop_tabelle": 3.225,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "ochsner-europa-mini-iwp",
@@ -2891,7 +3369,11 @@
       "luft_max_c": 40,
       "luftvolumen": "500–600 m³/h",
       "abmessung_mm": "432 × 657",
-      "gewicht_kg": 45
+      "gewicht_kg": 45,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Kontakte E2 (EVU) / E3 (Smart Grid)"
+      }
     },
     {
       "id": "wolf-fhs-180-s",
@@ -2921,7 +3403,14 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.225
+      "scop_tabelle": 3.225,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "myWOLF",
+        "anschluesse": "Modbus RTU (RS485), PV-/Energiemanager-Kontakt, WOLF Link optional",
+        "modbus": true
+      }
     },
     {
       "id": "lg-therma-v-wh20esf0-ca",
@@ -2951,7 +3440,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.2
+      "scop_tabelle": 3.2,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ",
+        "anschluesse": "SG Ready"
+      },
+      "sg_ready": true
     },
     {
       "id": "dimplex-dhw-250p",
@@ -2981,7 +3476,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.2
+      "scop_tabelle": 3.2,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "alarko-flr-hwh-190c",
@@ -3011,7 +3511,14 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.15
+      "scop_tabelle": 3.15,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus",
+        "modbus": true,
+        "anschluesse": "SG-Port, RS485-Modbus"
+      }
     },
     {
       "id": "wolf-fhs-280-he",
@@ -3038,10 +3545,17 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "HE",
-        "flaeche_m2": null
+        "flaeche_m2": 0.9
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.15
+      "scop_tabelle": 3.15,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "myWOLF",
+        "anschluesse": "Modbus RTU (RS485), PV-/Energiemanager-Kontakt, WOLF Link optional",
+        "modbus": true
+      }
     },
     {
       "id": "vaillant-fluostor-vwh-b-270-1",
@@ -3066,12 +3580,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.141
+      "scop_tabelle": 3.141,
+      "smart_home": {
+        "anschluesse": "2 PV-Kontakte (2 Stufen)"
+      },
+      "sg_ready": true
     },
     {
       "id": "alarko-flr-hwh-190csc",
@@ -3098,10 +3616,17 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "CSC",
-        "flaeche_m2": null
+        "flaeche_m2": 0.6
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.14
+      "scop_tabelle": 3.14,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus",
+        "modbus": true,
+        "anschluesse": "SG-Port, RS485-Modbus"
+      }
     },
     {
       "id": "alarko-flr-hwh-300csc",
@@ -3128,10 +3653,17 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": "CSC",
-        "flaeche_m2": null
+        "flaeche_m2": 1.1
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.13
+      "scop_tabelle": 3.13,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus",
+        "modbus": true,
+        "anschluesse": "SG-Port, RS485-Modbus"
+      }
     },
     {
       "id": "dimplex-dhw-301p-plus",
@@ -3161,7 +3693,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.125
+      "scop_tabelle": 3.125,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "saunier-duval-magna-aqua-270-3c",
@@ -3186,12 +3723,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "C",
+        "flaeche_m2": 0.8
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.125
+      "scop_tabelle": 3.125,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "MiGo",
+        "anschluesse": "2 Kontakteingänge (Niedertarif/PV)"
+      },
+      "sg_ready": true
     },
     {
       "id": "vaillant-arostor-vwl-bm-270-5",
@@ -3216,12 +3759,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "BM",
+        "flaeche_m2": 0.8
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.125
+      "scop_tabelle": 3.125,
+      "smart_home": {
+        "anschluesse": "PV-/Smart-Grid-Eingang"
+      },
+      "sg_ready": true
     },
     {
       "id": "oekofen-brauchwasser-waermepumpe-300",
@@ -3248,10 +3795,16 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": null,
-        "flaeche_m2": 1.0
+        "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.1
+      "scop_tabelle": 3.1,
+      "sg_ready": true,
+      "smart_home": {
+        "app": "myEnergy365",
+        "modbus": "optional",
+        "anschluesse": "Kommunikation mit ÖkoFEN-Pelletkessel"
+      }
     },
     {
       "id": "vaillant-fluostor-vwh-b-200-1",
@@ -3276,12 +3829,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.098
+      "scop_tabelle": 3.098,
+      "smart_home": {
+        "anschluesse": "2 PV-Kontakte (2 Stufen)"
+      },
+      "sg_ready": true
     },
     {
       "id": "vaillant-arostor-plus-vwl-bm-200-6",
@@ -3311,7 +3868,11 @@
         "flaeche_m2": 1.05
       },
       "scop_basis": "cop_a7",
-      "scop_tabelle": 3.09
+      "scop_tabelle": 3.09,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-/PV-Steckverbindung"
+      }
     },
     {
       "id": "hofman-energy-avarma-190-200-l",
@@ -3341,7 +3902,14 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.04
+      "scop_tabelle": 3.04,
+      "sg_ready": false,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life",
+        "modbus": true,
+        "anschluesse": "1 Schalteingang (Remote/PV), Modbus RS485"
+      }
     },
     {
       "id": "hisense-hi-water-ah-200u4gab00",
@@ -3371,7 +3939,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.025
+      "scop_tabelle": 3.025,
+      "smart_home": {
+        "wifi": true,
+        "app": "ConnectLife",
+        "anschluesse": "SG-Ready-Eingang"
+      },
+      "sg_ready": true
     },
     {
       "id": "ovum-opw-170",
@@ -3401,7 +3975,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "Modbus RTU (RS485), Smart-Grid-Anschluss (PV/Mehrtarif)",
+        "modbus": true
+      }
     },
     {
       "id": "viessmann-vitocal-060-a-t0e-ze-180-l",
@@ -3426,12 +4005,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "smart_home": {
+        "anschluesse": "Smart Grid über Anschluss-Set (Zubehör), Niedertarif",
+        "wifi": false
+      },
+      "sg_ready": true
     },
     {
       "id": "junkers-bosch-compress-5000-dw-cs5001dw-200",
@@ -3461,7 +4045,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "junkers-bosch-compress-5000-dw-cs5001dw-200-c",
@@ -3491,7 +4081,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "buderus-wpt200-4-a-logatherm",
@@ -3521,7 +4117,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "buderus-wpt200-4-as-logatherm",
@@ -3551,7 +4153,13 @@
         "flaeche_m2": 1.0
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "HomeCom Easy",
+        "anschluesse": "PV-Kontakt (EIN/AUS)"
+      }
     },
     {
       "id": "ochsner-europa-mini-iwpl",
@@ -3576,17 +4184,21 @@
       "cop_a20": 4.0,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "sg_ready": false,
+      "smart_home": {
+        "anschluesse": "keine Kommunikationsschnittstellen"
+      }
     },
     {
       "id": "ochsner-europa-250-dk",
       "name": "Ochsner Europa 250 DK",
-      "marke": "Ochsner",
+      "marke": "OCHSNER",
       "bauart": "bodenstehend",
       "volumen_l": 235.0,
       "eta_wh": 115.0,
@@ -3606,12 +4218,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "DK",
+        "flaeche_m2": 1.0
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 2.875
+      "scop_tabelle": 2.875,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "keine Schnittstellen im Datenblatt"
+      }
     },
     {
       "id": "austria-email-calypso-vm-2-150-l",
@@ -3641,7 +4257,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a20",
-      "scop_tabelle": 3.82
+      "scop_tabelle": 3.82,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion",
+        "wifi": true,
+        "app": "Cozytouch"
+      }
     },
     {
       "id": "haier-hp150m8-9",
@@ -3671,7 +4293,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.39
+      "scop_tabelle": 3.39,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "SG Ready / PV (Händlerangabe)"
+      },
+      "sg_ready": true
     },
     {
       "id": "haier-hp110m8-9",
@@ -3701,7 +4329,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.32
+      "scop_tabelle": 3.32,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "SG Ready / PV (Händlerangabe)"
+      },
+      "sg_ready": true
     },
     {
       "id": "austria-email-calypso-vm-2-100-l",
@@ -3731,7 +4365,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.23
+      "scop_tabelle": 3.23,
+      "sg_ready": true,
+      "smart_home": {
+        "anschluesse": "PV-Funktion",
+        "wifi": true,
+        "app": "Cozytouch"
+      }
     },
     {
       "id": "haier-hp80m8-9",
@@ -3761,7 +4401,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a14",
-      "scop_tabelle": 3.07
+      "scop_tabelle": 3.07,
+      "smart_home": {
+        "wifi": true,
+        "app": "hOn",
+        "anschluesse": "SG Ready / PV (Händlerangabe)"
+      },
+      "sg_ready": true
     },
     {
       "id": "alarko-flr-hwh-150wh",
@@ -3791,7 +4437,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.02
+      "scop_tabelle": 3.02,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus"
+      }
     },
     {
       "id": "lg-therma-v-wh15esf0-ha",
@@ -3821,7 +4471,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 3.0
+      "scop_tabelle": 3.0,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ",
+        "anschluesse": "SG Ready"
+      },
+      "sg_ready": true
     },
     {
       "id": "panasonic-aquarea-p-dhw150ae5",
@@ -3851,7 +4507,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 2.925
+      "scop_tabelle": 2.925,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Comfort Cloud",
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "panasonic-aquarea-p-dhw100ae5",
@@ -3881,7 +4543,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 2.8
+      "scop_tabelle": 2.8,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Comfort Cloud",
+        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
+      },
+      "sg_ready": true
     },
     {
       "id": "alarko-flr-hwh-80wh",
@@ -3911,7 +4579,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 2.75
+      "scop_tabelle": 2.75,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus"
+      }
     },
     {
       "id": "alarko-flr-hwh-100wh",
@@ -3941,7 +4613,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 2.74
+      "scop_tabelle": 2.74,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus"
+      }
     },
     {
       "id": "lg-therma-v-wh10esf0-ha",
@@ -3971,7 +4647,13 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 2.7
+      "scop_tabelle": 2.7,
+      "smart_home": {
+        "wifi": true,
+        "app": "ThinQ",
+        "anschluesse": "SG Ready"
+      },
+      "sg_ready": true
     },
     {
       "id": "dimplex-dhw-100pwh",
@@ -4001,7 +4683,12 @@
         "flaeche_m2": null
       },
       "scop_basis": "cop_a15",
-      "scop_tabelle": 2.7
+      "scop_tabelle": 2.7,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "vaillant-fluostor-vwh-b-150-1",
@@ -4026,12 +4713,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": null,
+        "vorhanden": false,
         "variante": null,
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 2.605
+      "scop_tabelle": 2.605,
+      "smart_home": {
+        "anschluesse": "PV-Eingang"
+      },
+      "sg_ready": true
     },
     {
       "id": "stiebel-eltron-wws-20",
@@ -4069,7 +4760,10 @@
       "luft_max_c": 40,
       "luftvolumen_m3h": 510,
       "abmessung_mm": "432 × 657 × 657",
-      "gewicht_kg": 45
+      "gewicht_kg": 45,
+      "smart_home": {
+        "anschluesse": "2 Eingänge E2/E3 (E3 ab Werk Smart-Grid-Funktion)"
+      }
     },
     {
       "id": "ed-ecodesign-compact-power",
@@ -4108,7 +4802,12 @@
       "luft_max_c": 43,
       "luftvolumen_m3h": 720,
       "abmessung_mm": "Ø 670 × 500",
-      "gewicht_kg": 53
+      "gewicht_kg": 53,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "anschluesse": "SG-/PV-Modus"
+      }
     },
     {
       "id": "krone-bws-125-100",
@@ -4186,7 +4885,10 @@
       "luft_max_c": 43,
       "luftvolumen_m3h": 350,
       "abmessung_mm": "1594 × Ø 640",
-      "gewicht_kg": 122
+      "gewicht_kg": 122,
+      "smart_home": {
+        "wifi": true
+      }
     },
     {
       "id": "krone-bws-125-300-s",
@@ -4212,7 +4914,7 @@
       "cop_unspezifisch": 3.0,
       "waermetauscher": {
         "vorhanden": true,
-        "variante": null,
+        "variante": "S",
         "flaeche_m2": 1.5
       },
       "scop_basis": "cop_unspezifisch",
@@ -4225,7 +4927,10 @@
       "luft_max_c": 43,
       "luftvolumen_m3h": 350,
       "abmessung_mm": "1875 × Ø 640",
-      "gewicht_kg": 149
+      "gewicht_kg": 149,
+      "smart_home": {
+        "wifi": true
+      }
     },
     {
       "id": "ed-ecodesign-100-wl",
@@ -4264,7 +4969,12 @@
       "luft_max_c": 35,
       "luftvolumen_m3h": 150,
       "abmessung_mm": null,
-      "gewicht_kg": null
+      "gewicht_kg": null,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-180-wl",
@@ -4303,7 +5013,12 @@
       "luft_max_c": 35,
       "luftvolumen_m3h": 400,
       "abmessung_mm": "1576 × 540 × 575",
-      "gewicht_kg": 70
+      "gewicht_kg": 70,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-100-rf",
@@ -4342,7 +5057,12 @@
       "luft_max_c": null,
       "luftvolumen_m3h": null,
       "abmessung_mm": null,
-      "gewicht_kg": null
+      "gewicht_kg": null,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-180-rf",
@@ -4381,7 +5101,12 @@
       "luft_max_c": null,
       "luftvolumen_m3h": null,
       "abmessung_mm": "1576 × 540 × 575",
-      "gewicht_kg": 70
+      "gewicht_kg": 70,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-300-wt",
@@ -4420,7 +5145,12 @@
       "luft_max_c": 35,
       "luftvolumen_m3h": 300,
       "abmessung_mm": null,
-      "gewicht_kg": null
+      "gewicht_kg": null,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-300-wt-e",
@@ -4446,8 +5176,8 @@
       "cop_unspezifisch": null,
       "waermetauscher": {
         "vorhanden": true,
-        "variante": null,
-        "flaeche_m2": null
+        "variante": "E",
+        "flaeche_m2": 1.0
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 3.46,
@@ -4459,7 +5189,12 @@
       "luft_max_c": 35,
       "luftvolumen_m3h": 300,
       "abmessung_mm": "Ø 707 × 1768",
-      "gewicht_kg": 100
+      "gewicht_kg": 100,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-310-wt-compact",
@@ -4486,7 +5221,7 @@
       "waermetauscher": {
         "vorhanden": true,
         "variante": null,
-        "flaeche_m2": null
+        "flaeche_m2": 1.0
       },
       "scop_basis": null,
       "scop_tabelle": null,
@@ -4498,7 +5233,12 @@
       "luft_max_c": 35,
       "luftvolumen_m3h": 300,
       "abmessung_mm": "Ø 707 × 1640",
-      "gewicht_kg": 148
+      "gewicht_kg": 148,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-400",
@@ -4537,7 +5277,12 @@
       "luft_max_c": 35,
       "luftvolumen_m3h": 300,
       "abmessung_mm": "Ø 707 × 1916",
-      "gewicht_kg": 136
+      "gewicht_kg": 136,
+      "sg_ready": true,
+      "smart_home": {
+        "modbus": true,
+        "anschluesse": "Smart Grid Interface (1 Kontakt)"
+      }
     },
     {
       "id": "ed-ecodesign-400-wpz",
@@ -4651,7 +5396,11 @@
       "luft_min_c": null,
       "luft_max_c": null,
       "abmessung_mm": null,
-      "gewicht_kg": null
+      "gewicht_kg": null,
+      "smart_home": {
+        "app": "KWB Comfort Online",
+        "anschluesse": "Ansteuerung über KWB-Regelung, PV-Überschuss"
+      }
     },
     {
       "id": "kwb-empaair-revolution-evo-3-200",
@@ -4687,7 +5436,13 @@
       "luft_min_c": 5,
       "luft_max_c": 43,
       "abmessung_mm": "1716 × 600 × 651",
-      "gewicht_kg": null
+      "gewicht_kg": null,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "kwb-empaair-revolution-evo-3-270",
@@ -4723,7 +5478,13 @@
       "luft_min_c": 5,
       "luft_max_c": 43,
       "abmessung_mm": "1902 × 600 × 651",
-      "gewicht_kg": 110
+      "gewicht_kg": 110,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "Cozytouch",
+        "anschluesse": "PV-Kontakt"
+      }
     },
     {
       "id": "mundoclima-muacsm-190-h14-i",
@@ -4756,7 +5517,14 @@
       "scop_tabelle": 3.2,
       "lastprofil": "L",
       "jahresstromverbrauch_kwh": 799,
-      "mischwassermenge_v40_l": 240
+      "mischwassermenge_v40_l": 240,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "app": "NetHome Plus",
+        "modbus": true,
+        "anschluesse": "Smart-Grid-Funktion (PV), Modbus (GLT)"
+      }
     },
     {
       "id": "alpha-innotec-bwp-190s",
@@ -4791,7 +5559,13 @@
       "waermeleistung": "1,7 kW (A15/W45)",
       "ww_max_c": 65,
       "abmessung_mm": "Ø 620 × 1620",
-      "gewicht_kg": 94
+      "gewicht_kg": 94,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "modbus": true,
+        "anschluesse": "SG Ready (QA1), PV-Eingang 0–10 V"
+      }
     },
     {
       "id": "alpha-innotec-bwp-260s",
@@ -4826,7 +5600,13 @@
       "waermeleistung": "1,7 kW (A15/W45)",
       "ww_max_c": 65,
       "abmessung_mm": "Ø 620 × 1960",
-      "gewicht_kg": 100
+      "gewicht_kg": 100,
+      "sg_ready": true,
+      "smart_home": {
+        "wifi": true,
+        "modbus": true,
+        "anschluesse": "SG Ready (QA1), PV-Eingang 0–10 V"
+      }
     },
     {
       "id": "alpha-innotec-wwb-21",
@@ -4859,7 +5639,13 @@
       "scop_tabelle": 4.4,
       "waermeleistung_kw": 2.0,
       "waermeleistung": "2,0 kW",
-      "ww_max_c": 65
+      "ww_max_c": 65,
+      "sg_ready": true,
+      "smart_home": {
+        "app": "myUplink",
+        "modbus": true,
+        "anschluesse": "LAN"
+      }
     }
   ]
 }

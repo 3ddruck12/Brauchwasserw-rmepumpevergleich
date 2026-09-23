@@ -94,7 +94,8 @@ export const fmt = {
 const EXPORT_KOPF = [
   'Modell', 'Marke', 'Bauart', 'Volumen (L)', 'Leistungszahl', 'Basis', 'ηwh (%)',
   'Effizienzklasse', 'Schallleistung dB(A)', 'Kältemittel', 'Preis (EUR)', 'Wärmetauscher',
-  'Heizstab (W)', 'Kesselmaterial', 'Anode', 'Wärmekosten (EUR/kWh)', 'Jahreskosten (EUR/a)',
+  'Heizstab (W)', 'Kesselmaterial', 'Anode', 'SG Ready', 'Smart Home',
+  'Wärmekosten (EUR/kWh)', 'Jahreskosten (EUR/a)',
 ]
 
 export function wtText(m) {
@@ -108,6 +109,30 @@ export function wtText(m) {
   return teile.length ? `ja (${teile.join(', ')})` : 'ja'
 }
 
+export function sgReadyText(m) {
+  if (m.sg_ready == null) return null
+  return m.sg_ready ? 'ja' : 'nein'
+}
+
+function anschlussTeil(wert, ja, optional) {
+  if (wert === true) return ja
+  if (wert === 'optional') return optional
+  return null
+}
+
+export function smartHomeText(m) {
+  const s = m.smart_home
+  if (!s) return null
+  if (typeof s === 'string') return s
+  const teile = [
+    anschlussTeil(s.wifi, 'WLAN', 'WLAN (optional)'),
+    s.app ? `App (${s.app})` : null,
+    anschlussTeil(s.modbus, 'Modbus', 'Modbus (optional)'),
+    s.anschluesse,
+  ].filter(Boolean)
+  return teile.length ? teile.join(', ') : null
+}
+
 function exportZeilen(modelle, basis, strompreis, bedarf, scopFaktor) {
   return modelle.map((m) => {
     const { wert, basis: b } = leistungszahl(m, basis, scopFaktor)
@@ -115,12 +140,13 @@ function exportZeilen(modelle, basis, strompreis, bedarf, scopFaktor) {
     return [
       m.name, m.marke, m.bauart, m.volumen_l, wert, basisKurz(b), m.eta_wh,
       m.eff_klasse, m.schallleistung_db, m.kaeltemittel, m.preis_eur, wtText(m),
-      m.heizstab_w, m.kessel_material, m.anode, k.proKwh, k.proJahr,
+      m.heizstab_w, m.kessel_material, m.anode, sgReadyText(m), smartHomeText(m),
+      k.proKwh, k.proJahr,
     ]
   })
 }
 
-const ZAHL_STELLEN = [null, null, null, 0, 2, null, 1, null, 1, null, 2, null, 0, null, null, 4, 0]
+const ZAHL_STELLEN = [null, null, null, 0, 2, null, 1, null, 1, null, 2, null, 0, null, null, null, null, 4, 0]
 
 function zahlAlsText(v, stellen) {
   if (v == null || v === '') return ''

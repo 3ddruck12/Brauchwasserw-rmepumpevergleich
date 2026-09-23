@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   BASEN, BAUARTEN, VOLUMENKLASSEN, leistungszahl, basisKurz, kosten, fmt,
-  bauartLabel, luftbereich, kaeltemittelLaeuftAus, alsCsv, alsXlsx, alsPdf, herunterladen,
+  bauartLabel, luftbereich, kaeltemittelLaeuftAus, sgReadyText, smartHomeText,
+  alsCsv, alsXlsx, alsPdf, herunterladen,
 } from './lib.js'
 import Starthilfe from './Starthilfe.jsx'
 
@@ -45,6 +46,8 @@ const SPALTEN = [
   { id: 'schallleistung_db', label: 'Schall', num: true },
   { id: 'kaeltemittel', label: 'Kältemittel' },
   { id: 'waermetauscher', label: 'WT' },
+  { id: 'sg_ready', label: 'SG Ready' },
+  { id: 'smart_home', label: 'Smart Home' },
   { id: 'heizstab_w', label: 'Heizstab', num: true },
   { id: 'kessel_material', label: 'Kessel' },
   { id: 'anode', label: 'Anode' },
@@ -60,6 +63,8 @@ const SPALTEN_OHNE_KESSEL = [
   { id: 'luftvolumen_m3h', label: 'Luftvolumen', num: true },
   { id: 'schallleistung_db', label: 'Schall', num: true },
   { id: 'kaeltemittel', label: 'Kältemittel' },
+  { id: 'sg_ready', label: 'SG Ready' },
+  { id: 'smart_home', label: 'Smart Home' },
   { id: 'abmessung_mm', label: 'Abmessung' },
   { id: 'gewicht_kg', label: 'Gewicht', num: true },
 ]
@@ -147,6 +152,8 @@ export default function App() {
         case 'name': return m.name.toLowerCase()
         case 'eff_klasse': return m.eff_klasse ? -m.eff_klasse.length : null
         case 'waermetauscher': return m.waermetauscher?.vorhanden ? 1 : 0
+        case 'sg_ready': return m.sg_ready === true ? 1 : m.sg_ready === false ? 0 : null
+        case 'smart_home': return (smartHomeText(m) || '').toLowerCase() || null
         case 'kessel_material':
         case 'anode':
         case 'kaeltemittel':
@@ -307,6 +314,20 @@ export default function App() {
             <span>F-Gas</span>
           </button>
         </span>
+        <select
+          aria-label="Nach Preis sortieren"
+          value={sortierung.spalte === 'preis_eur' ? (sortierung.ab ? 'ab' : 'auf') : 'egal'}
+          onChange={(e) => {
+            const wert = e.target.value
+            if (wert === 'auf') setSortierung({ spalte: 'preis_eur', ab: false })
+            else if (wert === 'ab') setSortierung({ spalte: 'preis_eur', ab: true })
+            else setSortierung({ spalte: 'leistung', ab: true })
+          }}
+        >
+          <option value="egal">Preis: Sortierung aus</option>
+          <option value="auf">Preis: aufsteigend</option>
+          <option value="ab">Preis: absteigend</option>
+        </select>
         <label className="haken">
           <input type="checkbox" checked={nurMitWt} onChange={(e) => setNurMitWt(e.target.checked)} />
           mit Wärmetauscher
@@ -387,6 +408,8 @@ export default function App() {
         <p>
           Preise sind Händlerpreise inkl. MwSt. zum genannten Stand und ändern sich laufend.
           Leere Felder heißen: Hersteller veröffentlicht den Wert nicht.
+          SG Ready und Smart Home (WLAN, App, Modbus) stammen aus Herstellerunterlagen –
+          wo nichts steht, ist der Anschluss nicht belegt.
         </p>
         <p>
           Hersteller messen bei verschiedenen Lufttemperaturen. Eine feste Vergleichsbasis
@@ -555,6 +578,8 @@ function spaltenZelle(m, id, extra) {
     case 'schallleistung_db': return fmt.db(m.schallleistung_db)
     case 'kaeltemittel': return <KaelteZelle mittel={m.kaeltemittel} onHinweis={extra.onKaelteHinweis} />
     case 'waermetauscher': return wtZelle(m)
+    case 'sg_ready': return fmt.text(sgReadyText(m))
+    case 'smart_home': return <span className="klein">{fmt.text(smartHomeText(m))}</span>
     case 'heizstab_w': return fmt.watt(m.heizstab_w)
     case 'kessel_material':
     case 'anode': return <span className="klein">{fmt.text(m[id])}</span>
@@ -611,6 +636,8 @@ function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen,
     ['Schallleistung', (m) => fmt.db(m.schallleistung_db)],
     ['Kältemittel', (m) => fmt.text(m.kaeltemittel)],
     ['Wärmetauscher', (m) => wtZelle(m)],
+    ['SG Ready', (m) => fmt.text(sgReadyText(m))],
+    ['Smart Home', (m) => fmt.text(smartHomeText(m))],
     ['Heizstab', (m) => fmt.watt(m.heizstab_w)],
     ['Kesselmaterial', (m) => fmt.text(m.kessel_material)],
     ['Anode', (m) => fmt.text(m.anode)],

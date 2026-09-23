@@ -240,6 +240,7 @@ tr.ohne-wert { color: var(--gedaempft); }
 .schmal { width: 34px; padding: 4px !important; }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 td.klein { font-size: 0.8rem; color: var(--gedaempft); text-align: left; }
+td .klein { font-size: 0.78rem; line-height: 1.35; }
 
 .modellname { display: block; font-weight: 600; }
 .marke { display: block; font-size: 0.78rem; color: var(--gedaempft); }

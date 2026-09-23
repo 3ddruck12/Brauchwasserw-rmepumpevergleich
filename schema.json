@@ -64,6 +64,16 @@
             "variante": { "$ref": "#/$defs/textOderNull" },
             "flaeche_m2": { "type": ["number", "null"], "minimum": 0, "maximum": 10 }
           }
+        },
+        "sg_ready": { "type": ["boolean", "null"] },
+        "smart_home": {
+          "type": "object",
+          "properties": {
+            "wifi": { "enum": [true, false, "optional", null] },
+            "app": { "$ref": "#/$defs/textOderNull" },
+            "modbus": { "enum": [true, false, "optional", null] },
+            "anschluesse": { "$ref": "#/$defs/textOderNull" }
+          }
         }
       }
     }

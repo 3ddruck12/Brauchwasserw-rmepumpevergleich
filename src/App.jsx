@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   BASEN, BAUARTEN, VOLUMENKLASSEN, leistungszahl, basisKurz, kosten, fmt,
-  bauartLabel, luftbereich, alsCsv, alsXlsx, alsPdf, herunterladen,
+  bauartLabel, luftbereich, kaeltemittelLaeuftAus, alsCsv, alsXlsx, alsPdf, herunterladen,
 } from './lib.js'
 
 const SPEICHER_SCHLUESSEL = 'bwwp-favoriten'
@@ -27,6 +27,7 @@ const ANSICHTEN = [
   { id: '200', label: '200er-Klasse', filter: { bauart: 'bodenstehend', volumenklasse: '200', nurFavoriten: false } },
   { id: '250', label: '250er-Klasse', filter: { bauart: 'bodenstehend', volumenklasse: '250', nurFavoriten: false } },
   { id: '300', label: '300er-Klasse', filter: { bauart: 'bodenstehend', volumenklasse: '300', nurFavoriten: false } },
+  { id: 'gross', label: 'große Speicher', filter: { bauart: 'bodenstehend', volumenklasse: 'gross', nurFavoriten: false } },
   { id: 'wand', label: 'Wandgeräte', filter: { bauart: 'wandhaengend', volumenklasse: 'alle', nurFavoriten: false } },
   { id: 'ohne_kessel', label: 'ohne Kessel', filter: { bauart: 'ohne_kessel', volumenklasse: 'alle', nurFavoriten: false } },
   { id: 'favoriten', label: 'Favoriten', filter: { bauart: 'alle', volumenklasse: 'alle', nurFavoriten: true } },
@@ -83,6 +84,7 @@ export default function App() {
   const [vergleich, setVergleich] = useState([])
   const [hinweiseOffen, setHinweiseOffen] = useState(false)
   const [exportOffen, setExportOffen] = useState(false)
+  const [kaelteWarnungOffen, setKaelteWarnungOffen] = useState(false)
 
   useEffect(() => {
     const basePath = import.meta.env.BASE_URL
@@ -253,10 +255,28 @@ export default function App() {
         <select value={volumenklasse} onChange={(e) => setVolumenklasse(e.target.value)}>
           {VOLUMENKLASSEN.map((v) => <option key={v.id} value={v.id}>{v.label}</option>)}
         </select>
-        <select value={kaeltemittel} onChange={(e) => setKaeltemittel(e.target.value)}>
-          <option value="alle">Kältemittel: alle</option>
-          {kaeltemittelListe.map((k) => <option key={k} value={k}>{k}</option>)}
-        </select>
+        <span className="kaelte-filter">
+          <select
+            value={kaeltemittel}
+            onChange={(e) => {
+              const wert = e.target.value
+              setKaeltemittel(wert)
+              if (kaeltemittelLaeuftAus(wert)) setKaelteWarnungOffen(true)
+            }}
+          >
+            <option value="alle">Kältemittel: alle</option>
+            {kaeltemittelListe.map((k) => <option key={k} value={k}>{k}</option>)}
+          </select>
+          <button
+            type="button"
+            className="kaelte-hinweis"
+            title="Hinweis zu Kältemitteln und F-Gasen"
+            onClick={() => setKaelteWarnungOffen(true)}
+          >
+            <Warnzeichen />
+            <span>F-Gas</span>
+          </button>
+        </span>
         <select value={wtFilter} onChange={(e) => setWtFilter(e.target.value)}>
           <option value="alle">Wärmetauscher: egal</option>
           <option value="ja">mit Wärmetauscher</option>
@@ -280,7 +300,8 @@ export default function App() {
 
       {vergleichsModelle.length > 0 && (
         <Vergleich modelle={vergleichsModelle} basis={basis} scopFaktor={scopFaktor}
-          strompreis={strompreis} bedarf={bedarf} schliessen={() => setVergleich([])} />
+          strompreis={strompreis} bedarf={bedarf} schliessen={() => setVergleich([])}
+          onKaelteHinweis={() => setKaelteWarnungOffen(true)} />
       )}
 
       <div className="tabellenrahmen">
@@ -314,7 +335,10 @@ export default function App() {
                   </td>
                   {spalten.map((s) => (
                     <td key={s.id} className={s.breit ? 'breit' : s.num ? 'num' : ''}>
-                      {spaltenZelle(m, s.id, { wert, basis: b, jahreskosten: k.proJahr })}
+                      {spaltenZelle(m, s.id, {
+                        wert, basis: b, jahreskosten: k.proJahr,
+                        onKaelteHinweis: () => setKaelteWarnungOffen(true),
+                      })}
                     </td>
                   ))}
                 </tr>
@@ -341,6 +365,28 @@ export default function App() {
         </p>
       </Dialog>
 
+      <Dialog
+        offen={kaelteWarnungOffen}
+        titel="Kältemittel und F-Gase"
+        variant="warnung"
+        onClose={() => setKaelteWarnungOffen(false)}
+      >
+        <p>
+          Geräte mit <strong>R-134a</strong> und anderen hoch-GWP-HFKW fallen unter die
+          EU-F-Gase-Verordnung (EU) 2024/573. Inverkehrbringen, Nachfüllen und Service
+          werden schrittweise eingeschränkt – Ersatz wird teurer, die Geräte verlieren
+          an Zukunftssicherheit.
+        </p>
+        <p>
+          Langfristig tragfähig sind vor allem <strong>R-290</strong> (Propan, GWP 3)
+          und <strong>R-513A</strong> als Nachfolger von R-134a.
+        </p>
+        <p className="klein">
+          Das Warnzeichen steht hinter jedem auslaufenden Kältemittel. Keine Rechtsberatung –
+          maßgeblich sind die jeweils geltenden F-Gase-Regeln.
+        </p>
+      </Dialog>
+
       <ExportDialog
         offen={exportOffen}
         anzahl={sortiert.length}
@@ -361,7 +407,35 @@ export default function App() {
   )
 }
 
-function Dialog({ offen, titel, onClose, children }) {
+function Warnzeichen() {
+  return (
+    <svg className="warnzeichen" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2.6 22.4 21H1.6L12 2.6Z" />
+      <path className="warnzeichen-strich" d="M12 9v6.2" />
+      <circle className="warnzeichen-punkt" cx="12" cy="18.1" r="1.05" />
+    </svg>
+  )
+}
+
+function KaelteZelle({ mittel, onHinweis }) {
+  if (!mittel) return '–'
+  if (!kaeltemittelLaeuftAus(mittel)) return fmt.text(mittel)
+  return (
+    <span className="kaelte-zelle">
+      {fmt.text(mittel)}
+      <button
+        type="button"
+        className="kaelte-warn"
+        title="Bald eingeschränktes Kältemittel – Hinweis öffnen"
+        onClick={onHinweis}
+      >
+        <Warnzeichen />
+      </button>
+    </span>
+  )
+}
+
+function Dialog({ offen, titel, onClose, variant, children }) {
   const ref = useRef(null)
   useEffect(() => {
     const el = ref.current
@@ -372,12 +446,13 @@ function Dialog({ offen, titel, onClose, children }) {
   return (
     <dialog
       ref={ref}
-      className="dialog"
+      className={`dialog ${variant === 'warnung' ? 'dialog-warnung' : ''}`}
       onClose={onClose}
       onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
     >
       <div className="dialog-kasten">
         <div className="dialog-kopf">
+          {variant === 'warnung' && <Warnzeichen />}
           <h2>{titel}</h2>
           <button type="button" onClick={onClose}>schließen</button>
         </div>
@@ -449,7 +524,7 @@ function spaltenZelle(m, id, extra) {
     case 'preis_eur': return fmt.euro(m.preis_eur)
     case 'jahreskosten': return extra.jahreskosten == null ? '–' : fmt.euro(extra.jahreskosten)
     case 'schallleistung_db': return fmt.db(m.schallleistung_db)
-    case 'kaeltemittel': return fmt.text(m.kaeltemittel)
+    case 'kaeltemittel': return <KaelteZelle mittel={m.kaeltemittel} onHinweis={extra.onKaelteHinweis} />
     case 'waermetauscher': return wtZelle(m)
     case 'heizstab_w': return fmt.watt(m.heizstab_w)
     case 'kessel_material':
@@ -474,7 +549,7 @@ function wtZelle(m) {
   return `ja${teile.length ? ` (${teile.join(', ')})` : ''}`
 }
 
-function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen }) {
+function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen, onKaelteHinweis }) {
   const mini = modelle.some((m) => m.bauart === 'ohne_kessel')
   const zeilen = [
     ['Marke', (m) => m.marke],
@@ -533,7 +608,13 @@ function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen 
               return (
                 <tr key={label} className={unterschiedlich ? 'abweichend' : ''}>
                   <th scope="row">{label}</th>
-                  {werte.map((v, i) => <td key={i}>{v}</td>)}
+                  {werte.map((v, i) => (
+                    <td key={i}>
+                      {label === 'Kältemittel'
+                        ? <KaelteZelle mittel={modelle[i].kaeltemittel} onHinweis={onKaelteHinweis} />
+                        : v}
+                    </td>
+                  ))}
                 </tr>
               )
             })}

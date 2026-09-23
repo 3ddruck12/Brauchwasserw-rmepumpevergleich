@@ -8,6 +8,7 @@
   --akzent: #1a5f8a;
   --akzent-hell: #e7f0f6;
   --warnung: #b8860b;
+  --warnung-flaeche: #fff6d8;
   --zeile-alt: #fafbfc;
   --schieber: #c5ced6;
   --knopf: #ffffff;
@@ -22,6 +23,8 @@
   --gedaempft: #9aa8b4;
   --akzent: #6bb3e0;
   --akzent-hell: #1e3a4d;
+  --warnung: #e0b84a;
+  --warnung-flaeche: #3a3014;
   --zeile-alt: #191f25;
   --schieber: #3d4b57;
   --knopf: #e6ecf1;
@@ -37,6 +40,8 @@
     --gedaempft: #9aa8b4;
     --akzent: #6bb3e0;
     --akzent-hell: #1e3a4d;
+    --warnung: #e0b84a;
+    --warnung-flaeche: #3a3014;
     --zeile-alt: #191f25;
     --schieber: #3d4b57;
     --knopf: #e6ecf1;
@@ -160,6 +165,47 @@ button:hover { border-color: var(--akzent); color: var(--akzent); }
 }
 
 .filter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.kaelte-filter { display: inline-flex; align-items: center; gap: 4px; }
+.kaelte-hinweis {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--warnung-flaeche);
+  border-color: var(--warnung);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.kaelte-zelle { display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+.kaelte-warn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: none;
+  line-height: 1;
+}
+.kaelte-warn:hover { opacity: 0.8; }
+.warnzeichen {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  fill: #f5c518;
+  stroke: #1c1c1c;
+  stroke-width: 1.15;
+  stroke-linejoin: round;
+}
+.warnzeichen-strich {
+  fill: none;
+  stroke: #1c1c1c;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+}
+.warnzeichen-punkt {
+  fill: #1c1c1c;
+  stroke: none;
+}
 .suche { flex: 1 1 240px; min-width: 200px; }
 .haken { display: flex; align-items: center; gap: 6px; font-size: 0.88rem; white-space: nowrap; }
 .haken input { padding: 0; }
@@ -262,8 +308,14 @@ footer {
   gap: 12px;
   margin-bottom: 10px;
 }
-.dialog-kopf h2 { margin: 0; font-size: 1.1rem; }
+.dialog-kopf h2 { margin: 0; font-size: 1.1rem; flex: 1; }
 .dialog p { margin: 0 0 10px; line-height: 1.45; }
+.dialog-warnung { border-color: var(--warnung); }
+.dialog-warnung .dialog-kopf .warnzeichen {
+  width: 1.7em;
+  height: 1.7em;
+  flex-shrink: 0;
+}
 .export-wahl { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
 .export-wahl button { text-align: left; padding: 10px 12px; }
 .export-wahl button:disabled { opacity: 0.7; cursor: wait; }

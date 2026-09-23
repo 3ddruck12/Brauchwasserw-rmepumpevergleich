@@ -53,6 +53,14 @@ export function bauartLabel(id) {
   return BAUARTEN.find((b) => b.id === id)?.label ?? id
 }
 
+/** Kältemittel, die unter der EU-F-Gase-Verordnung auslaufen bzw. stark eingeschränkt werden. */
+const KAELTE_AUSLAUF = new Set(['r-134a', 'r134a'])
+
+export function kaeltemittelLaeuftAus(wert) {
+  const k = (wert || '').toString().trim().toLowerCase().replace(/[\s-]+/g, '')
+  return KAELTE_AUSLAUF.has(k)
+}
+
 export function luftbereich(m) {
   if (m.luft_min_c == null && m.luft_max_c == null) return null
   const t = (v) => `${v > 0 ? '+' : ''}${v}`
@@ -64,7 +72,7 @@ export function luftbereich(m) {
 export const VOLUMENKLASSEN = [
   { id: 'alle', label: 'alle Größen', test: () => true },
   { id: 'klein', label: 'bis 150 L', test: (v) => v != null && v <= 150 },
-  { id: '200', label: '200er (180–229 L)', test: (v) => v >= 180 && v <= 229 },
+  { id: '200', label: '200er (160–229 L)', test: (v) => v >= 160 && v <= 229 },
   { id: '250', label: '250er (230–269 L)', test: (v) => v >= 230 && v <= 269 },
   { id: '300', label: '300er (270–330 L)', test: (v) => v >= 270 && v <= 330 },
   { id: 'gross', label: 'über 330 L', test: (v) => v > 330 },

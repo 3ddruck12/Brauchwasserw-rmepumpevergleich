@@ -29,9 +29,6 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
       - uses: actions/configure-pages@v5
-        with:
-          # schaltet Pages selbst ein, falls in den Repo-Settings noch nicht geschehen
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

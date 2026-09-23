@@ -87,8 +87,8 @@ export default function App() {
   useEffect(() => {
     const basePath = import.meta.env.BASE_URL
     Promise.all([
-      fetch(`${basePath}data/modelle.json`).then((r) => r.json()),
-      fetch(`${basePath}data/favoriten.json`).then((r) => (r.ok ? r.json() : { favoriten: [] })).catch(() => ({ favoriten: [] })),
+      fetch(`${basePath}data/modelle.json`, { cache: 'no-store' }).then((r) => r.json()),
+      fetch(`${basePath}data/favoriten.json`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : { favoriten: [] })).catch(() => ({ favoriten: [] })),
     ])
       .then(([m, f]) => {
         setDaten(m)

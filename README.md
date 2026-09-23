@@ -23,7 +23,7 @@ Die Webseite ist nur eine Ansicht darauf.
 | Feld | Bedeutung |
 |---|---|
 | `id` | eindeutiger Schlüssel (Kleinbuchstaben, Bindestriche) |
-| `name`, `marke`, `bauart` | `bodenstehend`, `wandhaengend` oder `split` |
+| `name`, `marke`, `bauart` | `bodenstehend`, `wandhaengend`, `ohne_kessel` oder `split` |
 | `volumen_l` | Speicherinhalt in Litern |
 | `eta_wh` | Warmwasserbereitungs-Energieeffizienz in % (ErP-Deklaration) |
 | `cop_a7` … `cop_a20` | COP bei der jeweiligen Lufteintrittstemperatur |

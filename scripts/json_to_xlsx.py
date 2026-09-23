@@ -112,8 +112,9 @@ def main(ziel):
     wb = Workbook()
     n1 = blatt(wb, "bodenstehend", [m for m in daten["modelle"] if m["bauart"] == "bodenstehend"], faktor, True)
     n2 = blatt(wb, "wandhängend", [m for m in daten["modelle"] if m["bauart"] == "wandhaengend"], faktor, False)
+    n3 = blatt(wb, "ohne Kessel", [m for m in daten["modelle"] if m["bauart"] == "ohne_kessel"], faktor, False)
     wb.save(ziel)
-    print(f"{ziel}: {n1} bodenstehende, {n2} wandhängende Modelle")
+    print(f"{ziel}: {n1} bodenstehende, {n2} wandhängende, {n3} ohne Kessel")
 
 
 if __name__ == "__main__":

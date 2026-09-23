@@ -1,4 +1,5 @@
-:root {
+:root,
+:root[data-theme='light'] {
   --grund: #ffffff;
   --flaeche: #f4f6f8;
   --rand: #d9dee3;
@@ -8,11 +9,27 @@
   --akzent-hell: #e7f0f6;
   --warnung: #b8860b;
   --zeile-alt: #fafbfc;
-  color-scheme: light dark;
+  --schieber: #c5ced6;
+  --knopf: #ffffff;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --grund: #14191e;
+  --flaeche: #1c232a;
+  --rand: #2f3a44;
+  --text: #e6ecf1;
+  --gedaempft: #9aa8b4;
+  --akzent: #6bb3e0;
+  --akzent-hell: #1e3a4d;
+  --zeile-alt: #191f25;
+  --schieber: #3d4b57;
+  --knopf: #e6ecf1;
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
+  :root:not([data-theme]) {
     --grund: #14191e;
     --flaeche: #1c232a;
     --rand: #2f3a44;
@@ -21,6 +38,9 @@
     --akzent: #6bb3e0;
     --akzent-hell: #1e3a4d;
     --zeile-alt: #191f25;
+    --schieber: #3d4b57;
+    --knopf: #e6ecf1;
+    color-scheme: dark;
   }
 }
 
@@ -33,12 +53,58 @@ body {
   font: 15px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
-.seite { max-width: 1600px; margin: 0 auto; padding: 24px 16px 64px; }
+.seite { max-width: 1600px; margin: 0 auto; padding: 24px 16px 16px; }
 .meldung { padding: 48px 16px; text-align: center; color: var(--gedaempft); }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
 header h1 { font-size: 1.6rem; margin: 0 0 4px; }
-.unterzeile { margin: 0 0 20px; color: var(--gedaempft); font-size: 0.9rem; }
+.unterzeile { margin: 0; color: var(--gedaempft); font-size: 0.9rem; }
 .quelle-link { color: var(--akzent); }
+
+.theme-schieber {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 4px;
+  user-select: none;
+}
+.theme-schieber span {
+  font-size: 0.78rem;
+  color: var(--gedaempft);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.theme-schieber [data-aktiv='true'] { color: var(--text); }
+.theme-bahn {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--rand);
+  border-radius: 13px;
+  background: var(--schieber);
+}
+.theme-bahn:hover { border-color: var(--akzent); }
+.theme-bahn:focus-visible { outline: 2px solid var(--akzent); outline-offset: 2px; }
+.theme-knopf {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--knopf);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.18s ease;
+}
+.theme-bahn[aria-checked='true'] .theme-knopf { transform: translateX(20px); }
 
 .steuerung {
   display: grid;
@@ -101,7 +167,7 @@ button:hover { border-color: var(--akzent); color: var(--akzent); }
 
 .tabellenrahmen {
   overflow: auto;
-  max-height: 72vh;
+  max-height: 78vh;
   border: 1px solid var(--rand);
   border-radius: 8px;
 }
@@ -160,10 +226,52 @@ td.klein { font-size: 0.8rem; color: var(--gedaempft); text-align: left; }
 .vergleichstabelle td { text-align: left; }
 tr.abweichend { background: var(--akzent-hell) !important; }
 
-footer { margin-top: 24px; color: var(--gedaempft); font-size: 0.82rem; }
+footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 4px 0;
+  color: var(--gedaempft);
+  font-size: 0.75rem;
+  border-top: 1px solid var(--rand);
+}
+.fuss-link {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  background: transparent;
+}
 .klein { font-size: 0.8rem; color: var(--gedaempft); }
 
+.dialog {
+  border: 1px solid var(--rand);
+  border-radius: 10px;
+  padding: 0;
+  background: var(--grund);
+  color: var(--text);
+  max-width: 520px;
+  width: calc(100vw - 32px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+.dialog::backdrop { background: rgba(12, 16, 20, 0.48); }
+.dialog-kasten { padding: 16px 18px 18px; }
+.dialog-kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.dialog-kopf h2 { margin: 0; font-size: 1.1rem; }
+.dialog p { margin: 0 0 10px; line-height: 1.45; }
+.export-wahl { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.export-wahl button { text-align: left; padding: 10px 12px; }
+.export-wahl button:disabled { opacity: 0.7; cursor: wait; }
+.export-wahl strong { display: block; }
+.export-wahl small { display: block; color: var(--gedaempft); font-weight: 400; }
+
 @media (max-width: 820px) {
+  header { flex-wrap: wrap; }
   .steuerung { grid-template-columns: 1fr; }
   .treffer { margin-left: 0; }
 }

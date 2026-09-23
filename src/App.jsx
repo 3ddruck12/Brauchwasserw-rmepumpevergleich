@@ -1,9 +1,25 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
-  BASEN, VOLUMENKLASSEN, leistungszahl, basisKurz, kosten, fmt, alsCsv, herunterladen,
+  BASEN, BAUARTEN, VOLUMENKLASSEN, leistungszahl, basisKurz, kosten, fmt,
+  bauartLabel, luftbereich, alsCsv, alsXlsx, alsPdf, herunterladen,
 } from './lib.js'
 
 const SPEICHER_SCHLUESSEL = 'bwwp-favoriten'
+const THEME_SCHLUESSEL = 'bwwp-theme'
+
+function systemTheme() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+function themeLesen() {
+  const gespeichert = localStorage.getItem(THEME_SCHLUESSEL)
+  return gespeichert === 'light' || gespeichert === 'dark' ? gespeichert : systemTheme()
+}
+
+function themeAnwenden(theme) {
+  document.documentElement.dataset.theme = theme
+  document.documentElement.style.colorScheme = theme
+}
 
 // Schnellzugriffe wie die Reiter in der Excel-Tabelle
 const ANSICHTEN = [
@@ -12,6 +28,7 @@ const ANSICHTEN = [
   { id: '250', label: '250er-Klasse', filter: { bauart: 'bodenstehend', volumenklasse: '250', nurFavoriten: false } },
   { id: '300', label: '300er-Klasse', filter: { bauart: 'bodenstehend', volumenklasse: '300', nurFavoriten: false } },
   { id: 'wand', label: 'Wandgeräte', filter: { bauart: 'wandhaengend', volumenklasse: 'alle', nurFavoriten: false } },
+  { id: 'ohne_kessel', label: 'ohne Kessel', filter: { bauart: 'ohne_kessel', volumenklasse: 'alle', nurFavoriten: false } },
   { id: 'favoriten', label: 'Favoriten', filter: { bauart: 'alle', volumenklasse: 'alle', nurFavoriten: true } },
 ]
 
@@ -30,10 +47,25 @@ const SPALTEN = [
   { id: 'anode', label: 'Anode' },
 ]
 
+const SPALTEN_OHNE_KESSEL = [
+  { id: 'name', label: 'Modell', breit: true },
+  { id: 'leistung', label: 'COP', num: true },
+  { id: 'waermeleistung_kw', label: 'Wärmeleistung', num: true },
+  { id: 'el_leistung_kw', label: 'el. Leistung', num: true },
+  { id: 'ww_max_c', label: 'WW max.', num: true },
+  { id: 'luftbereich', label: 'Luftbereich' },
+  { id: 'luftvolumen_m3h', label: 'Luftvolumen', num: true },
+  { id: 'schallleistung_db', label: 'Schall', num: true },
+  { id: 'kaeltemittel', label: 'Kältemittel' },
+  { id: 'abmessung_mm', label: 'Abmessung' },
+  { id: 'gewicht_kg', label: 'Gewicht', num: true },
+]
+
 export default function App() {
   const [daten, setDaten] = useState(null)
   const [fehler, setFehler] = useState(null)
   const [favoriten, setFavoriten] = useState([])
+  const [theme, setTheme] = useState(() => (typeof document === 'undefined' ? 'light' : themeLesen()))
 
   const [basis, setBasis] = useState('auto')
   const [strompreis, setStrompreis] = useState(0.30)
@@ -49,6 +81,8 @@ export default function App() {
 
   const [sortierung, setSortierung] = useState({ spalte: 'leistung', ab: true })
   const [vergleich, setVergleich] = useState([])
+  const [hinweiseOffen, setHinweiseOffen] = useState(false)
+  const [exportOffen, setExportOffen] = useState(false)
 
   useEffect(() => {
     const basePath = import.meta.env.BASE_URL
@@ -67,6 +101,11 @@ export default function App() {
   useEffect(() => {
     if (daten) localStorage.setItem(SPEICHER_SCHLUESSEL, JSON.stringify(favoriten))
   }, [favoriten, daten])
+
+  useEffect(() => {
+    themeAnwenden(theme)
+    localStorage.setItem(THEME_SCHLUESSEL, theme)
+  }, [theme])
 
   const scopFaktor = daten?.scop_faktor ?? 2.5
 
@@ -103,7 +142,9 @@ export default function App() {
         case 'waermetauscher': return m.waermetauscher?.vorhanden ? 1 : 0
         case 'kessel_material':
         case 'anode':
-        case 'kaeltemittel': return (m[sortierung.spalte] || '').toLowerCase()
+        case 'kaeltemittel':
+        case 'abmessung_mm': return (m[sortierung.spalte] || '').toLowerCase()
+        case 'luftbereich': return m.luft_min_c
         default: return m[sortierung.spalte]
       }
     }
@@ -153,15 +194,19 @@ export default function App() {
   if (!daten) return <div className="meldung">Lade Daten …</div>
 
   const vergleichsModelle = vergleich.map((id) => daten.modelle.find((m) => m.id === id)).filter(Boolean)
+  const spalten = bauart === 'ohne_kessel' ? SPALTEN_OHNE_KESSEL : SPALTEN
 
   return (
     <div className="seite">
       <header>
-        <h1>Brauchwasserwärmepumpen im Vergleich</h1>
-        <p className="unterzeile">
-          {daten.modelle.length} Modelle · Stand {daten.stand} ·{' '}
-          <a href="https://github.com/" className="quelle-link">Daten ergänzen</a>
-        </p>
+        <div>
+          <h1>Brauchwasserwärmepumpen im Vergleich</h1>
+          <p className="unterzeile">
+            {daten.modelle.length} Modelle · Stand {daten.stand} ·{' '}
+            <a href="https://github.com/" className="quelle-link">Daten ergänzen</a>
+          </p>
+        </div>
+        <ThemeSchieber theme={theme} onChange={setTheme} />
       </header>
 
       <section className="steuerung">
@@ -201,8 +246,9 @@ export default function App() {
           value={suche} onChange={(e) => setSuche(e.target.value)} />
         <select value={bauart} onChange={(e) => setBauart(e.target.value)}>
           <option value="alle">Bauart: alle</option>
-          <option value="bodenstehend">bodenstehend</option>
-          <option value="wandhaengend">wandhängend</option>
+          {BAUARTEN.filter((b) => b.id !== 'split').map((b) => (
+            <option key={b.id} value={b.id}>{b.label}</option>
+          ))}
         </select>
         <select value={volumenklasse} onChange={(e) => setVolumenklasse(e.target.value)}>
           {VOLUMENKLASSEN.map((v) => <option key={v.id} value={v.id}>{v.label}</option>)}
@@ -225,10 +271,7 @@ export default function App() {
           nur Favoriten ({favoriten.length})
         </label>
         <span className="treffer">{sortiert.length} Treffer</span>
-        <button onClick={() => herunterladen(
-          alsCsv(sortiert, basis, strompreis, bedarf, scopFaktor), 'brauchwasserwaermepumpen.csv')}>
-          CSV export
-        </button>
+        <button type="button" onClick={() => setExportOffen(true)}>Export</button>
         <button onClick={() => herunterladen(
           JSON.stringify({ favoriten }, null, 2), 'favoriten.json', 'application/json')}>
           favoriten.json
@@ -246,7 +289,7 @@ export default function App() {
             <tr>
               <th className="schmal" title="Favorit">★</th>
               <th className="schmal" title="Zum Vergleich">⇄</th>
-              {SPALTEN.map((s) => (
+              {spalten.map((s) => (
                 <th key={s.id} onClick={() => sortieren(s.id)}
                   className={`${s.num ? 'num' : ''} ${s.breit ? 'breit' : ''} sortierbar`}>
                   {s.label}
@@ -269,23 +312,11 @@ export default function App() {
                     <input type="checkbox" checked={vergleich.includes(m.id)}
                       onChange={() => vergleichUmschalten(m.id)} title="Vergleichen (max. 4)" />
                   </td>
-                  <td className="breit">
-                    <span className="modellname">{m.name}</span>
-                    <span className="marke">{m.marke} · {m.bauart === 'wandhaengend' ? 'wandhängend' : 'bodenstehend'}</span>
-                  </td>
-                  <td className="num">{fmt.liter(m.volumen_l)}</td>
-                  <td className="num">
-                    {fmt.zahl(wert)} <span className="basis-tag">{basisKurz(b)}</span>
-                  </td>
-                  <td>{fmt.text(m.eff_klasse)}</td>
-                  <td className="num">{fmt.euro(m.preis_eur)}</td>
-                  <td className="num">{k.proJahr == null ? '–' : fmt.euro(k.proJahr)}</td>
-                  <td className="num">{fmt.db(m.schallleistung_db)}</td>
-                  <td>{fmt.text(m.kaeltemittel)}</td>
-                  <td>{wtZelle(m)}</td>
-                  <td className="num">{fmt.watt(m.heizstab_w)}</td>
-                  <td className="klein">{fmt.text(m.kessel_material)}</td>
-                  <td className="klein">{fmt.text(m.anode)}</td>
+                  {spalten.map((s) => (
+                    <td key={s.id} className={s.breit ? 'breit' : s.num ? 'num' : ''}>
+                      {spaltenZelle(m, s.id, { wert, basis: b, jahreskosten: k.proJahr })}
+                    </td>
+                  ))}
                 </tr>
               )
             })}
@@ -294,14 +325,145 @@ export default function App() {
       </div>
 
       <footer>
+        <button type="button" className="fuss-link" onClick={() => setHinweiseOffen(true)}>Infos</button>
+        <span>Stand {daten.stand}</span>
+      </footer>
+
+      <Dialog offen={hinweiseOffen} titel="Hinweise" onClose={() => setHinweiseOffen(false)}>
         <p>{daten.quellen_hinweis}</p>
-        <p className="klein">
+        <p>
           Preise sind Händlerpreise inkl. MwSt. zum genannten Stand und ändern sich laufend.
           Leere Felder heißen: Hersteller veröffentlicht den Wert nicht.
         </p>
-      </footer>
+        <p>
+          Hersteller messen bei verschiedenen Lufttemperaturen. Eine feste Vergleichsbasis
+          macht die Geräte erst vergleichbar – Modelle ohne diesen Wert rutschen ans Ende.
+        </p>
+      </Dialog>
+
+      <ExportDialog
+        offen={exportOffen}
+        anzahl={sortiert.length}
+        onClose={() => setExportOffen(false)}
+        onExport={async (format) => {
+          const name = 'brauchwasserwaermepumpen'
+          if (format === 'csv') {
+            herunterladen(alsCsv(sortiert, basis, strompreis, bedarf, scopFaktor), `${name}.csv`)
+          } else if (format === 'xlsx') {
+            herunterladen(alsXlsx(sortiert, basis, strompreis, bedarf, scopFaktor), `${name}.xlsx`)
+          } else if (format === 'pdf') {
+            herunterladen(await alsPdf(sortiert, basis, strompreis, bedarf, scopFaktor), `${name}.pdf`)
+          }
+          setExportOffen(false)
+        }}
+      />
     </div>
   )
+}
+
+function Dialog({ offen, titel, onClose, children }) {
+  const ref = useRef(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    if (offen && !el.open) el.showModal()
+    if (!offen && el.open) el.close()
+  }, [offen])
+  return (
+    <dialog
+      ref={ref}
+      className="dialog"
+      onClose={onClose}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
+    >
+      <div className="dialog-kasten">
+        <div className="dialog-kopf">
+          <h2>{titel}</h2>
+          <button type="button" onClick={onClose}>schließen</button>
+        </div>
+        {children}
+      </div>
+    </dialog>
+  )
+}
+
+function ExportDialog({ offen, anzahl, onClose, onExport }) {
+  const [laeuft, setLaeuft] = useState(null)
+  const waehlen = async (format) => {
+    setLaeuft(format)
+    try { await onExport(format) }
+    finally { setLaeuft(null) }
+  }
+  return (
+    <Dialog offen={offen} titel="Export" onClose={onClose}>
+      <p className="klein">Die aktuelle Ansicht ({anzahl} Treffer) als Datei speichern.</p>
+      <div className="export-wahl">
+        {[
+          { id: 'csv', label: 'CSV', text: 'Semikolon-Tabelle, öffnet in Excel und Calc' },
+          { id: 'xlsx', label: 'XLSX', text: 'Excel-Arbeitsmappe' },
+          { id: 'pdf', label: 'PDF', text: 'Querformat zum Drucken und Weitergeben' },
+        ].map((f) => (
+          <button key={f.id} type="button" disabled={laeuft != null} onClick={() => waehlen(f.id)}>
+            <strong>{laeuft === f.id ? 'Wird erstellt …' : f.label}</strong>
+            <small>{f.text}</small>
+          </button>
+        ))}
+      </div>
+    </Dialog>
+  )
+}
+
+function ThemeSchieber({ theme, onChange }) {
+  const dunkel = theme === 'dark'
+  return (
+    <div className="theme-schieber">
+      <span data-aktiv={String(!dunkel)}>Hell</span>
+      <button
+        type="button"
+        className="theme-bahn"
+        role="switch"
+        aria-checked={dunkel}
+        aria-label={dunkel ? 'Dunkelmodus, zu Hell wechseln' : 'Hellmodus, zu Dunkel wechseln'}
+        onClick={() => onChange(dunkel ? 'light' : 'dark')}
+      >
+        <span className="theme-knopf" aria-hidden="true" />
+      </button>
+      <span data-aktiv={String(dunkel)}>Dunkel</span>
+    </div>
+  )
+}
+
+function spaltenZelle(m, id, extra) {
+  switch (id) {
+    case 'name':
+      return (
+        <>
+          <span className="modellname">{m.name}</span>
+          <span className="marke">{m.marke} · {bauartLabel(m.bauart)}</span>
+        </>
+      )
+    case 'volumen_l': return fmt.liter(m.volumen_l)
+    case 'leistung':
+      return <>{fmt.zahl(extra.wert)} <span className="basis-tag">{basisKurz(extra.basis)}</span></>
+    case 'eff_klasse': return fmt.text(m.eff_klasse)
+    case 'preis_eur': return fmt.euro(m.preis_eur)
+    case 'jahreskosten': return extra.jahreskosten == null ? '–' : fmt.euro(extra.jahreskosten)
+    case 'schallleistung_db': return fmt.db(m.schallleistung_db)
+    case 'kaeltemittel': return fmt.text(m.kaeltemittel)
+    case 'waermetauscher': return wtZelle(m)
+    case 'heizstab_w': return fmt.watt(m.heizstab_w)
+    case 'kessel_material':
+    case 'anode': return <span className="klein">{fmt.text(m[id])}</span>
+    case 'waermeleistung_kw': return m.waermeleistung || fmt.kw(m.waermeleistung_kw)
+    case 'el_leistung_kw': return m.el_leistung || fmt.kw(m.el_leistung_kw)
+    case 'ww_max_c': return fmt.grad(m.ww_max_c)
+    case 'luftbereich': return fmt.text(luftbereich(m))
+    case 'luftvolumen_m3h':
+      return m.luftvolumen || (m.luftvolumen_m3h == null ? '–' : `${m.luftvolumen_m3h.toLocaleString('de-DE')} m³/h`)
+    case 'abmessung_mm': return fmt.text(m.abmessung_mm)
+    case 'gewicht_kg': return fmt.kg(m.gewicht_kg)
+    default: return fmt.text(m[id])
+  }
 }
 
 function wtZelle(m) {
@@ -313,9 +475,19 @@ function wtZelle(m) {
 }
 
 function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen }) {
+  const mini = modelle.some((m) => m.bauart === 'ohne_kessel')
   const zeilen = [
     ['Marke', (m) => m.marke],
-    ['Bauart', (m) => (m.bauart === 'wandhaengend' ? 'wandhängend' : 'bodenstehend')],
+    ['Bauart', (m) => bauartLabel(m.bauart)],
+    ...(mini ? [
+      ['Wärmeleistung', (m) => m.waermeleistung || fmt.kw(m.waermeleistung_kw)],
+      ['el. Leistung', (m) => m.el_leistung || fmt.kw(m.el_leistung_kw)],
+      ['WW max.', (m) => fmt.grad(m.ww_max_c)],
+      ['Luftbereich', (m) => fmt.text(luftbereich(m))],
+      ['Luftvolumen', (m) => m.luftvolumen || (m.luftvolumen_m3h == null ? '–' : `${m.luftvolumen_m3h.toLocaleString('de-DE')} m³/h`)],
+      ['Abmessung', (m) => fmt.text(m.abmessung_mm)],
+      ['Gewicht', (m) => fmt.kg(m.gewicht_kg)],
+    ] : []),
     ['Speichervolumen', (m) => fmt.liter(m.volumen_l)],
     ['Leistungszahl', (m) => {
       const { wert, basis: b } = leistungszahl(m, basis, scopFaktor)

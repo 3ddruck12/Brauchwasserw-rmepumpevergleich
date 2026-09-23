@@ -78,7 +78,7 @@ export default function App() {
   const [bauart, setBauart] = useState('alle')
   const [volumenklasse, setVolumenklasse] = useState('alle')
   const [kaeltemittel, setKaeltemittel] = useState('alle')
-  const [wtFilter, setWtFilter] = useState('alle')
+  const [nurMitWt, setNurMitWt] = useState(false)
   const [nurMitPreis, setNurMitPreis] = useState(false)
   const [nurFavoriten, setNurFavoriten] = useState(false)
 
@@ -131,13 +131,12 @@ export default function App() {
       if (bauart !== 'alle' && m.bauart !== bauart) return false
       if (volumenklasse !== 'alle' && !klasse.test(m.volumen_l)) return false
       if (kaeltemittel !== 'alle' && m.kaeltemittel !== kaeltemittel) return false
-      if (wtFilter === 'ja' && m.waermetauscher?.vorhanden !== true) return false
-      if (wtFilter === 'nein' && m.waermetauscher?.vorhanden !== false) return false
+      if (nurMitWt && m.waermetauscher?.vorhanden !== true) return false
       if (nurMitPreis && m.preis_eur == null) return false
       if (nurFavoriten && !favoriten.includes(m.id)) return false
       return true
     })
-  }, [daten, suche, bauart, volumenklasse, kaeltemittel, wtFilter, nurMitPreis, nurFavoriten, favoriten])
+  }, [daten, suche, bauart, volumenklasse, kaeltemittel, nurMitWt, nurMitPreis, nurFavoriten, favoriten])
 
   const sortiert = useMemo(() => {
     const wertVon = (m) => {
@@ -169,14 +168,18 @@ export default function App() {
   // Zählt, wie viele Geräte hinter jeder Schnellansicht stecken – unabhängig von Suche und Detailfiltern
   const ansichtZaehler = useMemo(() => {
     if (!daten) return {}
-    const zaehle = ({ bauart: ba, volumenklasse: vk, nurFavoriten: nf }) => {
+    const zaehle = ({ bauart: ba, volumenklasse: vk, nurFavoriten: nf }, nurWt) => {
       const klasse = VOLUMENKLASSEN.find((v) => v.id === vk)
       return daten.modelle.filter((m) =>
         (ba === 'alle' || m.bauart === ba) &&
         (vk === 'alle' || klasse.test(m.volumen_l)) &&
-        (!nf || favoriten.includes(m.id))).length
+        (!nf || favoriten.includes(m.id)) &&
+        (!nurWt || m.waermetauscher?.vorhanden === true)).length
     }
-    return Object.fromEntries(ANSICHTEN.map((a) => [a.id, zaehle(a.filter)]))
+    return Object.fromEntries(ANSICHTEN.map((a) => [a.id, {
+      alle: zaehle(a.filter, false),
+      wt: zaehle(a.filter, true),
+    }]))
   }, [daten, favoriten])
 
   const ansichtAktiv = (a) =>
@@ -194,9 +197,10 @@ export default function App() {
     try { localStorage.setItem(START_SCHLUESSEL, 'ja') } catch { /* egal */ }
   }
 
-  const starthilfeWaehlen = (id) => {
+  const starthilfeWaehlen = (id, mitWt = false) => {
     const a = ANSICHTEN.find((x) => x.id === id)
     if (a) ansichtWaehlen(a)
+    setNurMitWt(!!mitWt)
     starthilfeSchliessen()
   }
 
@@ -264,7 +268,7 @@ export default function App() {
         {ANSICHTEN.map((a) => (
           <button key={a.id} onClick={() => ansichtWaehlen(a)}
             className={`reiter ${ansichtAktiv(a) ? 'aktiv' : ''}`}>
-            {a.label} <span className="anzahl">{ansichtZaehler[a.id] ?? 0}</span>
+            {a.label} <span className="anzahl">{ansichtZaehler[a.id]?.alle ?? 0}</span>
           </button>
         ))}
       </nav>
@@ -303,11 +307,10 @@ export default function App() {
             <span>F-Gas</span>
           </button>
         </span>
-        <select value={wtFilter} onChange={(e) => setWtFilter(e.target.value)}>
-          <option value="alle">Wärmetauscher: egal</option>
-          <option value="ja">mit Wärmetauscher</option>
-          <option value="nein">ohne Wärmetauscher</option>
-        </select>
+        <label className="haken">
+          <input type="checkbox" checked={nurMitWt} onChange={(e) => setNurMitWt(e.target.checked)} />
+          mit Wärmetauscher
+        </label>
         <label className="haken">
           <input type="checkbox" checked={nurMitPreis} onChange={(e) => setNurMitPreis(e.target.checked)} />
           nur mit Preis

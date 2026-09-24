@@ -221,15 +221,15 @@
       "bereitschaftsverlust_kwh_tag": 0.7,
       "kaeltemittel": "R-290",
       "preis_eur": 2979.0,
-      "heizstab_w": null,
+      "heizstab_w": 1500.0,
       "kessel_material": "emailliert (Ceraprotect)",
       "anode": "Magnesiumanode (elektr. überwacht)",
       "ehpa_guetesiegel": "08.04.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026 | EPREL 2516529: ηwh 139 % (vorher 165.0 %), Lastprofil XL; T2H-Variante laut EPREL 7098379: 165 %",
-      "cop_a7": null,
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026 | EPREL 2516529: ηwh 139 % (vorher 165.0 %), Lastprofil XL; T2H-Variante laut EPREL 7098379: 165 % | viessmann.de Vitocal 262-A: R290, COP 4,03 (A20/W10-53), 3,39 (A7/W10-53), Luft −10 bis +42 °C, WW 65/70 °C, Stand 09/2026",
+      "cop_a7": 3.39,
       "cop_a15": null,
       "cop_a14": null,
-      "cop_a20": null,
+      "cop_a20": 4.03,
       "cop_unspezifisch": null,
       "waermetauscher": {
         "vorhanden": true,
@@ -253,7 +253,10 @@
         "app": "ViCare",
         "anschluesse": "PV-Schaltkontakt, Niedertarif-Anschluss"
       },
-      "lastprofil": "XL"
+      "lastprofil": "XL",
+      "ww_max_c": 70,
+      "luft_min_c": -10,
+      "luft_max_c": 42
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-ze-300l",
@@ -265,17 +268,17 @@
       "eff_klasse": "A++",
       "schallleistung_db": 53.0,
       "bereitschaftsverlust_kwh_tag": 0.7,
-      "kaeltemittel": null,
+      "kaeltemittel": "R-1234ze",
       "preis_eur": null,
       "heizstab_w": null,
       "kessel_material": "emailliert (Ceraprotect)",
       "anode": "Magnesiumanode (elektr. überwacht)",
       "ehpa_guetesiegel": "21.02.2024",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Vorgänger-Generation: Datenblatt T2E-ze/T2H-ze R1234ze (GWP 7), nicht die aktuelle R290-Serie auf viessmann.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
-      "cop_a20": null,
+      "cop_a20": 4.02,
       "cop_unspezifisch": null,
       "waermetauscher": {
         "vorhanden": true,
@@ -286,7 +289,8 @@
           "volumen_l": 300.0,
           "eta_wh": 165.0,
           "eff_klasse": "A++",
-          "schallleistung_db": 53.0
+          "schallleistung_db": 53.0,
+          "kaeltemittel": "R-1234ze"
         }
       },
       "scop_basis": "eta_wh",

@@ -1,0 +1,465 @@
+{
+  "stand": "2026-09-24",
+  "hinweis": "Zuordnung über App-Namen (smart_home.app) oder Marke. hacs_standard = Repository steht im HACS-Standardkatalog (github.com/hacs/default).",
+  "integrationen": [
+    {
+      "id": "vicare",
+      "integration": "Viessmann ViCare",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/vicare/",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Hat eine Warmwasser-Entität, die Vitocal 262-A erscheint aber nur mit Grunddaten; API-Kontingent der Viessmann-Cloud beachten.",
+      "apps": [
+        "ViCare"
+      ],
+      "marken": []
+    },
+    {
+      "id": "mystiebel",
+      "integration": "MyStiebel",
+      "status": "hacs",
+      "hacs_standard": false,
+      "url": "https://github.com/aimarpl/mystiebel",
+      "warmwasser_wp": true,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Mit einer WWK-I 200 Plus getestet; muss als eigenes Repository in HACS hinzugefügt werden.",
+      "apps": [
+        "MyStiebel"
+      ],
+      "marken": []
+    },
+    {
+      "id": "stiebel-isg",
+      "integration": "STIEBEL ELTRON (ISG, Modbus TCP)",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/stiebel_eltron/",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Braucht ein ISG web mit Modbus-Freischaltung; WWK-Modelle sind in der Doku nicht ausdrücklich genannt.",
+      "apps": [],
+      "marken": [
+        "Stiebel Eltron",
+        "AEG"
+      ]
+    },
+    {
+      "id": "myvaillant",
+      "integration": "myVAILLANT / MiGo",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/signalkraft/mypyllant-component",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Unterstützt Warmwasser-Zonen und die MiGo-App von Saunier Duval; aroSTOR ist nicht ausdrücklich genannt.",
+      "apps": [
+        "MiGo",
+        "myVAILLANT"
+      ],
+      "marken": [
+        "Vaillant",
+        "Saunier Duval"
+      ]
+    },
+    {
+      "id": "vaillant-ebusd",
+      "integration": "ebusd (eBUS lokal)",
+      "status": "lokal",
+      "hacs_standard": null,
+      "url": "https://github.com/signalkraft/ebusd-vaillant-component",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Braucht einen eBUS-Adapter und das ebusd-Add-on; aroSTOR nicht ausdrücklich getestet.",
+      "apps": [],
+      "marken": [
+        "Vaillant",
+        "Saunier Duval"
+      ]
+    },
+    {
+      "id": "homecom",
+      "integration": "Bosch HomeCom Easy",
+      "status": "hacs",
+      "hacs_standard": false,
+      "url": "https://github.com/serbanb11/bosch-homecom-hass",
+      "warmwasser_wp": null,
+      "betrieb": "beides",
+      "gepflegt": true,
+      "hinweis": "Deckt Heizungs-WP mit Warmwasser ab; eigenständige Brauchwasser-WP sind nicht gelistet.",
+      "apps": [
+        "HomeCom Easy"
+      ],
+      "marken": []
+    },
+    {
+      "id": "onecta",
+      "integration": "Daikin Onecta",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/jwillemsen/daikin_onecta",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Braucht ein Konto im Daikin Developer Portal (Anfrage-Limit); Altherma M HW nicht ausdrücklich bestätigt.",
+      "apps": [
+        "Onecta"
+      ],
+      "marken": []
+    },
+    {
+      "id": "panasonic",
+      "integration": "Panasonic Comfort Cloud",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/sockless-coding/panasonic_cc",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Kennt Aquarea-Warmwasserspeicher und HWS-Warmwasser-WP; für die P-DHW ist keine Cloud-Anbindung belegt.",
+      "apps": [
+        "Comfort Cloud"
+      ],
+      "marken": []
+    },
+    {
+      "id": "thinq",
+      "integration": "LG ThinQ",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/lg_thinq/",
+      "warmwasser_wp": true,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Warmwasser-Entität vorhanden, braucht ein ThinQ-PAT-Token; WH20/27S laufen laut Community.",
+      "apps": [
+        "ThinQ"
+      ],
+      "marken": []
+    },
+    {
+      "id": "hon",
+      "integration": "Haier hOn",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/gvigroux/hon",
+      "warmwasser_wp": true,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "README nennt die HP150M8-9, aber „only programs are working“.",
+      "apps": [
+        "hOn"
+      ],
+      "marken": []
+    },
+    {
+      "id": "haier-modbus",
+      "integration": "Haier Modbus (M7)",
+      "status": "modbus",
+      "hacs_standard": false,
+      "url": "https://github.com/st03psn/haier-modbus",
+      "warmwasser_wp": true,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Lokal über Modbus RTU mit Gateway, ohne Cloud, mit Schreibzugriff; nicht jedes M7-Gerät hat die Schnittstelle.",
+      "apps": [],
+      "marken": [
+        "Haier"
+      ]
+    },
+    {
+      "id": "connectlife",
+      "integration": "ConnectLife",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/oyvindwe/connectlife-ha",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Hi-Water-Warmwasser-WP sind in den Gerätedateien noch nicht gelistet.",
+      "apps": [
+        "ConnectLife"
+      ],
+      "marken": []
+    },
+    {
+      "id": "cozytouch",
+      "integration": "Overkiz (Atlantic Cozytouch)",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/overkiz/",
+      "warmwasser_wp": true,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Warmwasser-Entität für Atlantic-Geräte; Geräte auf der neuen Cozytouch-API teils „nicht unterstützt“.",
+      "apps": [
+        "Cozytouch"
+      ],
+      "marken": []
+    },
+    {
+      "id": "wolflink",
+      "integration": "Wolf SmartSet (wolflink)",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/wolflink/",
+      "warmwasser_wp": false,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Nur für Heizungs- und WP-Systeme mit WOLF Link, die FHS ist nicht abgedeckt.",
+      "apps": [
+        "myWOLF"
+      ],
+      "marken": []
+    },
+    {
+      "id": "wolf-modbus",
+      "integration": "Wolf FHS per Modbus (Community-YAML)",
+      "status": "modbus",
+      "hacs_standard": null,
+      "url": "https://www.heizungsforum.de/threads/wolf-fhs-280-he-mod-bus-anbindung.28802/",
+      "warmwasser_wp": true,
+      "betrieb": "lokal",
+      "gepflegt": null,
+      "hinweis": "RS485 an CN11 mit Gateway oder ESPHome; YAML im Forum, laut Nutzern ab Firmware 14B.",
+      "apps": [],
+      "marken": [
+        "Wolf"
+      ]
+    },
+    {
+      "id": "remeha",
+      "integration": "Remeha Home",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/msvisser/remeha_home",
+      "warmwasser_wp": false,
+      "betrieb": "cloud",
+      "gepflegt": false,
+      "hinweis": "Nur für Kessel/Thermostate; die Azorra Ace lässt sich nur über den SG-Ready-Kontakt steuern.",
+      "apps": [
+        "Remeha Home"
+      ],
+      "marken": []
+    },
+    {
+      "id": "remocon",
+      "integration": "ELCO Aerotop (Remocon.net)",
+      "status": "hacs",
+      "hacs_standard": false,
+      "url": "https://github.com/thomasgregg/elco-aerotop",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Eigene Warmwasser-Entität für AEROTOP; als eigenes Repository hinzufügen.",
+      "apps": [
+        "REMOCON NET"
+      ],
+      "marken": []
+    },
+    {
+      "id": "midea",
+      "integration": "Midea (NetHome Plus)",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/midea/",
+      "warmwasser_wp": true,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Warmwasser-WP (Typ CD) lokal; Token nur mit Midea-SmartHome-Konto, nicht mit NetHome Plus.",
+      "apps": [
+        "NetHome Plus"
+      ],
+      "marken": []
+    },
+    {
+      "id": "midea-modbus",
+      "integration": "Midea-OEM per Modbus",
+      "status": "modbus",
+      "hacs_standard": true,
+      "url": "https://github.com/0xAHA/Midea-Heat-Pump-HA",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Für Midea-OEM-Warmwasser-WP über Modbus TCP; ob Alarko Midea-OEM ist, ist nicht belegt.",
+      "apps": [],
+      "marken": [
+        "Alarko"
+      ]
+    },
+    {
+      "id": "tuya",
+      "integration": "Tuya / Smart Life",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/tuya/",
+      "warmwasser_wp": null,
+      "betrieb": "beides",
+      "gepflegt": true,
+      "hinweis": "Core zeigt Warmwasserbereiter nur als einfaches Thermostat; tuya-local kennt diese Marken noch nicht.",
+      "apps": [
+        "Smart Life"
+      ],
+      "marken": []
+    },
+    {
+      "id": "myuplink",
+      "integration": "myUplink",
+      "status": "core",
+      "hacs_standard": null,
+      "url": "https://www.home-assistant.io/integrations/myuplink/",
+      "warmwasser_wp": null,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Braucht einen myUplink-Developer-Zugang; für die BWP-Serie nicht belegt.",
+      "apps": [
+        "myUplink"
+      ],
+      "marken": []
+    },
+    {
+      "id": "kronoterm",
+      "integration": "Kronoterm (Cloud oder Modbus)",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/Favio25/Kronoterm-homeassistant",
+      "warmwasser_wp": null,
+      "betrieb": "beides",
+      "gepflegt": true,
+      "hinweis": "Cloud-API oder Modbus mit TT3000/TT4000; reine Brauchwasser-WP nicht genannt.",
+      "apps": [
+        "CLOUD.KRONOTERM",
+        "CLOUD.KRONOTERM (angekündigt)"
+      ],
+      "marken": [
+        "Kronoterm"
+      ]
+    },
+    {
+      "id": "ochsner-ots",
+      "integration": "Ochsner Local OTS (Climatix)",
+      "status": "hacs",
+      "hacs_standard": false,
+      "url": "https://github.com/permissionBRICK/OTS-HomeAssistant",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Liest lokal dieselben Werte wie die OCHSNER-App; als eigenes Repository hinzufügen.",
+      "apps": [
+        "OCHSNER EASY"
+      ],
+      "marken": []
+    },
+    {
+      "id": "ochsner-modbus",
+      "integration": "OCHSNER 333 Genius per Modbus (Community-YAML)",
+      "status": "modbus",
+      "hacs_standard": null,
+      "url": "https://community.home-assistant.io/t/modbus-wrong-units-configuration-ochsner-europa-333-genius-warmepumpe-heating-pump/422196",
+      "warmwasser_wp": true,
+      "betrieb": "lokal",
+      "gepflegt": null,
+      "hinweis": "YAML im Community-Thread, Einheiten/Skalierung teils noch hakelig.",
+      "apps": [],
+      "marken": [
+        "OCHSNER"
+      ]
+    },
+    {
+      "id": "remko",
+      "integration": "REMKO SmartWeb",
+      "status": "hacs",
+      "hacs_standard": false,
+      "url": "https://github.com/Christoph-87/remko-smartweb-ha",
+      "warmwasser_wp": true,
+      "betrieb": "cloud",
+      "gepflegt": true,
+      "hinweis": "Laut README auch für Warmwassergeräte mit SmartWeb; als eigenes Repository hinzufügen.",
+      "apps": [
+        "REMKO Smart-Web"
+      ],
+      "marken": []
+    },
+    {
+      "id": "oekofen",
+      "integration": "ÖkoFEN Pellematic (lokale JSON-Schnittstelle)",
+      "status": "hacs",
+      "hacs_standard": true,
+      "url": "https://github.com/dominikamann/oekofen-pellematic-compact",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Nutzt die lokale Regler-Schnittstelle, nicht die myEnergy365-Cloud.",
+      "apps": [
+        "myEnergy365"
+      ],
+      "marken": []
+    },
+    {
+      "id": "dimplex-modbus",
+      "integration": "Dimplex DHW per Modbus",
+      "status": "modbus",
+      "hacs_standard": false,
+      "url": "https://github.com/ChristophCaina/ha-dimplex-heatpump-modbus",
+      "warmwasser_wp": true,
+      "betrieb": "lokal",
+      "gepflegt": false,
+      "hinweis": "Eigene Komponente für die DHW-Serie über Modbus TCP, seit 2024 ohne Updates.",
+      "apps": [],
+      "marken": [
+        "Dimplex"
+      ]
+    },
+    {
+      "id": "kermi-modbus",
+      "integration": "Kermi x-center per Modbus",
+      "status": "modbus",
+      "hacs_standard": false,
+      "url": "https://github.com/Cslegers/ha-kermi-xcenter",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Modbus TCP zum x-center; Schnittstelle muss von Kermi freigeschaltet sein.",
+      "apps": [],
+      "marken": [
+        "Kermi"
+      ]
+    },
+    {
+      "id": "ecodesign-modbus",
+      "integration": "EcoDesign per Modbus (YAML)",
+      "status": "modbus",
+      "hacs_standard": false,
+      "url": "https://github.com/frankol/ecodesign-homeassistant",
+      "warmwasser_wp": true,
+      "betrieb": "lokal",
+      "gepflegt": true,
+      "hinweis": "Fertige YAML für EcoDesign-Brauchwasser-WP über RS485-Ethernet-Adapter.",
+      "apps": [],
+      "marken": [
+        "ED EcoDesign"
+      ]
+    },
+    {
+      "id": "alpha-modbus",
+      "integration": "alpha innotec BWP per Modbus",
+      "status": "modbus",
+      "hacs_standard": null,
+      "url": "https://www.heizungsforum.de/threads/vorstellung-brauchwasser-wp-von-alpha-innotec-im-diy.29394/",
+      "warmwasser_wp": null,
+      "betrieb": "lokal",
+      "gepflegt": null,
+      "hinweis": "Modbus vorhanden, aber keine fertige HA-Konfiguration; Register aus der Betriebsanleitung.",
+      "apps": [],
+      "marken": [
+        "alpha innotec"
+      ]
+    }
+  ]
+}

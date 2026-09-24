@@ -94,6 +94,8 @@ export default function App() {
   const [wtInfo, setWtInfo] = useState(null)
   const [normInfo, setNormInfo] = useState(null)
   const [etaInfo, setEtaInfo] = useState(null)
+  const [haDaten, setHaDaten] = useState([])
+  const [shInfo, setShInfo] = useState(null)
   const [starthilfeOffen, setStarthilfeOffen] = useState(true)
 
   useEffect(() => {
@@ -101,9 +103,11 @@ export default function App() {
     Promise.all([
       fetch(`${basePath}data/modelle.json`, { cache: 'no-store' }).then((r) => r.json()),
       fetch(`${basePath}data/favoriten.json`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : { favoriten: [] })).catch(() => ({ favoriten: [] })),
+      fetch(`${basePath}data/home_assistant.json`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     ])
-      .then(([m, f]) => {
+      .then(([m, f, ha]) => {
         setDaten(m)
+        setHaDaten(ha?.integrationen ?? [])
         const lokal = JSON.parse(localStorage.getItem(SPEICHER_SCHLUESSEL) || 'null')
         setFavoriten(lokal ?? f.favoriten ?? [])
       })
@@ -393,6 +397,8 @@ export default function App() {
                         onWtInfo: () => setWtInfo(m),
                         onNormInfo: basis === 'auto' ? () => setNormInfo({ m, wert, basis: b }) : null,
                         onEtaInfo: b === 'eta_wh' ? () => setEtaInfo({ m, wert }) : null,
+                        onShInfo: () => setShInfo(m),
+                        ha: haFuer(m, haDaten),
                       })}
                     </td>
                   ))}
@@ -446,7 +452,8 @@ export default function App() {
 
       <WtVarianteDialog modell={wtInfo} onClose={() => setWtInfo(null)} />
       <NormDialog info={normInfo} scopFaktor={scopFaktor} onClose={() => setNormInfo(null)} />
-      <EtaDialog info={etaInfo} scopFaktor={scopFaktor} onClose={() => setEtaInfo(null)} />
+      <EtaDialog info={etaInfo} scopFaktor={scopFaktor} strompreis={strompreis} onClose={() => setEtaInfo(null)} />
+      <SmartHomeDialog modell={shInfo} ha={shInfo ? haFuer(shInfo, haDaten) : []} onClose={() => setShInfo(null)} />
 
       <ExportDialog
         offen={exportOffen}
@@ -606,7 +613,7 @@ function spaltenZelle(m, id, extra) {
     case 'kaeltemittel': return <KaelteZelle mittel={m.kaeltemittel} onHinweis={extra.onKaelteHinweis} />
     case 'waermetauscher': return <WtZelle m={m} onInfo={extra.onWtInfo} />
     case 'sg_ready': return fmt.text(sgReadyText(m))
-    case 'smart_home': return <span className="klein">{fmt.text(smartHomeText(m))}</span>
+    case 'smart_home': return <SmartHomeZelle m={m} ha={extra.ha} onInfo={extra.onShInfo} />
     case 'heizstab_w': return fmt.watt(m.heizstab_w)
     case 'kessel_material':
     case 'anode': return <span className="klein">{fmt.text(m[id])}</span>
@@ -710,7 +717,105 @@ const BASIS_TEXT = {
   cop_unspezifisch: 'ohne Angabe der Prüfbedingung',
 }
 
-function EtaDialog({ info, scopFaktor, onClose }) {
+function haFuer(m, liste) {
+  const app = m.smart_home?.app
+  return (liste || []).filter((e) => (app && e.apps?.includes(app)) || e.marken?.includes(m.marke))
+}
+
+const HA_STATUS = {
+  core: 'offiziell (Core)', hacs: 'HACS', modbus: 'Modbus', lokal: 'lokal', keine: 'keine',
+}
+
+function haStatusText(e) {
+  if (e.status === 'hacs') return e.hacs_standard ? 'HACS (Standardkatalog)' : 'HACS (eigenes Repository)'
+  if (e.status === 'modbus' && e.hacs_standard) return 'Modbus (HACS)'
+  return HA_STATUS[e.status] || e.status
+}
+
+function HaZeichen() {
+  return (
+    <svg className="ha-zeichen" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2.6 2.6 11.2V21.4h18.8V11.2Z" />
+      <circle cx="12" cy="11" r="1.6" /><circle cx="8.4" cy="15.2" r="1.3" /><circle cx="15.6" cy="15.2" r="1.3" />
+      <path d="M12 12.6v7M8.4 16.5l3.6 3M15.6 16.5 12 19.5" />
+    </svg>
+  )
+}
+
+function SmartHomeZelle({ m, ha, onInfo }) {
+  const text = smartHomeText(m)
+  const mitWw = (ha || []).some((e) => e.warmwasser_wp === true)
+  if (!text && !(ha || []).length) return '–'
+  return (
+    <span className="sh-zelle">
+      <span className="klein">{fmt.text(text)}</span>
+      {onInfo && (
+        <button type="button" className={`sh-info ${ha?.length ? 'mit-ha' : ''} ${mitWw ? 'ha-ww' : ''}`}
+          onClick={onInfo}
+          title={ha?.length ? `Home Assistant: ${ha.length} Integration(en)` : 'Smart-Home-Details'}>
+          {ha?.length ? <HaZeichen /> : <Infozeichen />}
+        </button>
+      )}
+    </span>
+  )
+}
+
+function jaNein(v) {
+  if (v === true) return 'ja'
+  if (v === 'optional') return 'optional (Zubehör)'
+  if (v === false) return 'nein'
+  return '–'
+}
+
+function SmartHomeDialog({ modell: m, ha, onClose }) {
+  const s = m?.smart_home || {}
+  return (
+    <Dialog offen={!!m} titel="Smart Home" onClose={onClose}>
+      {m && (
+        <>
+          <p><strong>{m.name}</strong></p>
+          <table className="wt-vergleich">
+            <tbody>
+              <tr><th scope="row">WLAN</th><td>{jaNein(s.wifi)}</td></tr>
+              <tr><th scope="row">App</th><td>{fmt.text(s.app)}</td></tr>
+              <tr><th scope="row">Modbus</th><td>{jaNein(s.modbus)}</td></tr>
+              <tr><th scope="row">SG Ready</th><td>{jaNein(m.sg_ready)}</td></tr>
+              {s.anschluesse && <tr><th scope="row">Anschlüsse</th><td>{s.anschluesse}</td></tr>}
+            </tbody>
+          </table>
+          <h3 className="ha-titel"><HaZeichen /> Home Assistant</h3>
+          {ha.length === 0 ? (
+            <p className="klein">
+              Keine Integration bekannt. Steuern lässt sich das Gerät dann meist nur über den
+              PV-/SG-Ready-Kontakt mit einem Relais (z. B. Shelly).
+            </p>
+          ) : (
+            <ul className="ha-liste">
+              {ha.map((e) => (
+                <li key={e.id} className="ha-eintrag">
+                  <div className="ha-kopf">
+                    <a href={e.url} target="_blank" rel="noreferrer">{e.integration}</a>
+                    <span className={`ha-status ha-${e.status}`}>{haStatusText(e)}</span>
+                  </div>
+                  <div className="klein">
+                    Warmwasser-WP unterstützt:{' '}
+                    <strong>{e.warmwasser_wp === true ? 'ja' : e.warmwasser_wp === false ? 'nein' : 'nicht bestätigt'}</strong>
+                    {' · '}{e.betrieb === 'lokal' ? 'lokal' : e.betrieb === 'cloud' ? 'über Cloud' : 'Cloud oder lokal'}
+                    {e.gepflegt === false && ' · wird kaum noch gepflegt'}
+                  </div>
+                  <div className="klein">{e.hinweis}</div>
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="klein">Stand der Recherche: September 2026. „HACS (eigenes Repository)“ heißt: in HACS über „Benutzerdefinierte Repositories“ hinzufügen.</p>
+        </>
+      )}
+    </Dialog>
+  )
+}
+
+function EtaDialog({ info, scopFaktor, strompreis, onClose }) {
   const m = info?.m
   const eta = m?.eta_wh
   const profil = m?.lastprofil
@@ -731,8 +836,42 @@ function EtaDialog({ info, scopFaktor, onClose }) {
                 <th scope="row">Leistungszahl</th>
                 <td>{fmt.zahl(info.wert)} (ηwh / 100 × {fmt.zahl(scopFaktor, 1)})</td>
               </tr>
+              <tr>
+                <th scope="row">Jahresarbeitszahl (Norm)</th>
+                <td><strong>≈ {fmt.zahl(info.wert, 1)}</strong></td>
+              </tr>
+              {m.eta_wh_kalt != null && (
+                <tr><th scope="row">JAZ kälteres Klima</th><td>≈ {fmt.zahl(m.eta_wh_kalt / 100 * scopFaktor, 1)}</td></tr>
+              )}
+              {m.eta_wh_warm != null && (
+                <tr><th scope="row">JAZ wärmeres Klima</th><td>≈ {fmt.zahl(m.eta_wh_warm / 100 * scopFaktor, 1)}</td></tr>
+              )}
+              {m.jahresstromverbrauch_kwh != null && (
+                <>
+                  <tr>
+                    <th scope="row">Stromverbrauch laut Label</th>
+                    <td>{m.jahresstromverbrauch_kwh.toLocaleString('de-DE')} kWh/Jahr</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Stromkosten laut Label</th>
+                    <td>{fmt.euro(m.jahresstromverbrauch_kwh * strompreis)} /Jahr bei {fmt.zahl(strompreis, 2)} €/kWh</td>
+                  </tr>
+                </>
+              )}
             </tbody>
           </table>
+          <p>
+            <strong>Jahresarbeitszahl (JAZ)</strong> = Wärme ÷ Strom über ein ganzes Jahr. Weil ηwh
+            den ganzen Normzyklus samt Bereitschaftsverlusten erfasst, entspricht ηwh × {fmt.zahl(scopFaktor, 1)}{' '}
+            der genormten JAZ bei durchschnittlichem Klima – die Leistungszahl in der Tabelle ist also
+            schon diese Norm-JAZ.
+          </p>
+          <p className="klein">
+            Deine echte JAZ hängt vom Aufstellort ab: kühler Keller (10–15 °C) senkt sie, ein warmer
+            Heizraum hebt sie. Außerdem zählen Solltemperatur (55 °C statt 60 °C spart deutlich),
+            Zapfmenge (bei wenig Verbrauch wiegen Bereitschaftsverluste schwerer) und wie oft der
+            Heizstab läuft (Legionellenschaltung, Schnellaufheizung).
+          </p>
           <p>
             ηwh kommt aus der EU-Ökodesign-Messung (ErP, EN 16147) mit genormtem Zapfprofil
             und Bereitschaftsverlusten. Deshalb sind die Geräte in der Rangliste vergleichbar.

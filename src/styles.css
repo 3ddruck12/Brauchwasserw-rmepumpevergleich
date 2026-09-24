@@ -463,3 +463,23 @@ footer {
 .norm-info { display: inline-flex; align-items: center; padding: 0; border: none; background: none; line-height: 1; cursor: pointer; }
 .norm-info:hover { opacity: 0.75; }
 .infozeichen.warn circle:first-child { fill: var(--warnung); }
+
+/* ---------- Smart Home / Home Assistant ---------- */
+.sh-zelle { display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+.sh-info { display: inline-flex; align-items: center; padding: 0; border: none; background: none; line-height: 1; cursor: pointer; flex-shrink: 0; }
+.sh-info:hover { opacity: 0.75; }
+.ha-zeichen { width: 1.15em; height: 1.15em; display: block; }
+.ha-zeichen path:first-child { fill: var(--gedaempft); }
+.sh-info.mit-ha .ha-zeichen path:first-child { fill: #41bdf5; }
+.sh-info.ha-ww .ha-zeichen path:first-child { fill: #18bcf2; }
+.ha-zeichen circle { fill: var(--grund); }
+.ha-zeichen path + circle ~ path, .ha-zeichen path:last-child { stroke: var(--grund); stroke-width: 1.4; fill: none; stroke-linecap: round; }
+.ha-titel { display: flex; align-items: center; gap: 6px; font-size: 1rem; margin: 6px 0 8px; }
+.ha-titel .ha-zeichen path:first-child { fill: #41bdf5; }
+.ha-liste { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ha-eintrag { border: 1px solid var(--rand); border-radius: 8px; padding: 8px 10px; display: flex; flex-direction: column; gap: 3px; }
+.ha-kopf { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.ha-kopf a { color: var(--akzent); font-weight: 600; }
+.ha-status { font-size: 0.72rem; padding: 1px 8px; border-radius: 10px; background: var(--akzent-hell); color: var(--akzent); white-space: nowrap; }
+.ha-status.ha-core { background: #e3f6fd; color: #0b6e99; }
+.ha-status.ha-modbus, .ha-status.ha-lokal { background: var(--flaeche); color: var(--gedaempft); border: 1px solid var(--rand); }

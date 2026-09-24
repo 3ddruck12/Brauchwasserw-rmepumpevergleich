@@ -8,7 +8,6 @@ import Starthilfe from './Starthilfe.jsx'
 
 const SPEICHER_SCHLUESSEL = 'bwwp-favoriten'
 const THEME_SCHLUESSEL = 'bwwp-theme'
-const START_SCHLUESSEL = 'bwwp-start-gesehen'
 
 function systemTheme() {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
@@ -93,10 +92,7 @@ export default function App() {
   const [exportOffen, setExportOffen] = useState(false)
   const [kaelteWarnungOffen, setKaelteWarnungOffen] = useState(false)
   const [wtInfo, setWtInfo] = useState(null)
-  // Startdialog nur beim ersten Besuch; localStorage kann in Privatfenstern werfen
-  const [starthilfeOffen, setStarthilfeOffen] = useState(() => {
-    try { return localStorage.getItem(START_SCHLUESSEL) !== 'ja' } catch { return true }
-  })
+  const [starthilfeOffen, setStarthilfeOffen] = useState(true)
 
   useEffect(() => {
     const basePath = import.meta.env.BASE_URL
@@ -200,10 +196,7 @@ export default function App() {
     setNurFavoriten(a.filter.nurFavoriten)
   }
 
-  const starthilfeSchliessen = () => {
-    setStarthilfeOffen(false)
-    try { localStorage.setItem(START_SCHLUESSEL, 'ja') } catch { /* egal */ }
-  }
+  const starthilfeSchliessen = () => setStarthilfeOffen(false)
 
   const starthilfeWaehlen = (id, mitWt = false) => {
     const a = ANSICHTEN.find((x) => x.id === id)
@@ -239,7 +232,7 @@ export default function App() {
         </div>
         <div className="kopf-knoepfe">
           <button className="hilfe-auf" onClick={() => setStarthilfeOffen(true)}
-            title="Bauart-Auswahl erneut öffnen">Bauart wählen</button>
+            title="Bauart-Auswahl öffnen">Bauart wählen</button>
           <ThemeSchieber theme={theme} onChange={setTheme} />
         </div>
       </header>

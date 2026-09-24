@@ -353,10 +353,10 @@
       "kaeltemittel": "R-290",
       "preis_eur": null,
       "heizstab_w": null,
-      "kessel_material": null,
+      "kessel_material": "Stahl emailliert",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "elco.de (COP A20/W10-55; A7: 3,5)",
+      "quelle": "elco.de AEROTOP DHW.3 Technische Informationen: 250 L ohne WT, COP 3,5 (A7/W10-55) / 4,1 (A20/W10-55), SCOP 3,58, A+, V40 341,5 L / XL, 48 dB(A) (Silent 41), 1931 × 600 × 680 mm, 81 kg, 2,4 kW, WW 62 °C (bis 75 °C), WLAN + REMOCON NET, PV-Schnittstelle | SYS-Variante: 245 L, WT 0,65 m², 92 kg",
       "cop_a7": 3.5,
       "cop_a15": null,
       "cop_a14": null,
@@ -373,13 +373,21 @@
           "cop_a7": 3.5,
           "cop_a20": 4.1,
           "schallleistung_db": 48.0,
-          "kaeltemittel": "R-290"
+          "kaeltemittel": "R-290",
+          "gewicht_kg": 92
         }
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 4.1,
+      "waermeleistung_kw": 2.4,
+      "ww_max_c": 62,
+      "lastprofil": "XL",
+      "mischwassermenge_v40_l": 341.5,
+      "abmessung_mm": "1931 × 600 × 680",
+      "gewicht_kg": 81,
+      "sg_ready": true,
       "smart_home": {
-        "anschluesse": "PV-Schnittstelle",
+        "anschluesse": "PV-Schnittstelle, I-Memory",
         "wifi": true,
         "app": "REMOCON NET"
       }
@@ -819,10 +827,10 @@
       "kaeltemittel": "R-290",
       "preis_eur": null,
       "heizstab_w": null,
-      "kessel_material": null,
+      "kessel_material": "Stahl emailliert",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "elco.de (COP A20/W10-55; A7: 3,4)",
+      "quelle": "elco.de AEROTOP DHW.3 Technische Informationen: 200 L ohne WT, COP 3,4 (A7/W10-55) / 3,8 (A20/W10-55), SCOP 3,36, A+, V40 272,8 L / L, 48 dB(A) (Silent 41), 1671 × 600 × 680 mm, 72 kg, 2,4 kW, WW 62 °C (bis 75 °C), WLAN + REMOCON NET, PV-Schnittstelle",
       "cop_a7": 3.4,
       "cop_a15": null,
       "cop_a14": null,
@@ -835,8 +843,15 @@
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 3.8,
+      "waermeleistung_kw": 2.4,
+      "ww_max_c": 62,
+      "lastprofil": "L",
+      "mischwassermenge_v40_l": 272.8,
+      "abmessung_mm": "1671 × 600 × 680",
+      "gewicht_kg": 72,
+      "sg_ready": true,
       "smart_home": {
-        "anschluesse": "PV-Schnittstelle",
+        "anschluesse": "PV-Schnittstelle, I-Memory",
         "wifi": true,
         "app": "REMOCON NET"
       }

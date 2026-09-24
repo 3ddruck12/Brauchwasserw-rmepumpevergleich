@@ -4,78 +4,6 @@
   "quellen_hinweis": "GET-Produktdatenbank (Gruppe 396), Herstellerdatenblätter und Händlerpreise. COP-Werte sind nach Messbasis getrennt, weil Hersteller unterschiedliche Lufteintrittstemperaturen angeben.",
   "modelle": [
     {
-      "id": "ochsner-europa-n-300-r-ca",
-      "name": "OCHSNER EUROPA N 300 R CA",
-      "marke": "OCHSNER",
-      "bauart": "bodenstehend",
-      "volumen_l": 294.0,
-      "eta_wh": 177.3,
-      "eff_klasse": "A++",
-      "schallleistung_db": 59.0,
-      "bereitschaftsverlust_kwh_tag": 0.0,
-      "kaeltemittel": "R-290",
-      "preis_eur": 3488.99,
-      "heizstab_w": 1500.0,
-      "kessel_material": "Stahl emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": "02.04.2028",
-      "quelle": "GET-DB + OCHSNER-Datenblatt (ηwh_m × Faktor; COP lt. Hersteller 4,34 bei A20) · WT 0,9 m² | Preis: heat-store.de, Stand 09/2026",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": 4.34,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "R",
-        "flaeche_m2": 0.9
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 4.433,
-      "sg_ready": true,
-      "smart_home": {
-        "anschluesse": "WLAN integriert, 2 Eingänge (SG Ready/EVU)",
-        "wifi": true,
-        "app": "OCHSNER EASY"
-      }
-    },
-    {
-      "id": "stiebel-eltron-wwk-i-300-w-plus",
-      "name": "Stiebel Eltron WWK-I 300 W Plus",
-      "marke": "Stiebel Eltron",
-      "bauart": "bodenstehend",
-      "volumen_l": 294.0,
-      "eta_wh": 177.3,
-      "eff_klasse": "A++",
-      "schallleistung_db": 59.0,
-      "bereitschaftsverlust_kwh_tag": 0.0,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2966.01,
-      "heizstab_w": 1500,
-      "kessel_material": "emailliert",
-      "anode": "Signalanode (Opferanode)",
-      "ehpa_guetesiegel": "23.01.2028",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de, Stand 09/2026",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "W",
-        "flaeche_m2": 0.9
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 4.433,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": true,
-        "app": "MyStiebel",
-        "anschluesse": "SG Ready (2 Eingänge), WLAN integriert"
-      }
-    },
-    {
       "id": "stiebel-eltron-wwk-i-200-plus",
       "name": "Stiebel Eltron WWK-I 200 Plus",
       "marke": "Stiebel Eltron",
@@ -206,12 +134,25 @@
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
-      "cop_a20": null,
+      "cop_a20": 4.34,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "R",
+        "flaeche_m2": 0.9,
+        "variante_modell": {
+          "name": "OCHSNER EUROPA N 300 R CA",
+          "volumen_l": 294.0,
+          "eta_wh": 177.3,
+          "eff_klasse": "A++",
+          "cop_a20": 4.34,
+          "schallleistung_db": 59.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 3488.99
+        },
+        "uebernommen": [
+          "cop_a20"
+        ]
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 4.295,
@@ -245,9 +186,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "SOL",
+        "flaeche_m2": 0.9,
+        "variante_modell": {
+          "name": "Stiebel Eltron WWK-I 300 W Plus",
+          "volumen_l": 294.0,
+          "eta_wh": 177.3,
+          "eff_klasse": "A++",
+          "schallleistung_db": 59.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2719.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 4.295,
@@ -281,9 +231,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "T2H",
+        "flaeche_m2": 0.8,
+        "variante_modell": {
+          "name": "Viessmann Vitocal 262-A T2H-R290",
+          "volumen_l": 300.0,
+          "eta_wh": 139.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 48.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 3519.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 4.125,
@@ -317,44 +276,16 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 4.125,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": false,
-        "anschluesse": "PV-Schaltkontakt; Modbus nur für Energiezähler; nicht ViCare-fähig"
-      }
-    },
-    {
-      "id": "viessmann-vitocal-262-a-t2h-ze-300l",
-      "name": "Viessmann Vitocal 262-A T2H-ze 300l",
-      "marke": "Viessmann",
-      "bauart": "bodenstehend",
-      "volumen_l": 300.0,
-      "eta_wh": 165.0,
-      "eff_klasse": "A++",
-      "schallleistung_db": 53.0,
-      "bereitschaftsverlust_kwh_tag": 0.7,
-      "kaeltemittel": null,
-      "preis_eur": null,
-      "heizstab_w": null,
-      "kessel_material": "emailliert (Ceraprotect)",
-      "anode": "Magnesiumanode (elektr. überwacht)",
-      "ehpa_guetesiegel": "21.02.2024",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "T2H",
-        "flaeche_m2": 0.9
+        "flaeche_m2": 0.9,
+        "variante_modell": {
+          "name": "Viessmann Vitocal 262-A T2H-ze 300l",
+          "volumen_l": 300.0,
+          "eta_wh": 165.0,
+          "eff_klasse": "A++",
+          "schallleistung_db": 53.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 4.125,
@@ -387,9 +318,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "WT",
+        "flaeche_m2": 1.2,
+        "variante_modell": {
+          "name": "Austria Email Explorer Evo 3 270L WT",
+          "volumen_l": 270.0,
+          "eta_wh": 162.0,
+          "eff_klasse": "A++",
+          "schallleistung_db": 47.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2119.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 4.1,
@@ -423,44 +363,18 @@
       "cop_a20": 4.1,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 4.1,
-      "smart_home": {
-        "anschluesse": "PV-Schnittstelle",
-        "wifi": true,
-        "app": "REMOCON NET"
-      }
-    },
-    {
-      "id": "elco-aerotop-dhw-3-250-sys",
-      "name": "ELCO AEROTOP DHW.3 250 SYS",
-      "marke": "ELCO",
-      "bauart": "bodenstehend",
-      "volumen_l": 245.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 48.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": null,
-      "heizstab_w": null,
-      "kessel_material": null,
-      "anode": null,
-      "ehpa_guetesiegel": null,
-      "quelle": "elco.de (COP A20/W10-55; A7: 3,5) · WT 0,65 m²",
-      "cop_a7": 3.5,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": 4.1,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "SYS",
-        "flaeche_m2": 0.65
+        "flaeche_m2": 0.65,
+        "variante_modell": {
+          "name": "ELCO AEROTOP DHW.3 250 SYS",
+          "volumen_l": 245.0,
+          "eff_klasse": "A+",
+          "cop_a7": 3.5,
+          "cop_a20": 4.1,
+          "schallleistung_db": 48.0,
+          "kaeltemittel": "R-290"
+        }
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 4.1,
@@ -493,85 +407,23 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 4.075,
-      "sg_ready": true,
-      "smart_home": {
-        "anschluesse": "PV-Funktion / SmartGrid-Ready"
-      }
-    },
-    {
-      "id": "boesch-mcb270r-l",
-      "name": "Bösch MCB270R-L",
-      "marke": "Bösch",
-      "bauart": "bodenstehend",
-      "volumen_l": 260.0,
-      "eta_wh": 163.0,
-      "eff_klasse": "A++",
-      "schallleistung_db": 47.0,
-      "bereitschaftsverlust_kwh_tag": 0.0,
-      "kaeltemittel": "R-290",
-      "preis_eur": null,
-      "heizstab_w": null,
-      "kessel_material": null,
-      "anode": null,
-      "ehpa_guetesiegel": "19.02.2028",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "R",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Bösch MCB270R-L",
+          "volumen_l": 260.0,
+          "eta_wh": 163.0,
+          "eff_klasse": "A++",
+          "schallleistung_db": 47.0,
+          "kaeltemittel": "R-290"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 4.075,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "PV-Funktion / SmartGrid-Ready"
-      }
-    },
-    {
-      "id": "austria-email-explorer-evo-3-270l-wt",
-      "name": "Austria Email Explorer Evo 3 270L WT",
-      "marke": "Austria Email",
-      "bauart": "bodenstehend",
-      "volumen_l": 270.0,
-      "eta_wh": 162.0,
-      "eff_klasse": "A++",
-      "schallleistung_db": 47.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2119.0,
-      "heizstab_w": 1200.0,
-      "kessel_material": "emailliert",
-      "anode": "ACI-Hybrid (Titan/Mg)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor) – Klasse aus ηwh 162 % bei Lastprofil XL (Shop nannte A) · WT 1,2 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "WT",
-        "flaeche_m2": 1.2
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 4.05,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": true,
-        "app": "Cozytouch",
-        "anschluesse": "PV-Kontakt"
       }
     },
     {
@@ -597,45 +449,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.91,
-      "smart_home": {
-        "wifi": "optional",
-        "anschluesse": "PV-Kontakt (1 Eingang), WiFi-Stick optional",
-        "app": "REMKO Smart-Web"
-      },
-      "sg_ready": false
-    },
-    {
-      "id": "remko-rbw-302-pro-pv-s",
-      "name": "Remko RBW 302 Pro-PV-S",
-      "marke": "Remko",
-      "bauart": "bodenstehend",
-      "volumen_l": 280.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 53.8,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2658.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "badexo.de (COP A14/W53) · WT 1,5 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": 3.91,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "S",
-        "flaeche_m2": 1.5
+        "flaeche_m2": 1.5,
+        "variante_modell": {
+          "name": "Remko RBW 302 Pro-PV-S",
+          "volumen_l": 280.0,
+          "eff_klasse": "A+",
+          "cop_a14": 3.91,
+          "schallleistung_db": 53.8,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2658.0
+        }
       },
       "scop_basis": "cop_a14",
       "scop_tabelle": 3.91,
@@ -792,7 +617,7 @@
       "marke": "Vaillant",
       "bauart": "bodenstehend",
       "volumen_l": 260.0,
-      "eta_wh": null,
+      "eta_wh": 135.0,
       "eff_klasse": "A+",
       "schallleistung_db": 54.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -809,9 +634,21 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "BM",
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Vaillant aroSTOR plus VWL BM 260/6",
+          "volumen_l": 252.0,
+          "eta_wh": 135.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 54.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2549.0
+        },
+        "uebernommen": [
+          "eta_wh"
+        ]
       },
       "scop_basis": "cop_a14",
       "scop_tabelle": 3.86,
@@ -950,43 +787,17 @@
       "cop_a20": null,
       "cop_unspezifisch": 3.8,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.8,
-      "smart_home": {
-        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "tesy-aquathermica-pro-hpwh-4-11-fs-260-u-02-s-306267",
-      "name": "Tesy AquaThermica Pro HPWH 4.11 FS 260 U 02 S (306267)",
-      "marke": "Tesy",
-      "bauart": "bodenstehend",
-      "volumen_l": 251.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": null,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1589.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode (Ø 33 × 400 mm)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (CoP DHW) · WT 1,05 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": 3.8,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "S",
-        "flaeche_m2": 1.05
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Tesy AquaThermica Pro HPWH 4.11 FS 260 U 02 S (306267)",
+          "volumen_l": 251.0,
+          "eff_klasse": "A+",
+          "cop_unspezifisch": 3.8,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1589.0
+        }
       },
       "scop_basis": "cop_unspezifisch",
       "scop_tabelle": 3.8,
@@ -1053,9 +864,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "C",
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Panasonic Aquarea P-DHW260CAE5",
+          "volumen_l": 251.0,
+          "eta_wh": 148.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 50.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1955.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.75,
@@ -1160,9 +980,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "C",
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Panasonic Aquarea P-DHW200CAE5",
+          "volumen_l": 194.0,
+          "eta_wh": 148.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 50.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1889.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.725,
@@ -1238,78 +1067,6 @@
       "sg_ready": true
     },
     {
-      "id": "panasonic-aquarea-p-dhw200cae5",
-      "name": "Panasonic Aquarea P-DHW200CAE5",
-      "marke": "Panasonic",
-      "bauart": "bodenstehend",
-      "volumen_l": 194.0,
-      "eta_wh": 148.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 50.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1889.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode (Trockenkontrolle)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "C",
-        "flaeche_m2": 1.05
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.7,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "Comfort Cloud",
-        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "panasonic-aquarea-p-dhw260cae5",
-      "name": "Panasonic Aquarea P-DHW260CAE5",
-      "marke": "Panasonic",
-      "bauart": "bodenstehend",
-      "volumen_l": 251.0,
-      "eta_wh": 148.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 50.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1955.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode (Trockenkontrolle)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "C",
-        "flaeche_m2": 1.05
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.7,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "Comfort Cloud",
-        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
-      },
-      "sg_ready": true
-    },
-    {
       "id": "styleboiler-futura-eco-x-200",
       "name": "Styleboiler Futura Eco X 200",
       "marke": "Styleboiler",
@@ -1332,44 +1089,18 @@
       "cop_a20": null,
       "cop_unspezifisch": 3.69,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.69,
-      "smart_home": {
-        "wifi": true,
-        "app": "Smart Life",
-        "anschluesse": "Digitaleingang (PV)"
-      }
-    },
-    {
-      "id": "styleboiler-futura-eco-x-1-wt-200-w",
-      "name": "Styleboiler Futura Eco X 1 WT 200 W",
-      "marke": "Styleboiler",
-      "bauart": "bodenstehend",
-      "volumen_l": 207.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 51.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1659.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "Edelstahl (Duplex 2205)",
-      "anode": "Fremdstromanode (Titan)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP Hersteller)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": 3.69,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "WT",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Styleboiler Futura Eco X 1 WT 200 W",
+          "volumen_l": 207.0,
+          "eff_klasse": "A+",
+          "cop_unspezifisch": 3.69,
+          "schallleistung_db": 51.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1659.0
+        }
       },
       "scop_basis": "cop_unspezifisch",
       "scop_tabelle": 3.69,
@@ -1436,9 +1167,18 @@
       "cop_a20": 3.67,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "HE",
+        "flaeche_m2": 0.9,
+        "variante_modell": {
+          "name": "Wolf FHS-280-HE",
+          "volumen_l": 270.0,
+          "eff_klasse": "A+",
+          "cop_a20": 3.15,
+          "schallleistung_db": 58.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2749.0
+        }
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 3.67,
@@ -1467,15 +1207,27 @@
       "anode": "Magnesium-Schutzanode (von außen messbar)",
       "ehpa_guetesiegel": null,
       "quelle": "HD24 (COP A14/W55)",
-      "cop_a7": null,
+      "cop_a7": 3.09,
       "cop_a15": null,
       "cop_a14": 3.66,
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "BM",
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Vaillant aroSTOR plus VWL BM 200/6",
+          "volumen_l": 194.0,
+          "eff_klasse": "A+",
+          "cop_a7": 3.09,
+          "schallleistung_db": 54.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2498.0
+        },
+        "uebernommen": [
+          "cop_a7"
+        ]
       },
       "scop_basis": "cop_a14",
       "scop_tabelle": 3.66,
@@ -1615,9 +1367,19 @@
       "cop_a20": 3.63,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "S",
+        "flaeche_m2": 0.93,
+        "variante_modell": {
+          "name": "Brötje BTW S 200 B",
+          "volumen_l": 188.0,
+          "eff_klasse": "A+",
+          "cop_a7": 3.09,
+          "cop_a20": 3.63,
+          "schallleistung_db": 49.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2945.41
+        }
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 3.63,
@@ -1649,43 +1411,18 @@
       "cop_a20": 3.63,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.63,
-      "smart_home": {
-        "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "broetje-btw-s-200-b",
-      "name": "Brötje BTW S 200 B",
-      "marke": "Brötje",
-      "bauart": "bodenstehend",
-      "volumen_l": 188.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 49.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2945.41,
-      "heizstab_w": 1800.0,
-      "kessel_material": "emailliert (Keramikbeschichtung)",
-      "anode": "Titan-Kathodenschutzanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "heat-store.de (COP A20/Raumluft; A7: 3,09)",
-      "cop_a7": 3.09,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": 3.63,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "S",
-        "flaeche_m2": 0.93
+        "flaeche_m2": 0.93,
+        "variante_modell": {
+          "name": "Brötje BTW S 250 B",
+          "volumen_l": 243.0,
+          "eff_klasse": "A+",
+          "cop_a20": 3.54,
+          "schallleistung_db": 49.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 3130.15
+        }
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 3.63,
@@ -1717,43 +1454,17 @@
       "cop_a20": null,
       "cop_unspezifisch": 3.6,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.6,
-      "smart_home": {
-        "anschluesse": "PV/SG-Eingang (1 Kontakt)"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "tesy-aquathermica-pro-hpwh-4-11-fs-200-u-02-s-306268",
-      "name": "Tesy AquaThermica Pro HPWH 4.11 FS 200 U 02 S (306268)",
-      "marke": "Tesy",
-      "bauart": "bodenstehend",
-      "volumen_l": 194.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": null,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1559.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode (Ø 33 × 400 mm)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (CoP DHW) · WT 1,05 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": 3.6,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "S",
-        "flaeche_m2": 1.05
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Tesy AquaThermica Pro HPWH 4.11 FS 200 U 02 S (306268)",
+          "volumen_l": 194.0,
+          "eff_klasse": "A+",
+          "cop_unspezifisch": 3.6,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1559.0
+        }
       },
       "scop_basis": "cop_unspezifisch",
       "scop_tabelle": 3.6,
@@ -1887,84 +1598,23 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.6,
-      "smart_home": {
-        "anschluesse": "PV-/EVU-Kontakt"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "stiebel-eltron-wwk-300-electronic-sol",
-      "name": "Stiebel Eltron WWK 300 electronic SOL",
-      "marke": "Stiebel Eltron",
-      "bauart": "bodenstehend",
-      "volumen_l": 291.0,
-      "eta_wh": 144.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 60.0,
-      "bereitschaftsverlust_kwh_tag": 1.6,
-      "kaeltemittel": "R-134a",
-      "preis_eur": 2639.0,
-      "heizstab_w": 1500,
-      "kessel_material": "emailliert (Spezialemaillierung)",
-      "anode": "Fremdstromanode",
-      "ehpa_guetesiegel": "18.11.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de; Heizstab wie baugleiche AEG WPT 300 EL plus, Stand 09/2026",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "SOL",
-        "flaeche_m2": 1.3
+        "flaeche_m2": 1.3,
+        "variante_modell": {
+          "name": "Stiebel Eltron WWK 300 electronic SOL",
+          "volumen_l": 291.0,
+          "eta_wh": 144.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 60.0,
+          "kaeltemittel": "R-134a",
+          "preis_eur": 2639.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.6,
       "smart_home": {
         "anschluesse": "PV-/EVU-Kontakt"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "haier-hp200m7c-f9",
-      "name": "Haier HP200M7C-F9",
-      "marke": "Haier",
-      "bauart": "bodenstehend",
-      "volumen_l": 185.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 50.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1439.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "elektronische Anode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24/Haier-Datenblatt (COP 14 °C) – Klasse lt. Haier A+, HD24 nennt fälschlich A+++ | baugleich als „Kwikot by Haier“ Kwikot HP200M7C-F9 vertrieben (klimacorner.de: 1516.01 €)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": 3.55,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "C",
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.55,
-      "smart_home": {
-        "wifi": true,
-        "app": "hOn",
-        "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
       },
       "sg_ready": true
     },
@@ -2003,40 +1653,6 @@
       "sg_ready": true
     },
     {
-      "id": "broetje-btw-s-250-b",
-      "name": "Brötje BTW S 250 B",
-      "marke": "Brötje",
-      "bauart": "bodenstehend",
-      "volumen_l": 243.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 49.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 3130.15,
-      "heizstab_w": 1800.0,
-      "kessel_material": "emailliert (Keramikbeschichtung)",
-      "anode": "Titan-Kathodenschutzanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "haustec.de (COP max., Raumluft)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": 3.54,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "S",
-        "flaeche_m2": 0.93
-      },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.54,
-      "smart_home": {
-        "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
-      },
-      "sg_ready": true
-    },
-    {
       "id": "aeg-wpt-300-el",
       "name": "AEG WPT 300 EL",
       "marke": "AEG",
@@ -2059,43 +1675,17 @@
       "cop_a20": 3.51,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.51,
-      "smart_home": {
-        "anschluesse": "PV-/EVU-Kontakt (2. Solltemperatur)"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "aeg-wpt-300-el-plus",
-      "name": "AEG WPT 300 EL plus",
-      "marke": "AEG",
-      "bauart": "bodenstehend",
-      "volumen_l": 291.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 60.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": null,
-      "preis_eur": 1998.0,
-      "heizstab_w": 1500,
-      "kessel_material": "Stahl emailliert",
-      "anode": null,
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": 3.51,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "plus",
-        "flaeche_m2": 1.3
+        "flaeche_m2": 1.3,
+        "variante_modell": {
+          "name": "AEG WPT 300 EL plus",
+          "volumen_l": 291.0,
+          "eff_klasse": "A+",
+          "cop_a20": 3.51,
+          "schallleistung_db": 60.0,
+          "preis_eur": 1998.0
+        }
       },
       "scop_basis": "cop_a20",
       "scop_tabelle": 3.51,
@@ -2127,9 +1717,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "C",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Haier HP200M7C-F9",
+          "volumen_l": 185.0,
+          "eff_klasse": "A+",
+          "cop_a14": 3.55,
+          "schallleistung_db": 50.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1439.0
+        }
       },
       "scop_basis": "cop_a14",
       "scop_tabelle": 3.5,
@@ -2211,42 +1810,6 @@
       "sg_ready": true
     },
     {
-      "id": "viessmann-vitocal-262-a-t2h-r290",
-      "name": "Viessmann Vitocal 262-A T2H-R290",
-      "marke": "Viessmann",
-      "bauart": "bodenstehend",
-      "volumen_l": 300.0,
-      "eta_wh": 139.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 48.0,
-      "bereitschaftsverlust_kwh_tag": 0.0,
-      "kaeltemittel": "R-290",
-      "preis_eur": 3519.0,
-      "heizstab_w": null,
-      "kessel_material": "emailliert (Ceraprotect)",
-      "anode": "Magnesiumanode (elektr. überwacht)",
-      "ehpa_guetesiegel": "08.04.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "T2H",
-        "flaeche_m2": 0.8
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.475,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": true,
-        "app": "ViCare",
-        "anschluesse": "PV-Schaltkontakt, Niedertarif-Anschluss"
-      }
-    },
-    {
       "id": "kermi-x-change-aqua-eco-xl",
       "name": "Kermi x-change aqua eco XL",
       "marke": "Kermi",
@@ -2304,45 +1867,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.45,
-      "smart_home": {
-        "wifi": true,
-        "app": "hOn",
-        "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "haier-hp250m7c-f9",
-      "name": "Haier HP250M7C-F9",
-      "marke": "Haier",
-      "bauart": "bodenstehend",
-      "volumen_l": 240.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 50.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1549.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "elektronische Anode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24/Haier-Datenblatt (COP 14 °C) – Klasse lt. Haier A+, HD24 nennt fälschlich A+++ | baugleich als „Kwikot by Haier“ Kwikot HP250M7C-F9 vertrieben (klimacorner.de: 1740.63 €)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": 3.45,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "C",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Haier HP250M7C-F9",
+          "volumen_l": 240.0,
+          "eff_klasse": "A+",
+          "cop_a14": 3.45,
+          "schallleistung_db": 50.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1549.0
+        }
       },
       "scop_basis": "cop_a14",
       "scop_tabelle": 3.45,
@@ -2376,45 +1912,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.45,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "Onecta",
-        "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "daikin-altherma-m-hw-260-biv-ekhhe260pcv37",
-      "name": "Daikin Altherma M HW 260 Biv (EKHHE260PCV37)",
-      "marke": "Daikin",
-      "bauart": "bodenstehend",
-      "volumen_l": 247.0,
-      "eta_wh": 138.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 51.0,
-      "bereitschaftsverlust_kwh_tag": 71.0,
-      "kaeltemittel": "R-134a",
-      "preis_eur": 2098.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emaillierter Stahl",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor) · WT 0,72 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "Biv",
-        "flaeche_m2": 0.72
+        "flaeche_m2": 0.72,
+        "variante_modell": {
+          "name": "Daikin Altherma M HW 260 Biv (EKHHE260PCV37)",
+          "volumen_l": 247.0,
+          "eta_wh": 138.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 51.0,
+          "kaeltemittel": "R-134a",
+          "preis_eur": 2098.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.45,
@@ -2448,43 +1957,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.425,
-      "sg_ready": true,
-      "smart_home": {
-        "anschluesse": "PV-Funktion / SmartGrid-Ready"
-      }
-    },
-    {
-      "id": "boesch-mcb270r",
-      "name": "Bösch MCB270R",
-      "marke": "Bösch",
-      "bauart": "bodenstehend",
-      "volumen_l": 260.0,
-      "eta_wh": 137.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 51.0,
-      "bereitschaftsverlust_kwh_tag": 0.0,
-      "kaeltemittel": "R-290",
-      "preis_eur": null,
-      "heizstab_w": null,
-      "kessel_material": null,
-      "anode": null,
-      "ehpa_guetesiegel": "19.02.2028",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "R",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Bösch MCB270R",
+          "volumen_l": 260.0,
+          "eta_wh": 137.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 51.0,
+          "kaeltemittel": "R-290"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.425,
@@ -2497,8 +1980,8 @@
       "id": "viessmann-vitocal-262-a-t2w-r290",
       "name": "Viessmann Vitocal 262-A T2W-R290",
       "marke": "Viessmann",
-      "bauart": "bodenstehend",
-      "volumen_l": 0.0,
+      "bauart": "ohne_kessel",
+      "volumen_l": null,
       "eta_wh": 137.0,
       "eff_klasse": "A+",
       "schallleistung_db": 53.0,
@@ -2509,7 +1992,7 @@
       "kessel_material": "emailliert (Ceraprotect)",
       "anode": "Magnesiumanode (elektr. überwacht)",
       "ehpa_guetesiegel": "08.04.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026 | Wandgerät ohne eigenen Speicher, für vorhandene Speicher 50–500 L",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -2552,9 +2035,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "WWKS",
+        "flaeche_m2": 1.0,
+        "variante_modell": {
+          "name": "Viessmann Vitocal 161-A WWKS 161.A02",
+          "volumen_l": 300.0,
+          "eta_wh": 136.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 56.0,
+          "kaeltemittel": "R-134a"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.4,
@@ -2562,74 +2053,6 @@
         "anschluesse": "PV über Energiezähler (Modbus, Zubehör)"
       },
       "sg_ready": true
-    },
-    {
-      "id": "viessmann-vitocal-161-a-wwks-161-a02",
-      "name": "Viessmann Vitocal 161-A WWKS 161.A02",
-      "marke": "Viessmann",
-      "bauart": "bodenstehend",
-      "volumen_l": 300.0,
-      "eta_wh": 136.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 56.0,
-      "bereitschaftsverlust_kwh_tag": 2.5,
-      "kaeltemittel": "R-134a",
-      "preis_eur": null,
-      "heizstab_w": null,
-      "kessel_material": "emailliert (Ceraprotect)",
-      "anode": null,
-      "ehpa_guetesiegel": "06.11.2019",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "WWKS",
-        "flaeche_m2": 1.0
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.4,
-      "smart_home": {
-        "anschluesse": "PV über Energiezähler (Modbus, Zubehör), Solarregelung"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "vaillant-arostor-plus-vwl-bm-260-6",
-      "name": "Vaillant aroSTOR plus VWL BM 260/6",
-      "marke": "Vaillant",
-      "bauart": "bodenstehend",
-      "volumen_l": 252.0,
-      "eta_wh": 135.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 54.0,
-      "bereitschaftsverlust_kwh_tag": 1.77,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2549.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emaillierter Stahl",
-      "anode": "Magnesium-Schutzanode (von außen messbar)",
-      "ehpa_guetesiegel": "02.12.2028",
-      "quelle": "GET-DB + HD24 · WT 1,05 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "BM",
-        "flaeche_m2": 1.05
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.375,
-      "sg_ready": true,
-      "smart_home": {
-        "anschluesse": "Smart-Grid-/PV-Steckverbindung"
-      }
     },
     {
       "id": "daikin-altherma-m-hw-200-ekhhe200cv37",
@@ -2654,45 +2077,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.375,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "Onecta",
-        "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "daikin-altherma-m-hw-200-biv-ekhhe200pcv37",
-      "name": "Daikin Altherma M HW 200 Biv (EKHHE200PCV37)",
-      "marke": "Daikin",
-      "bauart": "bodenstehend",
-      "volumen_l": 187.0,
-      "eta_wh": 135.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 53.0,
-      "bereitschaftsverlust_kwh_tag": 63.0,
-      "kaeltemittel": "R-134a",
-      "preis_eur": 1869.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emaillierter Stahl",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor) · WT 0,72 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "Biv",
-        "flaeche_m2": 0.72
+        "flaeche_m2": 0.72,
+        "variante_modell": {
+          "name": "Daikin Altherma M HW 200 Biv (EKHHE200PCV37)",
+          "volumen_l": 187.0,
+          "eta_wh": 135.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 53.0,
+          "kaeltemittel": "R-134a",
+          "preis_eur": 1869.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.375,
@@ -2726,45 +2122,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.35,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "HomeCom Easy",
-        "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
-    },
-    {
-      "id": "junkers-bosch-compress-5000-dw-cs5001dw-260-c",
-      "name": "Junkers Bosch Compress 5000 DW CS5001DW 260 C",
-      "marke": "Junkers Bosch",
-      "bauart": "bodenstehend",
-      "volumen_l": 251.0,
-      "eta_wh": 134.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 56.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-513A",
-      "preis_eur": 2729.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "C",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Junkers Bosch Compress 5000 DW CS5001DW 260 C",
+          "volumen_l": 251.0,
+          "eta_wh": 134.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 56.0,
+          "kaeltemittel": "R-513A",
+          "preis_eur": 2729.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.35,
@@ -2875,40 +2244,6 @@
       "scop_tabelle": 3.325
     },
     {
-      "id": "stiebel-eltron-wwk-301-electronic-sol",
-      "name": "Stiebel Eltron WWK 301 electronic SOL",
-      "marke": "Stiebel Eltron",
-      "bauart": "bodenstehend",
-      "volumen_l": 291.0,
-      "eta_wh": 133.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 52.0,
-      "bereitschaftsverlust_kwh_tag": 1.6,
-      "kaeltemittel": "R-134a",
-      "preis_eur": 2999.0,
-      "heizstab_w": 1500,
-      "kessel_material": "emailliert (Spezialemaillierung)",
-      "anode": "Fremdstromanode",
-      "ehpa_guetesiegel": "18.11.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de (Stand 2024), Stand 09/2026",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "SOL",
-        "flaeche_m2": 1.3
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.325,
-      "smart_home": {
-        "anschluesse": "PV-/EVU-Kontakt"
-      },
-      "sg_ready": true
-    },
-    {
       "id": "boesch-mcb200",
       "name": "Bösch MCB200",
       "marke": "Bösch",
@@ -2965,9 +2300,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "SOL",
+        "flaeche_m2": 1.3,
+        "variante_modell": {
+          "name": "Stiebel Eltron WWK 301 electronic SOL",
+          "volumen_l": 291.0,
+          "eta_wh": 133.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 52.0,
+          "kaeltemittel": "R-134a",
+          "preis_eur": 2999.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.3,
@@ -2999,44 +2343,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.3,
-      "smart_home": {
-        "anschluesse": "Smart Grid über Anschluss-Set (Zubehör), Niedertarif",
-        "wifi": false
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "viessmann-vitocal-060-a-t0s-ze-250l",
-      "name": "Viessmann Vitocal 060-A T0S-ze 250l",
-      "marke": "Viessmann",
-      "bauart": "bodenstehend",
-      "volumen_l": 251.0,
-      "eta_wh": 132.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 50.0,
-      "bereitschaftsverlust_kwh_tag": 0.57,
-      "kaeltemittel": "R-1234ze",
-      "preis_eur": null,
-      "heizstab_w": null,
-      "kessel_material": "emailliert (Ceraprotect)",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": "21.02.2024",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "T0S",
-        "flaeche_m2": 1.0
+        "flaeche_m2": 1.0,
+        "variante_modell": {
+          "name": "Viessmann Vitocal 060-A T0S-ze 250l",
+          "volumen_l": 251.0,
+          "eta_wh": 132.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 50.0,
+          "kaeltemittel": "R-1234ze"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.3,
@@ -3069,9 +2386,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "CSC",
+        "flaeche_m2": 1.1,
+        "variante_modell": {
+          "name": "Alarko FLR-HWH-300CSC",
+          "volumen_l": 300.0,
+          "eff_klasse": "A",
+          "cop_a15": 3.13,
+          "schallleistung_db": 51.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1569.0
+        }
       },
       "scop_basis": "cop_a15",
       "scop_tabelle": 3.25,
@@ -3106,45 +2432,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.25,
-      "smart_home": {
-        "wifi": true,
-        "app": "ConnectLife",
-        "anschluesse": "SG-Ready-Eingang"
-      },
-      "sg_ready": true
-    },
-    {
-      "id": "hisense-hi-water-ah-250u4gbc00",
-      "name": "Hisense Hi-Water AH-250U4GBC00",
-      "marke": "Hisense",
-      "bauart": "bodenstehend",
-      "volumen_l": 250.0,
-      "eta_wh": 130.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 53.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": null,
-      "heizstab_w": 2000.0,
-      "kessel_material": "Stahl emailliert",
-      "anode": "Opferanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "Hisense ES (ηwh_m × Faktor, Wert der baugleichen GBB00)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "C",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Hisense Hi-Water AH-250U4GBC00",
+          "volumen_l": 250.0,
+          "eta_wh": 130.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 53.0,
+          "kaeltemittel": "R-290"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.25,
@@ -3178,44 +2476,18 @@
       "cop_a20": null,
       "cop_unspezifisch": 3.24,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.24,
-      "smart_home": {
-        "wifi": true,
-        "app": "Smart Life",
-        "anschluesse": "Digitaleingang (PV)"
-      }
-    },
-    {
-      "id": "styleboiler-futura-eco-x-1-wt-300-w",
-      "name": "Styleboiler Futura Eco X 1 WT 300 W",
-      "marke": "Styleboiler",
-      "bauart": "bodenstehend",
-      "volumen_l": 285.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 51.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2049.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "Edelstahl (Duplex 2205)",
-      "anode": "Fremdstromanode (Titan)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP Hersteller)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": 3.24,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "WT",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Styleboiler Futura Eco X 1 WT 300 W",
+          "volumen_l": 285.0,
+          "eff_klasse": "A+",
+          "cop_unspezifisch": 3.24,
+          "schallleistung_db": 51.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 2049.0
+        }
       },
       "scop_basis": "cop_unspezifisch",
       "scop_tabelle": 3.24,
@@ -3321,9 +2593,17 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "+",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Dimplex DHW 301P+",
+          "volumen_l": 265.0,
+          "eta_wh": 125.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 50.0,
+          "kaeltemittel": "R-290"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.225,
@@ -3506,9 +2786,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "CSC",
+        "flaeche_m2": 0.6,
+        "variante_modell": {
+          "name": "Alarko FLR-HWH-190CSC",
+          "volumen_l": 190.0,
+          "eff_klasse": "A",
+          "cop_a15": 3.14,
+          "schallleistung_db": 51.0,
+          "kaeltemittel": "R-290",
+          "preis_eur": 1389.0
+        }
       },
       "scop_basis": "cop_a15",
       "scop_tabelle": 3.15,
@@ -3518,43 +2807,6 @@
         "app": "NetHome Plus",
         "modbus": true,
         "anschluesse": "SG-Port, RS485-Modbus"
-      }
-    },
-    {
-      "id": "wolf-fhs-280-he",
-      "name": "Wolf FHS-280-HE",
-      "marke": "Wolf",
-      "bauart": "bodenstehend",
-      "volumen_l": 270.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 58.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2749.0,
-      "heizstab_w": 2000.0,
-      "kessel_material": "emaillierter Stahl",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20/W10-55) – Kältemittel lt. HD24 R290, Vorgängerserie R134a",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": 3.15,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "HE",
-        "flaeche_m2": 0.9
-      },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.15,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "myWOLF",
-        "anschluesse": "Modbus RTU (RS485), PV-/Energiemanager-Kontakt, WOLF Link optional",
-        "modbus": true
       }
     },
     {
@@ -3590,115 +2842,6 @@
         "anschluesse": "2 PV-Kontakte (2 Stufen)"
       },
       "sg_ready": true
-    },
-    {
-      "id": "alarko-flr-hwh-190csc",
-      "name": "Alarko FLR-HWH-190CSC",
-      "marke": "Alarko",
-      "bauart": "bodenstehend",
-      "volumen_l": 190.0,
-      "eta_wh": null,
-      "eff_klasse": "A",
-      "schallleistung_db": 51.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1389.0,
-      "heizstab_w": 1640.0,
-      "kessel_material": "Stahl emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
-      "cop_a7": null,
-      "cop_a15": 3.14,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "CSC",
-        "flaeche_m2": 0.6
-      },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.14,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": true,
-        "app": "NetHome Plus",
-        "modbus": true,
-        "anschluesse": "SG-Port, RS485-Modbus"
-      }
-    },
-    {
-      "id": "alarko-flr-hwh-300csc",
-      "name": "Alarko FLR-HWH-300CSC",
-      "marke": "Alarko",
-      "bauart": "bodenstehend",
-      "volumen_l": 300.0,
-      "eta_wh": null,
-      "eff_klasse": "A",
-      "schallleistung_db": 51.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 1569.0,
-      "heizstab_w": 1640.0,
-      "kessel_material": "Stahl emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
-      "cop_a7": null,
-      "cop_a15": 3.13,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "CSC",
-        "flaeche_m2": 1.1
-      },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.13,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": true,
-        "app": "NetHome Plus",
-        "modbus": true,
-        "anschluesse": "SG-Port, RS485-Modbus"
-      }
-    },
-    {
-      "id": "dimplex-dhw-301p-plus",
-      "name": "Dimplex DHW 301P+",
-      "marke": "Dimplex",
-      "bauart": "bodenstehend",
-      "volumen_l": 265.0,
-      "eta_wh": 125.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 50.0,
-      "bereitschaftsverlust_kwh_tag": 0.0,
-      "kaeltemittel": "R-290",
-      "preis_eur": null,
-      "heizstab_w": 1200.0,
-      "kessel_material": "Stahl emailliert",
-      "anode": "Fremdstromanode",
-      "ehpa_guetesiegel": "28.03.2027",
-      "quelle": "GET-DB + Dimplex-Montageanweisung (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "+",
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.125,
-      "sg_ready": true,
-      "smart_home": {
-        "modbus": true,
-        "anschluesse": "PV-Kontakt"
-      }
     },
     {
       "id": "saunier-duval-magna-aqua-270-3c",
@@ -3839,40 +2982,6 @@
         "anschluesse": "2 PV-Kontakte (2 Stufen)"
       },
       "sg_ready": true
-    },
-    {
-      "id": "vaillant-arostor-plus-vwl-bm-200-6",
-      "name": "Vaillant aroSTOR plus VWL BM 200/6",
-      "marke": "Vaillant",
-      "bauart": "bodenstehend",
-      "volumen_l": 194.0,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 54.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-290",
-      "preis_eur": 2498.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emaillierter Stahl",
-      "anode": "Magnesium-Schutzanode (von außen messbar)",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A7/W55) · WT 1,05 m²",
-      "cop_a7": 3.09,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
-        "vorhanden": true,
-        "variante": "BM",
-        "flaeche_m2": 1.05
-      },
-      "scop_basis": "cop_a7",
-      "scop_tabelle": 3.09,
-      "sg_ready": true,
-      "smart_home": {
-        "anschluesse": "Smart-Grid-/PV-Steckverbindung"
-      }
     },
     {
       "id": "hofman-energy-avarma-190-200-l",
@@ -4040,45 +3149,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "HomeCom Easy",
-        "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
-    },
-    {
-      "id": "junkers-bosch-compress-5000-dw-cs5001dw-200-c",
-      "name": "Junkers Bosch Compress 5000 DW CS5001DW 200 C",
-      "marke": "Junkers Bosch",
-      "bauart": "bodenstehend",
-      "volumen_l": 194.0,
-      "eta_wh": 120.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 56.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-513A",
-      "preis_eur": 2655.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor)",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "C",
-        "flaeche_m2": null
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Junkers Bosch Compress 5000 DW CS5001DW 200 C",
+          "volumen_l": 194.0,
+          "eta_wh": 120.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 56.0,
+          "kaeltemittel": "R-513A",
+          "preis_eur": 2655.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.0,
@@ -4112,45 +3194,18 @@
       "cop_a20": null,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
-      },
-      "scop_basis": "eta_wh",
-      "scop_tabelle": 3.0,
-      "sg_ready": true,
-      "smart_home": {
-        "wifi": "optional",
-        "app": "HomeCom Easy",
-        "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
-    },
-    {
-      "id": "buderus-wpt200-4-as-logatherm",
-      "name": "Buderus WPT200.4 AS Logatherm",
-      "marke": "Buderus",
-      "bauart": "bodenstehend",
-      "volumen_l": 194.0,
-      "eta_wh": 120.0,
-      "eff_klasse": "A+",
-      "schallleistung_db": 56.0,
-      "bereitschaftsverlust_kwh_tag": null,
-      "kaeltemittel": "R-513A",
-      "preis_eur": 1919.0,
-      "heizstab_w": 1500.0,
-      "kessel_material": "emailliert",
-      "anode": "Magnesiumanode",
-      "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor) · WT 1,0 m²",
-      "cop_a7": null,
-      "cop_a15": null,
-      "cop_a14": null,
-      "cop_a20": null,
-      "cop_unspezifisch": null,
-      "waermetauscher": {
         "vorhanden": true,
         "variante": "AS",
-        "flaeche_m2": 1.0
+        "flaeche_m2": 1.0,
+        "variante_modell": {
+          "name": "Buderus WPT200.4 AS Logatherm",
+          "volumen_l": 194.0,
+          "eta_wh": 120.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 56.0,
+          "kaeltemittel": "R-513A",
+          "preis_eur": 1919.0
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.0,
@@ -4165,8 +3220,8 @@
       "id": "ochsner-europa-mini-iwpl",
       "name": "OCHSNER EUROPA MINI IWPL",
       "marke": "OCHSNER",
-      "bauart": "bodenstehend",
-      "volumen_l": 357.0,
+      "bauart": "ohne_kessel",
+      "volumen_l": null,
       "eta_wh": 120.0,
       "eff_klasse": "A",
       "schallleistung_db": 57.0,
@@ -4177,7 +3232,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "OCHSNER-Datenblatt (ηwh_m × Faktor, XL; COP 4,00 bei L21, 3,70 bei L15) | Preis: klimaworld.com über geizhals.de; Speicher nicht im Lieferumfang, Stand 09/2026",
+      "quelle": "OCHSNER-Datenblatt (ηwh_m × Faktor, XL; COP 4,00 bei L21, 3,70 bei L15) | Preis: klimaworld.com über geizhals.de; Speicher nicht im Lieferumfang, Stand 09/2026 | Kopfgerät: 357 L war der Speicher der ErP-Prüfung, Speicher bauseits bis 500 L",
       "cop_a7": null,
       "cop_a15": 3.7,
       "cop_a14": null,
@@ -4185,7 +3240,7 @@
       "cop_unspezifisch": null,
       "waermetauscher": {
         "vorhanden": false,
-        "variante": null,
+        "variante": "externer Speicher",
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
@@ -5646,6 +4701,456 @@
         "modbus": true,
         "anschluesse": "LAN"
       }
+    },
+    {
+      "id": "stiebel-eltron-wwk-221-electronic",
+      "name": "Stiebel Eltron WWK 221 electronic",
+      "marke": "Stiebel Eltron",
+      "bauart": "bodenstehend",
+      "volumen_l": 220.0,
+      "eta_wh": null,
+      "eff_klasse": "A+",
+      "schallleistung_db": 52.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": 2788.11,
+      "heizstab_w": 1500,
+      "kessel_material": "emailliert (Spezialemaillierung)",
+      "anode": "Fremdstromanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "stiebel-eltron.at Technisches Datenblatt WWK 221/301 electronic (SOL): 220 L, Lastprofil L, A+, 52 dB(A) mit Luftkanal (60 ohne), Heizstab 1,5 kW, Fremdstromanode; COP-Einzelwert nicht getrennt ausgewiesen (Baureihe A20 3,28–3,75) | Preis: voelkner.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": null,
+      "scop_tabelle": null,
+      "smart_home": {
+        "anschluesse": "PV-/EVU-Kontakt (SmartGrid-Schnittstelle)"
+      },
+      "sg_ready": true,
+      "lastprofil": "L",
+      "abmessung_mm": "Ø 690 × 1501",
+      "gewicht_kg": 120
+    },
+    {
+      "id": "stiebel-eltron-wwk-i-201-k-premium",
+      "name": "Stiebel Eltron WWK-I 201 K Premium",
+      "marke": "Stiebel Eltron",
+      "bauart": "bodenstehend",
+      "volumen_l": 200.0,
+      "eta_wh": null,
+      "eff_klasse": null,
+      "schallleistung_db": null,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "stiebel-eltron.de Pressemitteilung „Premium-Variante der WWK-I“: kanalgeführte Außenluft, R290, 1,5 kW Heizstab (bis 2 kW gesamt bei PV-Überschuss), MyStiebel-App; Markteinführung Ende 2026 – Datenblatt noch nicht veröffentlicht, Volumen analog WWK-I Plus",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": null,
+      "scop_tabelle": null,
+      "smart_home": {
+        "wifi": true,
+        "app": "MyStiebel",
+        "anschluesse": "Außenluft über Luftkanal"
+      },
+      "sg_ready": null
+    },
+    {
+      "id": "stiebel-eltron-wwk-i-301-k-premium",
+      "name": "Stiebel Eltron WWK-I 301 K Premium",
+      "marke": "Stiebel Eltron",
+      "bauart": "bodenstehend",
+      "volumen_l": 300.0,
+      "eta_wh": null,
+      "eff_klasse": null,
+      "schallleistung_db": null,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "stiebel-eltron.de Pressemitteilung „Premium-Variante der WWK-I“: kanalgeführte Außenluft, R290, 1,5 kW Heizstab (bis 2 kW gesamt bei PV-Überschuss), MyStiebel-App; Markteinführung Ende 2026 – Datenblatt noch nicht veröffentlicht, Volumen analog WWK-I Plus",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "SOL",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Stiebel Eltron WWK-I 301 KW Premium",
+          "volumen_l": 294.0
+        }
+      },
+      "scop_basis": null,
+      "scop_tabelle": null,
+      "smart_home": {
+        "wifi": true,
+        "app": "MyStiebel",
+        "anschluesse": "Außenluft über Luftkanal"
+      },
+      "sg_ready": null
+    },
+    {
+      "id": "sunex-drops-4-1",
+      "name": "Sunex DROPS 4.1",
+      "marke": "Sunex",
+      "bauart": "ohne_kessel",
+      "volumen_l": null,
+      "eta_wh": null,
+      "eff_klasse": "A+",
+      "schallleistung_db": 57.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": 1459.0,
+      "heizstab_w": null,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "sunex-deutschland.de DROPS 4.1: COP 3,0 (A15/W10-55), 3,3 (A20/W10-55), R134a 0,60 kg, 57 dB, Kopfgerät für vorhandenen Speicher | Preis: solarcamp24.de (M4.1; D4.1 1.582,90 €), Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": 3.0,
+      "cop_a14": null,
+      "cop_a20": 3.3,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": "externer Speicher",
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_a20",
+      "scop_tabelle": 3.3,
+      "waermeleistung_kw": 1.5,
+      "el_leistung_kw": null,
+      "ww_max_c": 55,
+      "luft_min_c": -7,
+      "luft_max_c": 43,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "Ø 661 × 585",
+      "gewicht_kg": 45,
+      "smart_home": {
+        "anschluesse": "Wochenprogramm, Steuerung M (manuell) oder D (Touch)"
+      },
+      "waermeleistung": "1,5 kW (A20/W10-55)"
+    },
+    {
+      "id": "sunex-drops-4-2",
+      "name": "Sunex DROPS 4.2",
+      "marke": "Sunex",
+      "bauart": "ohne_kessel",
+      "volumen_l": null,
+      "eta_wh": null,
+      "eff_klasse": "A+",
+      "schallleistung_db": 57.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": 1868.9,
+      "heizstab_w": null,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "sunex-deutschland.de DROPS 4.2: COP 3,0 (A15/W10-55), 3,42 (A20/W10-55), R134a 0,80 kg, 57 dB, integrierte Umwälzpumpe, Kopfgerät | Preis: solarcamp24.de (D4.2 1.890 €), Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": 3.0,
+      "cop_a14": null,
+      "cop_a20": 3.42,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": "externer Speicher",
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_a20",
+      "scop_tabelle": 3.42,
+      "waermeleistung_kw": 2.85,
+      "el_leistung_kw": null,
+      "ww_max_c": 55,
+      "luft_min_c": -7,
+      "luft_max_c": 43,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "Ø 670 × 500",
+      "gewicht_kg": 53,
+      "smart_home": {
+        "anschluesse": "Steuerung M (manuell) oder D (Touch)"
+      },
+      "waermeleistung": "2,85 kW (A15/W10-55)"
+    },
+    {
+      "id": "sunex-drops-eco",
+      "name": "Sunex DROPS ECO",
+      "marke": "Sunex",
+      "bauart": "ohne_kessel",
+      "volumen_l": null,
+      "eta_wh": null,
+      "eff_klasse": "A+",
+      "schallleistung_db": 59.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": null,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "sunex-deutschland.de DROPS ECO: COP 3,42 (A15/W10-55), 4,5 (A20/W10-55), R134a 0,70 kg, 59 dB, Plattenwärmetauscher, Kopfgerät; kein Händlerpreis gefunden",
+      "cop_a7": null,
+      "cop_a15": 3.42,
+      "cop_a14": null,
+      "cop_a20": 4.5,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": "externer Speicher",
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_a20",
+      "scop_tabelle": 4.5,
+      "waermeleistung_kw": 3.06,
+      "el_leistung_kw": null,
+      "ww_max_c": 55,
+      "luft_min_c": 5,
+      "luft_max_c": 43,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "655 × 445 × 635",
+      "gewicht_kg": 57,
+      "waermeleistung": "3,06 kW (A15/W10-55), 3,7 kW (A20)"
+    },
+    {
+      "id": "sunex-drops-pro",
+      "name": "Sunex DROPS PRO",
+      "marke": "Sunex",
+      "bauart": "ohne_kessel",
+      "volumen_l": null,
+      "eta_wh": null,
+      "eff_klasse": "A+",
+      "schallleistung_db": 57.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": 1990.0,
+      "heizstab_w": null,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "sunex-deutschland.de / solarcamp24.de DROPS PRO: „COP bis 4,65“ ohne Prüfbedingung, R290 0,15 kg, 57 dB, Kopfgerät | Preis: solarcamp24.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": 4.65,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": "externer Speicher",
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_unspezifisch",
+      "scop_tabelle": 4.65,
+      "waermeleistung_kw": 2.55,
+      "el_leistung_kw": null,
+      "ww_max_c": 70,
+      "luft_min_c": -7,
+      "luft_max_c": 43,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "700 × 550",
+      "gewicht_kg": 46,
+      "smart_home": {
+        "anschluesse": "PV-Anbindung, Zweitarif, Touchpanel"
+      },
+      "waermeleistung": "2,55 kW"
+    },
+    {
+      "id": "a-tronix-200l",
+      "name": "a-TroniX 200L",
+      "marke": "a-TroniX",
+      "bauart": "bodenstehend",
+      "volumen_l": 200.0,
+      "eta_wh": null,
+      "eff_klasse": "A++",
+      "schallleistung_db": 55.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": 1990.0,
+      "heizstab_w": null,
+      "kessel_material": "Edelstahl 316L",
+      "anode": "keine (Edelstahl)",
+      "ehpa_guetesiegel": null,
+      "quelle": "solarcamp24.de a-TroniX 200L (AKKU SYS, Halstenbek): COP 3,61 ohne Prüfbedingung, A++, R290, 55 dB(A), Edelstahl 316L, Heizstab integriert (Leistung nicht angegeben) | Preis: solarcamp24.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": 3.61,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_unspezifisch",
+      "scop_tabelle": 3.61,
+      "waermeleistung_kw": 1.56,
+      "el_leistung_kw": null,
+      "ww_max_c": 70,
+      "luft_min_c": null,
+      "luft_max_c": null,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "560 × 560 × 1750",
+      "gewicht_kg": 90,
+      "smart_home": {
+        "anschluesse": "SG Ready / PV"
+      },
+      "waermeleistung": "1,56 kW",
+      "sg_ready": true
+    },
+    {
+      "id": "a-tronix-300l",
+      "name": "a-TroniX 300L",
+      "marke": "a-TroniX",
+      "bauart": "bodenstehend",
+      "volumen_l": 300.0,
+      "eta_wh": null,
+      "eff_klasse": "A+",
+      "schallleistung_db": 56.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": 2090.0,
+      "heizstab_w": null,
+      "kessel_material": "Edelstahl 316L",
+      "anode": "keine (Edelstahl)",
+      "ehpa_guetesiegel": null,
+      "quelle": "solarcamp24.de a-TroniX 300L (AKKU SYS, Halstenbek): COP 3,80 ohne Prüfbedingung, A+, R290, 56 dB(A), Edelstahl 316L | Preis: solarcamp24.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": 3.8,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_unspezifisch",
+      "scop_tabelle": 3.8,
+      "waermeleistung_kw": 1.58,
+      "el_leistung_kw": null,
+      "ww_max_c": 70,
+      "luft_min_c": null,
+      "luft_max_c": null,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "640 × 640 × 1850",
+      "gewicht_kg": 110,
+      "smart_home": {
+        "anschluesse": "SG Ready / PV"
+      },
+      "waermeleistung": "1,58 kW",
+      "sg_ready": true
+    },
+    {
+      "id": "elix-gm200",
+      "name": "Elix GM200",
+      "marke": "Elix",
+      "bauart": "bodenstehend",
+      "volumen_l": 200.0,
+      "eta_wh": null,
+      "eff_klasse": null,
+      "schallleistung_db": null,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": 1499.0,
+      "heizstab_w": 2500,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "solarcamp24.de Elix GM200: COP 4,0 bei 20 °C, 1.192 kWh/a, WP 394 W, Heizstab 2.500 W, R290, „<42 dB(A)“ (Schalldruck, kein Schallleistungspegel), emailliert | Preis: solarcamp24.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": 4.0,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_a20",
+      "scop_tabelle": 4.0,
+      "waermeleistung_kw": null,
+      "el_leistung_kw": 0.394,
+      "ww_max_c": 75,
+      "luft_min_c": -7,
+      "luft_max_c": 45,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "Ø 650 × 1460",
+      "gewicht_kg": 95,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life"
+      },
+      "jahresstromverbrauch_kwh": 1192
+    },
+    {
+      "id": "elix-gm300",
+      "name": "Elix GM300",
+      "marke": "Elix",
+      "bauart": "bodenstehend",
+      "volumen_l": 300.0,
+      "eta_wh": null,
+      "eff_klasse": null,
+      "schallleistung_db": null,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": 1699.0,
+      "heizstab_w": 2500,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "kaufland.at / solarcamp24.de Elix GM300: COP 4,0 bei 20 °C, 1.206 kWh/a, WP 394 W, Heizstab 2.500 W, R290 150 g, emailliert, Magnesiumanode | Preis: solarcamp24.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": 4.0,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "cop_a20",
+      "scop_tabelle": 4.0,
+      "waermeleistung_kw": null,
+      "el_leistung_kw": 0.394,
+      "ww_max_c": null,
+      "luft_min_c": -7,
+      "luft_max_c": 45,
+      "luftvolumen_m3h": null,
+      "abmessung_mm": "Ø 650 × 1850",
+      "gewicht_kg": 135,
+      "smart_home": {
+        "wifi": true,
+        "app": "Smart Life"
+      },
+      "jahresstromverbrauch_kwh": 1206
     }
   ]
 }

@@ -436,3 +436,20 @@ footer {
   .typ-bild { width: 80px; height: 106px; }
   .hilfe { padding: 20px 16px 16px; }
 }
+
+/* ---------- Info zur Wärmetauscher-Variante ---------- */
+.wt-zelle { display: inline-flex; align-items: center; justify-content: center; gap: 4px; white-space: nowrap; }
+.wt-info {
+  display: inline-flex; align-items: center;
+  padding: 0; border: none; background: none; line-height: 1; cursor: pointer;
+}
+.wt-info:hover { opacity: 0.75; }
+.infozeichen { width: 1.1em; height: 1.1em; display: block; }
+.infozeichen circle:first-child { fill: var(--akzent); }
+.infozeichen path { stroke: var(--grund); stroke-width: 2.4; stroke-linecap: round; fill: none; }
+.infozeichen-punkt { fill: var(--grund); }
+.wt-vergleich { width: 100%; border-collapse: collapse; margin: 4px 0 12px; font-size: 0.88rem; }
+.wt-vergleich th, .wt-vergleich td { padding: 5px 8px; border-bottom: 1px solid var(--rand); text-align: center; }
+.wt-vergleich th[scope='row'] { text-align: left; font-weight: 600; white-space: nowrap; }
+.wt-vergleich thead th { font-size: 0.8rem; color: var(--gedaempft); }
+.wt-vergleich tr.abweichend td { background: var(--akzent-hell); font-weight: 600; }

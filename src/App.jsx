@@ -92,6 +92,7 @@ export default function App() {
   const [hinweiseOffen, setHinweiseOffen] = useState(false)
   const [exportOffen, setExportOffen] = useState(false)
   const [kaelteWarnungOffen, setKaelteWarnungOffen] = useState(false)
+  const [wtInfo, setWtInfo] = useState(null)
   // Startdialog nur beim ersten Besuch; localStorage kann in Privatfenstern werfen
   const [starthilfeOffen, setStarthilfeOffen] = useState(() => {
     try { return localStorage.getItem(START_SCHLUESSEL) !== 'ja' } catch { return true }
@@ -388,6 +389,7 @@ export default function App() {
                       {spaltenZelle(m, s.id, {
                         wert, basis: b, jahreskosten: k.proJahr,
                         onKaelteHinweis: () => setKaelteWarnungOffen(true),
+                        onWtInfo: () => setWtInfo(m),
                       })}
                     </td>
                   ))}
@@ -438,6 +440,8 @@ export default function App() {
           maßgeblich sind die jeweils geltenden F-Gase-Regeln.
         </p>
       </Dialog>
+
+      <WtVarianteDialog modell={wtInfo} onClose={() => setWtInfo(null)} />
 
       <ExportDialog
         offen={exportOffen}
@@ -577,7 +581,7 @@ function spaltenZelle(m, id, extra) {
     case 'jahreskosten': return extra.jahreskosten == null ? '–' : fmt.euro(extra.jahreskosten)
     case 'schallleistung_db': return fmt.db(m.schallleistung_db)
     case 'kaeltemittel': return <KaelteZelle mittel={m.kaeltemittel} onHinweis={extra.onKaelteHinweis} />
-    case 'waermetauscher': return wtZelle(m)
+    case 'waermetauscher': return <WtZelle m={m} onInfo={extra.onWtInfo} />
     case 'sg_ready': return fmt.text(sgReadyText(m))
     case 'smart_home': return <span className="klein">{fmt.text(smartHomeText(m))}</span>
     case 'heizstab_w': return fmt.watt(m.heizstab_w)
@@ -593,6 +597,88 @@ function spaltenZelle(m, id, extra) {
     case 'gewicht_kg': return fmt.kg(m.gewicht_kg)
     default: return fmt.text(m[id])
   }
+}
+
+function Infozeichen() {
+  return (
+    <svg className="infozeichen" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 10.5v6.5" />
+      <circle className="infozeichen-punkt" cx="12" cy="7.2" r="1.1" />
+    </svg>
+  )
+}
+
+function WtZelle({ m, onInfo }) {
+  const wt = m.waermetauscher
+  if (!wt?.variante_modell || !onInfo) return wtZelle(m)
+  return (
+    <span className="wt-zelle">
+      {wt.variante ? `ja (${wt.variante})` : 'ja'}
+      <button type="button" className="wt-info" onClick={onInfo}
+        title={`Variante ${m.waermetauscher.variante_modell.name} – Werte ansehen`}>
+        <Infozeichen />
+      </button>
+    </span>
+  )
+}
+
+const FELD_NAMEN = {
+  eta_wh: 'ηwh', eff_klasse: 'Effizienzklasse', cop_a7: 'COP A7', cop_a14: 'COP A14',
+  cop_a15: 'COP A15', cop_a20: 'COP A20', cop_unspezifisch: 'COP', schallleistung_db: 'Schall',
+  kaeltemittel: 'Kältemittel', heizstab_w: 'Heizstab', sg_ready: 'SG Ready',
+}
+
+function WtVarianteDialog({ modell, onClose }) {
+  const wt = modell?.waermetauscher
+  const v = wt?.variante_modell
+  const zeilen = !v ? [] : [
+    ['Speicher', (x) => fmt.liter(x.volumen_l)],
+    ['ηwh', (x) => (x.eta_wh == null ? '–' : `${fmt.zahl(x.eta_wh, 1)} %`)],
+    ['Effizienzklasse', (x) => fmt.text(x.eff_klasse)],
+    ['COP A20', (x) => fmt.zahl(x.cop_a20)],
+    ['COP A15', (x) => fmt.zahl(x.cop_a15)],
+    ['COP A14', (x) => fmt.zahl(x.cop_a14)],
+    ['COP A7', (x) => fmt.zahl(x.cop_a7)],
+    ['Schallleistung', (x) => fmt.db(x.schallleistung_db)],
+    ['Kältemittel', (x) => fmt.text(x.kaeltemittel)],
+    ['Preis', (x) => fmt.euro(x.preis_eur)],
+  ].map(([label, f]) => [label, f(modell), f(v)])
+    .filter(([, a, b]) => a !== '–' || b !== '–')
+  return (
+    <Dialog offen={!!v} titel="Variante mit Wärmetauscher" onClose={onClose}>
+      {v && (
+        <>
+          <p>
+            Diese Zeile fasst <strong>{modell.name}</strong> und die Variante{' '}
+            <strong>{v.name}</strong> zusammen. In der Tabelle stehen die Werte des Grundmodells.
+          </p>
+          <table className="wt-vergleich">
+            <thead>
+              <tr><th /><th>ohne WT</th><th>mit WT ({wt.variante})</th></tr>
+            </thead>
+            <tbody>
+              {wt.flaeche_m2 != null && (
+                <tr><th scope="row">Wärmetauscher</th><td>–</td><td>{fmt.zahl(wt.flaeche_m2, 2)} m²</td></tr>
+              )}
+              {zeilen.map(([label, a, b]) => (
+                <tr key={label} className={a !== b && a !== '–' && b !== '–' ? 'abweichend' : ''}>
+                  <th scope="row">{label}</th><td>{a}</td><td>{b}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {wt.uebernommen?.length > 0 && (
+            <p className="klein">
+              Beim Grundmodell fehlte {wt.uebernommen.map((k) => FELD_NAMEN[k] || k).join(', ')}.
+              Der Wert in der Tabelle stammt deshalb von der Variante.
+            </p>
+          )}
+          <p className="klein">Hervorgehoben: Werte, die sich zwischen beiden Ausführungen unterscheiden.</p>
+        </>
+      )}
+    </Dialog>
+  )
 }
 
 function wtZelle(m) {

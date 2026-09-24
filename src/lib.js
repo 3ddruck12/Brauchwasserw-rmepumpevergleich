@@ -36,6 +36,13 @@ export function basisKurz(feld) {
   return BASEN.find((b) => b.id === feld)?.kurz ?? '–'
 }
 
+/** EcoDesign ohne ηwh hat kein vergleichbares Lastprofil – nicht in die ErP-Rangliste. */
+export function erpVergleichbar(modell) {
+  if (!modell) return false
+  if (modell.marke === 'ED EcoDesign' && modell.eta_wh == null) return false
+  return true
+}
+
 /** Wärmekosten je kWh und Jahreskosten aus Leistungszahl, Strompreis und Bedarf. */
 export function kosten(wert, strompreis, bedarf) {
   if (!wert) return { proKwh: null, proJahr: null }

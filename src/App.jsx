@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   BASEN, BAUARTEN, VOLUMENKLASSEN, leistungszahl, basisKurz, kosten, fmt,
   bauartLabel, luftbereich, kaeltemittelLaeuftAus, sgReadyText, smartHomeText,
-  alsCsv, alsXlsx, alsPdf, herunterladen,
+  erpVergleichbar, alsCsv, alsXlsx, alsPdf, herunterladen,
 } from './lib.js'
 import Starthilfe from './Starthilfe.jsx'
 
@@ -144,9 +144,10 @@ export default function App() {
   const sortiert = useMemo(() => {
     const wertVon = (m) => {
       const { wert } = leistungszahl(m, basis, scopFaktor)
+      const nurErP = basis === 'auto' || basis === 'eta_wh'
       switch (sortierung.spalte) {
-        case 'leistung': return wert
-        case 'jahreskosten': return kosten(wert, strompreis, bedarf).proJahr
+        case 'leistung': return nurErP && !erpVergleichbar(m) ? null : wert
+        case 'jahreskosten': return nurErP && !erpVergleichbar(m) ? null : kosten(wert, strompreis, bedarf).proJahr
         case 'name': return m.name.toLowerCase()
         case 'eff_klasse': return m.eff_klasse ? -m.eff_klasse.length : null
         case 'waermetauscher': return m.waermetauscher?.vorhanden ? 1 : 0
@@ -369,7 +370,7 @@ export default function App() {
               const { wert, basis: b } = leistungszahl(m, basis, scopFaktor)
               const k = kosten(wert, strompreis, bedarf)
               return (
-                <tr key={m.id} className={wert == null ? 'ohne-wert' : ''}>
+                <tr key={m.id} className={wert == null || ((basis === 'auto' || basis === 'eta_wh') && !erpVergleichbar(m)) ? 'ohne-wert' : ''}>
                   <td className="schmal">
                     <button className={`stern ${favoriten.includes(m.id) ? 'aktiv' : ''}`}
                       onClick={() => favUmschalten(m.id)} title="Als Favorit merken">★</button>

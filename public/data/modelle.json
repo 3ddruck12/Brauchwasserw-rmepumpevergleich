@@ -81,7 +81,7 @@
       "marke": "Kronoterm",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": 172.0,
+      "eta_wh": 163.0,
       "eff_klasse": "A++",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -91,7 +91,7 @@
       "kessel_material": "emailliert",
       "anode": "Doppel-Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "Kronoterm ErP-Datenblatt (ηwh_m × Faktor, A20 Raumluft, XL; A14: 163 %, A7: 149 %) | Preis: jakatehnika.si über ceneje.si (SI, inkl. 22 % MwSt.), Stand 09/2026",
+      "quelle": "Kronoterm ErP-Datenblatt (ηwh_m × Faktor, A20 Raumluft, XL; A14: 163 %, A7: 149 %) | Preis: jakatehnika.si über ceneje.si (SI, inkl. 22 % MwSt.), Stand 09/2026 | EPREL 2659204: ηwh 163 % (vorher 172 %), Lastprofil XL; EPREL-Eintrag „exhaust air“",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -105,14 +105,15 @@
       "scop_basis": "eta_wh",
       "eta_wh_a14": 163.0,
       "eta_wh_a7": 149.0,
-      "scop_tabelle": 4.3,
+      "scop_tabelle": 4.075,
       "sg_ready": true,
       "smart_home": {
         "wifi": "optional",
         "modbus": true,
         "anschluesse": "Modbus RTU (RS485), Bluetooth",
         "app": "CLOUD.KRONOTERM (angekündigt)"
-      }
+      },
+      "lastprofil": "XL"
     },
     {
       "id": "ochsner-europa-n-300-ca",
@@ -214,7 +215,7 @@
       "marke": "Viessmann",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": 165.0,
+      "eta_wh": 139.0,
       "eff_klasse": "A++",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": 0.7,
@@ -224,7 +225,7 @@
       "kessel_material": "emailliert (Ceraprotect)",
       "anode": "Magnesiumanode (elektr. überwacht)",
       "ehpa_guetesiegel": "08.04.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: unidomo.de, Stand 09/2026 | EPREL 2516529: ηwh 139 % (vorher 165.0 %), Lastprofil XL; T2H-Variante laut EPREL 7098379: 165 %",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -237,7 +238,7 @@
         "variante_modell": {
           "name": "Viessmann Vitocal 262-A T2H-R290",
           "volumen_l": 300.0,
-          "eta_wh": 139.0,
+          "eta_wh": 165.0,
           "eff_klasse": "A+",
           "schallleistung_db": 48.0,
           "kaeltemittel": "R-290",
@@ -245,13 +246,14 @@
         }
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.125,
+      "scop_tabelle": 3.475,
       "sg_ready": true,
       "smart_home": {
         "wifi": true,
         "app": "ViCare",
         "anschluesse": "PV-Schaltkontakt, Niedertarif-Anschluss"
-      }
+      },
+      "lastprofil": "XL"
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-ze-300l",
@@ -346,7 +348,7 @@
       "marke": "ELCO",
       "bauart": "bodenstehend",
       "volumen_l": 250.0,
-      "eta_wh": null,
+      "eta_wh": 144.0,
       "eff_klasse": "A+",
       "schallleistung_db": 48.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -356,7 +358,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "elco.de AEROTOP DHW.3 Technische Informationen: 250 L ohne WT, COP 3,5 (A7/W10-55) / 4,1 (A20/W10-55), SCOP 3,58, A+, V40 341,5 L / XL, 48 dB(A) (Silent 41), 1931 × 600 × 680 mm, 81 kg, 2,4 kW, WW 62 °C (bis 75 °C), WLAN + REMOCON NET, PV-Schnittstelle | SYS-Variante: 245 L, WT 0,65 m², 92 kg",
+      "quelle": "elco.de AEROTOP DHW.3 Technische Informationen: 250 L ohne WT, COP 3,5 (A7/W10-55) / 4,1 (A20/W10-55), SCOP 3,58, A+, V40 341,5 L / XL, 48 dB(A) (Silent 41), 1931 × 600 × 680 mm, 81 kg, 2,4 kW, WW 62 °C (bis 75 °C), WLAN + REMOCON NET, PV-Schnittstelle | SYS-Variante: 245 L, WT 0,65 m², 92 kg | EPREL 2563382 („AEROTOP DHW FS 250.3“): ηwh 144 %, Lastprofil XL, 1162 kWh/a, Klasse A+, 48 dB(A) – SYS-Variante EPREL 2563383 identisch",
       "cop_a7": 3.5,
       "cop_a15": null,
       "cop_a14": null,
@@ -377,8 +379,8 @@
           "gewicht_kg": 92
         }
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 4.1,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.6,
       "waermeleistung_kw": 2.4,
       "ww_max_c": 62,
       "lastprofil": "XL",
@@ -390,7 +392,8 @@
         "anschluesse": "PV-Schnittstelle, I-Memory",
         "wifi": true,
         "app": "REMOCON NET"
-      }
+      },
+      "jahresstromverbrauch_kwh": 1162
     },
     {
       "id": "boesch-mcb270-l",
@@ -398,7 +401,7 @@
       "marke": "Bösch",
       "bauart": "bodenstehend",
       "volumen_l": 260.0,
-      "eta_wh": 163.0,
+      "eta_wh": 142.0,
       "eff_klasse": "A++",
       "schallleistung_db": 47.0,
       "bereitschaftsverlust_kwh_tag": 0.0,
@@ -408,7 +411,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": "19.02.2028",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | EPREL 2650808: ηwh 142 % (vorher 163 %), Lastprofil XL",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -428,11 +431,12 @@
         }
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 4.075,
+      "scop_tabelle": 3.55,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "PV-Funktion / SmartGrid-Ready"
-      }
+      },
+      "lastprofil": "XL"
     },
     {
       "id": "remko-rbw-302-pro-pv",
@@ -440,7 +444,7 @@
       "marke": "Remko",
       "bauart": "bodenstehend",
       "volumen_l": 287.0,
-      "eta_wh": 142.2,
+      "eta_wh": 163.0,
       "eff_klasse": "A+",
       "schallleistung_db": 53.8,
       "bereitschaftsverlust_kwh_tag": null,
@@ -450,7 +454,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "badexo.de (COP A14/W53) | ηwh 142,2 %: ErP-Datenblatt, Lastprofil XL, 1178 kWh/a; Remko Bedienungs-/Installationsanleitung RBW 302 Pro-PV – Außenluft A7; Innenluft A14: 163 % / 1030 kWh",
+      "quelle": "badexo.de (COP A14/W53) | ηwh 142,2 %: ErP-Datenblatt, Lastprofil XL, 1178 kWh/a; Remko Bedienungs-/Installationsanleitung RBW 302 Pro-PV – Außenluft A7; Innenluft A14: 163 % / 1030 kWh | EPREL 2607518: ηwh 163 % (vorher 142.2 %), Lastprofil XL; Innenluftwert A14",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.91,
@@ -471,7 +475,7 @@
         }
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.555,
+      "scop_tabelle": 4.075,
       "smart_home": {
         "wifi": "optional",
         "anschluesse": "PV-Kontakt (1 Eingang), WiFi-Stick optional",
@@ -713,7 +717,7 @@
       "marke": "Kronoterm",
       "bauart": "bodenstehend",
       "volumen_l": 450.0,
-      "eta_wh": 145.3,
+      "eta_wh": 156.0,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -723,7 +727,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "Kronoterm Prospekt (COP A20/W10-55, XXL) | ηwh 145,3 %: berechnet aus Energielabel (1153 kWh/a, Lastprofil XL); topten.eu – unsicher: topten.ch nennt XXL/1402 kWh, Index 146 %",
+      "quelle": "Kronoterm Prospekt (COP A20/W10-55, XXL) | ηwh 145,3 %: berechnet aus Energielabel (1153 kWh/a, Lastprofil XL); topten.eu – unsicher: topten.ch nennt XXL/1402 kWh, Index 146 % | EPREL 363629: ηwh 156 % (vorher 145.3 %), Lastprofil XXL",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -735,7 +739,7 @@
         "flaeche_m2": 1.76
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.633,
+      "scop_tabelle": 3.9,
       "sg_ready": true,
       "smart_home": {
         "modbus": true,
@@ -743,7 +747,7 @@
         "wifi": "optional",
         "app": "CLOUD.KRONOTERM"
       },
-      "lastprofil": "XL",
+      "lastprofil": "XXL",
       "jahresstromverbrauch_kwh": 1153
     },
     {
@@ -790,7 +794,7 @@
       "marke": "Tesy",
       "bauart": "bodenstehend",
       "volumen_l": 260.0,
-      "eta_wh": 145.4,
+      "eta_wh": 150.0,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -800,7 +804,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode (Ø 33 × 400 mm)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (CoP DHW) | ηwh 145,4 %: berechnet aus Energielabel (1152 kWh/a, Lastprofil XL); tesy.com Produktseite / Label 306179",
+      "quelle": "HD24 (CoP DHW) | ηwh 145,4 %: berechnet aus Energielabel (1152 kWh/a, Lastprofil XL); tesy.com Produktseite / Label 306179 | EPREL 2367935: ηwh 150 % (vorher 145.4 %), Lastprofil XL",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -820,7 +824,7 @@
         }
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.635,
+      "scop_tabelle": 3.75,
       "smart_home": {
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
@@ -834,7 +838,7 @@
       "marke": "ELCO",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 142.0,
       "eff_klasse": "A+",
       "schallleistung_db": 48.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -844,7 +848,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "elco.de AEROTOP DHW.3 Technische Informationen: 200 L ohne WT, COP 3,4 (A7/W10-55) / 3,8 (A20/W10-55), SCOP 3,36, A+, V40 272,8 L / L, 48 dB(A) (Silent 41), 1671 × 600 × 680 mm, 72 kg, 2,4 kW, WW 62 °C (bis 75 °C), WLAN + REMOCON NET, PV-Schnittstelle",
+      "quelle": "elco.de AEROTOP DHW.3 Technische Informationen: 200 L ohne WT, COP 3,4 (A7/W10-55) / 3,8 (A20/W10-55), SCOP 3,36, A+, V40 272,8 L / L, 48 dB(A) (Silent 41), 1671 × 600 × 680 mm, 72 kg, 2,4 kW, WW 62 °C (bis 75 °C), WLAN + REMOCON NET, PV-Schnittstelle | EPREL 2563381 („AEROTOP DHW FS 200.3“): ηwh 142 %, Lastprofil L, 719 kWh/a, Klasse A+, 48 dB(A)",
       "cop_a7": 3.4,
       "cop_a15": null,
       "cop_a14": null,
@@ -855,8 +859,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.8,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.55,
       "waermeleistung_kw": 2.4,
       "ww_max_c": 62,
       "lastprofil": "L",
@@ -868,7 +872,8 @@
         "anschluesse": "PV-Schnittstelle, I-Memory",
         "wifi": true,
         "app": "REMOCON NET"
-      }
+      },
+      "jahresstromverbrauch_kwh": 719
     },
     {
       "id": "panasonic-aquarea-p-dhw260ae5",
@@ -1359,16 +1364,21 @@
       "kessel_material": "emailliert (Keramikbeschichtung)",
       "anode": "Titan-Kathodenschutzanode",
       "ehpa_guetesiegel": null,
-      "quelle": "heizung-billiger.de (COP A20/W35; A15/W10: 3,25; A7: 3,09) | ηwh 128 %: ErP-Datenblatt, Lastprofil L, 800 kWh/a; EPREL 1815329",
+      "quelle": "heizung-billiger.de (COP A20/W35; A15/W10: 3,25; A7: 3,09) | ηwh 128 %: ErP-Datenblatt, Lastprofil L, 800 kWh/a; EPREL 1815329 | Wärmetauscher-Variante Azorra Ace 200 H laut EPREL 2493311: ηwh 130 %",
       "cop_a7": 3.09,
       "cop_a15": 3.25,
       "cop_a14": null,
       "cop_a20": 3.64,
       "cop_unspezifisch": null,
       "waermetauscher": {
-        "vorhanden": false,
-        "variante": null,
-        "flaeche_m2": null
+        "vorhanden": true,
+        "variante": "H",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Remeha Azorra Ace 200 H",
+          "eta_wh": 130.0,
+          "eff_klasse": "A+"
+        }
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.2,
@@ -1522,7 +1532,7 @@
       "marke": "Weishaupt",
       "bauart": "bodenstehend",
       "volumen_l": 290.0,
-      "eta_wh": null,
+      "eta_wh": 134.0,
       "eff_klasse": "A+",
       "schallleistung_db": 60.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1532,7 +1542,7 @@
       "kessel_material": "Stahl emailliert (DIN 4753)",
       "anode": "Schutzanode (Typ n. a.)",
       "ehpa_guetesiegel": null,
-      "quelle": "Weishaupt-Produktinfo / heat-store.de (COP A15/W10-55, EN 16147, XL) · WT 1,2 m²",
+      "quelle": "Weishaupt-Produktinfo / heat-store.de (COP A15/W10-55, EN 16147, XL) · WT 1,2 m² | Weishaupt Energielabel/Produktdaten WWP T 300 WA (812/2013, EN 16147): ηwh 134 %, XL, 1.250 kWh/a, wärmer 145 % / 1.156 kWh, 60 dB(A), V40 351 L, Außenluft",
       "cop_a7": null,
       "cop_a15": 3.6,
       "cop_a14": null,
@@ -1543,14 +1553,17 @@
         "variante": "WA",
         "flaeche_m2": 1.2
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.6,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.35,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "2 Smart-Grid-Eingänge (4 Zustände), Ausgang 2. Wärmeerzeuger",
         "wifi": false,
         "modbus": false
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1250,
+      "mischwassermenge_v40_l": 351
     },
     {
       "id": "austria-email-ag-ae-revolution-evo-3-240l-wt",
@@ -2289,7 +2302,7 @@
       "marke": "KWB",
       "bauart": "bodenstehend",
       "volumen_l": 291.0,
-      "eta_wh": 133.0,
+      "eta_wh": 154.0,
       "eff_klasse": "A+",
       "schallleistung_db": 52.0,
       "bereitschaftsverlust_kwh_tag": 0.0,
@@ -2299,7 +2312,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": "18.11.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | EPREL 338022: ηwh 154 % (vorher 133 %), Lastprofil XL",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -2311,7 +2324,8 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.325
+      "scop_tabelle": 3.85,
+      "lastprofil": "XL"
     },
     {
       "id": "boesch-mcb200",
@@ -2577,7 +2591,7 @@
       "marke": "Hofman Energy",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": 131.7,
+      "eta_wh": 122.0,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2587,7 +2601,7 @@
       "kessel_material": "Edelstahl (Duplex 2205)",
       "anode": "elektronische Anode",
       "ehpa_guetesiegel": null,
-      "quelle": "hofman-energy.com (COP DHW) | ηwh 131,7 %: ErP-Datenblatt, Lastprofil XL, 1272 kWh/a; Hofman EPD HE-AI-190 – Innenluft, Smart-Control an",
+      "quelle": "hofman-energy.com (COP DHW) | ηwh 131,7 %: ErP-Datenblatt, Lastprofil XL, 1272 kWh/a; Hofman EPD HE-AI-190 – Innenluft, Smart-Control an | EPREL 2494494: ηwh 122 % (vorher 131.7 %), Lastprofil XL; Datenblatt nennt 131,7 % mit Smart-Control",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -2599,7 +2613,7 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.292,
+      "scop_tabelle": 3.05,
       "sg_ready": false,
       "smart_home": {
         "wifi": true,
@@ -3071,7 +3085,7 @@
       "marke": "Hofman Energy",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": 129.9,
+      "eta_wh": 118.0,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3081,7 +3095,7 @@
       "kessel_material": "Edelstahl (Duplex 2205)",
       "anode": "elektronische Anode",
       "ehpa_guetesiegel": null,
-      "quelle": "hofman-energy.com (COP DHW) | ηwh 129,9 %: ErP-Datenblatt, Lastprofil L, 788 kWh/a; Hofman EPD HE-AI-190 – Innenluft, Smart-Control an; Label-PDF nennt abweichende kWh",
+      "quelle": "hofman-energy.com (COP DHW) | ηwh 129,9 %: ErP-Datenblatt, Lastprofil L, 788 kWh/a; Hofman EPD HE-AI-190 – Innenluft, Smart-Control an; Label-PDF nennt abweichende kWh | EPREL 2494463: ηwh 118 % (vorher 129.9 %), Lastprofil L; Datenblatt nennt 129,9 % mit Smart-Control",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3093,7 +3107,7 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.248,
+      "scop_tabelle": 2.95,
       "sg_ready": false,
       "smart_home": {
         "wifi": true,
@@ -3819,9 +3833,9 @@
       "marke": "Dimplex",
       "bauart": "wandhaengend",
       "volumen_l": 100.0,
-      "eta_wh": null,
+      "eta_wh": 99.0,
       "eff_klasse": "A",
-      "schallleistung_db": null,
+      "schallleistung_db": 41.0,
       "bereitschaftsverlust_kwh_tag": null,
       "kaeltemittel": "R-290",
       "preis_eur": null,
@@ -3829,7 +3843,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "Dimplex/Zajadacz (COP A15; A7: 2,4; Lastprofil M)",
+      "quelle": "Dimplex/Zajadacz (COP A15; A7: 2,4; Lastprofil M) | EPREL 1859804 („DHW 100PW“): ηwh 99 %, Lastprofil M, 519 kWh/a, Klasse A, 41 dB(A)",
       "cop_a7": 2.4,
       "cop_a15": 2.7,
       "cop_a14": null,
@@ -3840,13 +3854,15 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 2.7,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.475,
       "sg_ready": true,
       "smart_home": {
         "modbus": true,
         "anschluesse": "PV-Kontakt"
-      }
+      },
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 519
     },
     {
       "id": "vaillant-fluostor-vwh-b-150-1",
@@ -4707,9 +4723,9 @@
       "marke": "alpha innotec",
       "bauart": "bodenstehend",
       "volumen_l": 190,
-      "eta_wh": null,
+      "eta_wh": 146.0,
       "eff_klasse": "A+",
-      "schallleistung_db": null,
+      "schallleistung_db": 49.0,
       "bereitschaftsverlust_kwh_tag": null,
       "kaeltemittel": "R-134a",
       "preis_eur": 2898.49,
@@ -4717,7 +4733,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "alpha-innotec.de BWP-Serie / heizungstechnik-online.de: COP 3,95 bei A15/W45, 1,7 kW, Klasse A+, R134a (GWP 1430), Heizstab und Wärmetauscher integriert, 2.898,49 € (toms-car-hifi.de) bis 3.925 € (AT); Schallleistungspegel nicht veröffentlicht",
+      "quelle": "alpha-innotec.de BWP-Serie / heizungstechnik-online.de: COP 3,95 bei A15/W45, 1,7 kW, Klasse A+, R134a (GWP 1430), Heizstab und Wärmetauscher integriert, 2.898,49 € (toms-car-hifi.de) bis 3.925 € (AT); Schallleistungspegel nicht veröffentlicht | EPREL 405252 („Art.-Nr. 15208001“): ηwh 146 %, Lastprofil L, 703 kWh/a, Klasse A+, 49 dB(A)",
       "cop_a7": null,
       "cop_a15": 3.95,
       "cop_a14": null,
@@ -4728,8 +4744,8 @@
         "variante": "S (Solarregister)",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.95,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.65,
       "waermeleistung_kw": 1.7,
       "waermeleistung": "1,7 kW (A15/W45)",
       "ww_max_c": 65,
@@ -4740,7 +4756,9 @@
         "wifi": true,
         "modbus": true,
         "anschluesse": "SG Ready (QA1), PV-Eingang 0–10 V"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 703
     },
     {
       "id": "alpha-innotec-bwp-260s",
@@ -4791,9 +4809,9 @@
       "marke": "alpha innotec",
       "bauart": "wandhaengend",
       "volumen_l": 180,
-      "eta_wh": null,
-      "eff_klasse": null,
-      "schallleistung_db": null,
+      "eta_wh": 163.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": 43.0,
       "bereitschaftsverlust_kwh_tag": null,
       "kaeltemittel": "R-134a",
       "preis_eur": null,
@@ -4801,7 +4819,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "alpha-innotec.com WWB-Serie / haustechnikdialog.de: Wasser/Wasser-Booster, Wärmequelle ist ein Niedertemperatur-Heizungsnetz 20–42 °C – kein Luftgerät, daher nicht direkt mit A15/A20-Werten vergleichbar. COP 4,4 bei W25/W50, 180 L, 2,0 kW, 37 dB(A) Schalldruck, wandhängend, Luxtronik 2.0",
+      "quelle": "alpha-innotec.com WWB-Serie / haustechnikdialog.de: Wasser/Wasser-Booster, Wärmequelle ist ein Niedertemperatur-Heizungsnetz 20–42 °C – kein Luftgerät, daher nicht direkt mit A15/A20-Werten vergleichbar. COP 4,4 bei W25/W50, 180 L, 2,0 kW, 37 dB(A) Schalldruck, wandhängend, Luxtronik 2.0 | EPREL 405254 („Art.-Nr. 15210901“): ηwh 163 %, Lastprofil L, 630 kWh/a, Klasse A+, 43 dB(A) – Zuordnung zur WWB-Serie über die Artikelnummer",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -4812,8 +4830,8 @@
         "variante": "Wasser/Wasser-Quelle",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 4.4,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 4.075,
       "waermeleistung_kw": 2.0,
       "waermeleistung": "2,0 kW",
       "ww_max_c": 65,
@@ -4822,7 +4840,9 @@
         "app": "myUplink",
         "modbus": true,
         "anschluesse": "LAN"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 630
     },
     {
       "id": "stiebel-eltron-wwk-221-electronic",
@@ -4954,9 +4974,9 @@
       "marke": "Sunex",
       "bauart": "ohne_kessel",
       "volumen_l": null,
-      "eta_wh": null,
-      "eff_klasse": "A+",
-      "schallleistung_db": 57.0,
+      "eta_wh": 96.0,
+      "eff_klasse": "A",
+      "schallleistung_db": 59.0,
       "bereitschaftsverlust_kwh_tag": null,
       "kaeltemittel": "R-134a",
       "preis_eur": 1459.0,
@@ -4964,7 +4984,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "sunex-deutschland.de DROPS 4.1: COP 3,0 (A15/W10-55), 3,3 (A20/W10-55), R134a 0,60 kg, 57 dB, Kopfgerät für vorhandenen Speicher | Preis: solarcamp24.de (M4.1; D4.1 1.582,90 €), Stand 09/2026",
+      "quelle": "sunex-deutschland.de DROPS 4.1: COP 3,0 (A15/W10-55), 3,3 (A20/W10-55), R134a 0,60 kg, 57 dB, Kopfgerät für vorhandenen Speicher | Preis: solarcamp24.de (M4.1; D4.1 1.582,90 €), Stand 09/2026 | EPREL 2769272 („DROPS M4.1“): ηwh 96 %, Lastprofil L, 1062 kWh/a, Klasse A, 59 dB(A) – Hersteller wirbt mit A+, EPREL: A",
       "cop_a7": null,
       "cop_a15": 3.0,
       "cop_a14": null,
@@ -4975,8 +4995,8 @@
         "variante": "externer Speicher",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.3,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.4,
       "waermeleistung_kw": 1.5,
       "el_leistung_kw": null,
       "ww_max_c": 55,
@@ -4988,7 +5008,9 @@
       "smart_home": {
         "anschluesse": "Wochenprogramm, Steuerung M (manuell) oder D (Touch)"
       },
-      "waermeleistung": "1,5 kW (A20/W10-55)"
+      "waermeleistung": "1,5 kW (A20/W10-55)",
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 1062
     },
     {
       "id": "sunex-drops-4-2",
@@ -4996,7 +5018,7 @@
       "marke": "Sunex",
       "bauart": "ohne_kessel",
       "volumen_l": null,
-      "eta_wh": null,
+      "eta_wh": 129.0,
       "eff_klasse": "A+",
       "schallleistung_db": 57.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -5006,7 +5028,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "sunex-deutschland.de DROPS 4.2: COP 3,0 (A15/W10-55), 3,42 (A20/W10-55), R134a 0,80 kg, 57 dB, integrierte Umwälzpumpe, Kopfgerät | Preis: solarcamp24.de (D4.2 1.890 €), Stand 09/2026",
+      "quelle": "sunex-deutschland.de DROPS 4.2: COP 3,0 (A15/W10-55), 3,42 (A20/W10-55), R134a 0,80 kg, 57 dB, integrierte Umwälzpumpe, Kopfgerät | Preis: solarcamp24.de (D4.2 1.890 €), Stand 09/2026 | EPREL 2766562 („DROPS D4.2“): ηwh 129 %, Lastprofil XL, 1302 kWh/a, Klasse A+, 57 dB(A)",
       "cop_a7": null,
       "cop_a15": 3.0,
       "cop_a14": null,
@@ -5017,8 +5039,8 @@
         "variante": "externer Speicher",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.42,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.225,
       "waermeleistung_kw": 2.85,
       "el_leistung_kw": null,
       "ww_max_c": 55,
@@ -5030,7 +5052,9 @@
       "smart_home": {
         "anschluesse": "Steuerung M (manuell) oder D (Touch)"
       },
-      "waermeleistung": "2,85 kW (A15/W10-55)"
+      "waermeleistung": "2,85 kW (A15/W10-55)",
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1302
     },
     {
       "id": "sunex-drops-eco",
@@ -5038,7 +5062,7 @@
       "marke": "Sunex",
       "bauart": "ohne_kessel",
       "volumen_l": null,
-      "eta_wh": null,
+      "eta_wh": 143.0,
       "eff_klasse": "A+",
       "schallleistung_db": 59.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -5048,7 +5072,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "sunex-deutschland.de DROPS ECO: COP 3,42 (A15/W10-55), 4,5 (A20/W10-55), R134a 0,70 kg, 59 dB, Plattenwärmetauscher, Kopfgerät; kein Händlerpreis gefunden",
+      "quelle": "sunex-deutschland.de DROPS ECO: COP 3,42 (A15/W10-55), 4,5 (A20/W10-55), R134a 0,70 kg, 59 dB, Plattenwärmetauscher, Kopfgerät; kein Händlerpreis gefunden | EPREL 2364460 („DROPS ECO“): ηwh 143 %, Lastprofil XL, 1169 kWh/a, Klasse A+, 59 dB(A)",
       "cop_a7": null,
       "cop_a15": 3.42,
       "cop_a14": null,
@@ -5059,8 +5083,8 @@
         "variante": "externer Speicher",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 4.5,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.575,
       "waermeleistung_kw": 3.06,
       "el_leistung_kw": null,
       "ww_max_c": 55,
@@ -5069,7 +5093,9 @@
       "luftvolumen_m3h": null,
       "abmessung_mm": "655 × 445 × 635",
       "gewicht_kg": 57,
-      "waermeleistung": "3,06 kW (A15/W10-55), 3,7 kW (A20)"
+      "waermeleistung": "3,06 kW (A15/W10-55), 3,7 kW (A20)",
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1169
     },
     {
       "id": "sunex-drops-pro",

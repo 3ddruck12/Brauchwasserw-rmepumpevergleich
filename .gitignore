@@ -3,3 +3,6 @@ dist/
 .DS_Store
 *.log
 vite.config.js.timestamp-*
+
+# Hilfsskripte aus der Datenpflege
+.patch/

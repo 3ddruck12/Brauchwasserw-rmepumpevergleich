@@ -249,6 +249,10 @@ td .klein { font-size: 0.78rem; line-height: 1.35; }
   border-radius: 10px; background: var(--akzent-hell); color: var(--akzent);
   font-size: 0.7rem; font-variant-numeric: normal;
 }
+button.basis-tag-knopf {
+  border: none; cursor: pointer; font: inherit; line-height: inherit;
+}
+button.basis-tag-knopf:hover { outline: 1px solid var(--akzent); }
 
 .stern {
   border: none; background: none; padding: 2px 4px;

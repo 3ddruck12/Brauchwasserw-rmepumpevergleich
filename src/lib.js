@@ -36,13 +36,9 @@ export function basisKurz(feld) {
   return BASEN.find((b) => b.id === feld)?.kurz ?? '–'
 }
 
-/** Ohne ηwh/Lastprofil nicht in die ErP-Rangliste (EcoDesign, Hersteller-COP k. A.). */
+/** Nur ηwh/Lastprofil zählt in der ErP-Rangliste – A20, A15 und k. A. nicht. */
 export function erpVergleichbar(modell) {
-  if (!modell) return false
-  if (modell.eta_wh != null) return true
-  if (modell.marke === 'ED EcoDesign') return false
-  const hatNormCop = ['cop_a20', 'cop_a15', 'cop_a14', 'cop_a7'].some((f) => modell[f] != null)
-  return hatNormCop
+  return modell?.eta_wh != null
 }
 
 /** Wärmekosten je kWh und Jahreskosten aus Leistungszahl, Strompreis und Bedarf. */

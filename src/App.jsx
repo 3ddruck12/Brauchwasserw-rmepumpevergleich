@@ -93,6 +93,7 @@ export default function App() {
   const [kaelteWarnungOffen, setKaelteWarnungOffen] = useState(false)
   const [wtInfo, setWtInfo] = useState(null)
   const [normInfo, setNormInfo] = useState(null)
+  const [etaInfo, setEtaInfo] = useState(null)
   const [starthilfeOffen, setStarthilfeOffen] = useState(true)
 
   useEffect(() => {
@@ -142,12 +143,12 @@ export default function App() {
   }, [daten, suche, bauart, volumenklasse, kaeltemittel, nurMitWt, nurMitPreis, nurFavoriten, favoriten])
 
   const sortiert = useMemo(() => {
+    const nurErP = basis === 'auto' || basis === 'eta_wh'
     const wertVon = (m) => {
       const { wert } = leistungszahl(m, basis, scopFaktor)
-      const nurErP = basis === 'auto' || basis === 'eta_wh'
       switch (sortierung.spalte) {
-        case 'leistung': return nurErP && !erpVergleichbar(m) ? null : wert
-        case 'jahreskosten': return nurErP && !erpVergleichbar(m) ? null : kosten(wert, strompreis, bedarf).proJahr
+        case 'leistung': return wert
+        case 'jahreskosten': return kosten(wert, strompreis, bedarf).proJahr
         case 'name': return m.name.toLowerCase()
         case 'eff_klasse': return m.eff_klasse ? -m.eff_klasse.length : null
         case 'waermetauscher': return m.waermetauscher?.vorhanden ? 1 : 0
@@ -162,6 +163,11 @@ export default function App() {
       }
     }
     return [...gefiltert].sort((a, b) => {
+      if (nurErP && (sortierung.spalte === 'leistung' || sortierung.spalte === 'jahreskosten')) {
+        const ae = erpVergleichbar(a) ? 0 : 1
+        const be = erpVergleichbar(b) ? 0 : 1
+        if (ae !== be) return ae - be
+      }
       const x = wertVon(a), y = wertVon(b)
       if (x == null && y == null) return 0
       if (x == null) return 1            // Modelle ohne Wert immer ans Ende
@@ -386,6 +392,7 @@ export default function App() {
                         onKaelteHinweis: () => setKaelteWarnungOffen(true),
                         onWtInfo: () => setWtInfo(m),
                         onNormInfo: basis === 'auto' ? () => setNormInfo({ m, wert, basis: b }) : null,
+                        onEtaInfo: b === 'eta_wh' ? () => setEtaInfo({ m, wert }) : null,
                       })}
                     </td>
                   ))}
@@ -439,6 +446,7 @@ export default function App() {
 
       <WtVarianteDialog modell={wtInfo} onClose={() => setWtInfo(null)} />
       <NormDialog info={normInfo} scopFaktor={scopFaktor} onClose={() => setNormInfo(null)} />
+      <EtaDialog info={etaInfo} scopFaktor={scopFaktor} onClose={() => setEtaInfo(null)} />
 
       <ExportDialog
         offen={exportOffen}
@@ -574,7 +582,15 @@ function spaltenZelle(m, id, extra) {
     case 'leistung':
       return (
         <span className="leistung-zelle">
-          {fmt.zahl(extra.wert)} <span className="basis-tag">{basisKurz(extra.basis)}</span>
+          {fmt.zahl(extra.wert)}{' '}
+          {extra.onEtaInfo && extra.basis === 'eta_wh' ? (
+            <button type="button" className="basis-tag basis-tag-knopf" onClick={extra.onEtaInfo}
+              title={`ηwh ${fmt.zahl(m.eta_wh, 1)} % – ErP-Deklaration`}>
+              {basisKurz(extra.basis)}
+            </button>
+          ) : (
+            <span className="basis-tag">{basisKurz(extra.basis)}</span>
+          )}
           {extra.onNormInfo && extra.basis && extra.basis !== 'eta_wh' && (
             <button type="button" className="norm-info" onClick={extra.onNormInfo}
               title="Hersteller-COP – nicht normvergleichbar">
@@ -692,6 +708,39 @@ const BASIS_TEXT = {
   cop_a20: 'bei 20 °C Lufttemperatur (A20)', cop_a15: 'bei 15 °C Lufttemperatur (A15)',
   cop_a14: 'bei 14 °C Lufttemperatur (A14)', cop_a7: 'bei 7 °C Lufttemperatur (A7)',
   cop_unspezifisch: 'ohne Angabe der Prüfbedingung',
+}
+
+function EtaDialog({ info, scopFaktor, onClose }) {
+  const m = info?.m
+  const eta = m?.eta_wh
+  const profil = m?.lastprofil
+  return (
+    <Dialog offen={!!m} titel="ηwh (ErP-Deklaration)" onClose={onClose}>
+      {m && (
+        <>
+          <p>
+            Für <strong>{m.name}</strong> ist der Warmwasser-Wirkungsgrad{' '}
+            <strong>ηwh {fmt.zahl(eta, 1)} %</strong>
+            {profil ? <> bei Lastprofil <strong>{profil}</strong></> : null}.
+          </p>
+          <table className="wt-vergleich">
+            <tbody>
+              <tr><th scope="row">ηwh</th><td>{fmt.zahl(eta, 1)} %</td></tr>
+              {profil && <tr><th scope="row">Lastprofil</th><td>{profil}</td></tr>}
+              <tr>
+                <th scope="row">Leistungszahl</th>
+                <td>{fmt.zahl(info.wert)} (ηwh / 100 × {fmt.zahl(scopFaktor, 1)})</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            ηwh kommt aus der EU-Ökodesign-Messung (ErP, EN 16147) mit genormtem Zapfprofil
+            und Bereitschaftsverlusten. Deshalb sind die Geräte in der Rangliste vergleichbar.
+          </p>
+        </>
+      )}
+    </Dialog>
+  )
 }
 
 function NormDialog({ info, scopFaktor, onClose }) {

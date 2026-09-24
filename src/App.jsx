@@ -92,6 +92,7 @@ export default function App() {
   const [exportOffen, setExportOffen] = useState(false)
   const [kaelteWarnungOffen, setKaelteWarnungOffen] = useState(false)
   const [wtInfo, setWtInfo] = useState(null)
+  const [normInfo, setNormInfo] = useState(null)
   const [starthilfeOffen, setStarthilfeOffen] = useState(true)
 
   useEffect(() => {
@@ -383,6 +384,7 @@ export default function App() {
                         wert, basis: b, jahreskosten: k.proJahr,
                         onKaelteHinweis: () => setKaelteWarnungOffen(true),
                         onWtInfo: () => setWtInfo(m),
+                        onNormInfo: basis === 'auto' ? () => setNormInfo({ m, wert, basis: b }) : null,
                       })}
                     </td>
                   ))}
@@ -435,6 +437,7 @@ export default function App() {
       </Dialog>
 
       <WtVarianteDialog modell={wtInfo} onClose={() => setWtInfo(null)} />
+      <NormDialog info={normInfo} scopFaktor={scopFaktor} onClose={() => setNormInfo(null)} />
 
       <ExportDialog
         offen={exportOffen}
@@ -568,7 +571,17 @@ function spaltenZelle(m, id, extra) {
       )
     case 'volumen_l': return fmt.liter(m.volumen_l)
     case 'leistung':
-      return <>{fmt.zahl(extra.wert)} <span className="basis-tag">{basisKurz(extra.basis)}</span></>
+      return (
+        <span className="leistung-zelle">
+          {fmt.zahl(extra.wert)} <span className="basis-tag">{basisKurz(extra.basis)}</span>
+          {extra.onNormInfo && extra.basis && extra.basis !== 'eta_wh' && (
+            <button type="button" className="norm-info" onClick={extra.onNormInfo}
+              title="Hersteller-COP – nicht normvergleichbar">
+              <Infozeichen warn />
+            </button>
+          )}
+        </span>
+      )
     case 'eff_klasse': return fmt.text(m.eff_klasse)
     case 'preis_eur': return fmt.euro(m.preis_eur)
     case 'jahreskosten': return extra.jahreskosten == null ? '–' : fmt.euro(extra.jahreskosten)
@@ -592,9 +605,9 @@ function spaltenZelle(m, id, extra) {
   }
 }
 
-function Infozeichen() {
+function Infozeichen({ warn }) {
   return (
-    <svg className="infozeichen" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className={`infozeichen ${warn ? 'warn' : ''}`} viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="12" cy="12" r="10" />
       <path d="M12 10.5v6.5" />
       <circle className="infozeichen-punkt" cx="12" cy="7.2" r="1.1" />
@@ -668,6 +681,55 @@ function WtVarianteDialog({ modell, onClose }) {
             </p>
           )}
           <p className="klein">Hervorgehoben: Werte, die sich zwischen beiden Ausführungen unterscheiden.</p>
+        </>
+      )}
+    </Dialog>
+  )
+}
+
+const BASIS_TEXT = {
+  cop_a20: 'bei 20 °C Lufttemperatur (A20)', cop_a15: 'bei 15 °C Lufttemperatur (A15)',
+  cop_a14: 'bei 14 °C Lufttemperatur (A14)', cop_a7: 'bei 7 °C Lufttemperatur (A7)',
+  cop_unspezifisch: 'ohne Angabe der Prüfbedingung',
+}
+
+function NormDialog({ info, scopFaktor, onClose }) {
+  const m = info?.m
+  const werte = !m ? [] : [
+    ['COP A20', m.cop_a20], ['COP A15', m.cop_a15], ['COP A14', m.cop_a14],
+    ['COP A7', m.cop_a7], ['COP (ohne Angabe)', m.cop_unspezifisch],
+  ].filter(([, v]) => v != null)
+  return (
+    <Dialog offen={!!m} titel="Nicht normvergleichbar" variant="warnung" onClose={onClose}>
+      {m && (
+        <>
+          <p>
+            Für <strong>{m.name}</strong> gibt es keinen ηwh-Wert aus der ErP-Messung.
+            Die Leistungszahl <strong>{fmt.zahl(info.wert)}</strong> ist ein Hersteller-COP{' '}
+            {BASIS_TEXT[info.basis] || ''}.
+          </p>
+          <p>
+            Hersteller-COPs gelten für günstige Laborbedingungen – ohne genormtes Zapfprofil und
+            ohne Bereitschaftsverluste. Sie liegen meist <strong>10–30 % über</strong> dem Wert aus
+            ηwh × {fmt.zahl(scopFaktor, 1)}. Beispiel OCHSNER EUROPA MINI IWPL: COP A20 = 4,0,
+            aus ηwh dagegen 3,0.
+          </p>
+          <p>
+            Das Gerät steht in der Rangliste deshalb wahrscheinlich zu weit oben, und die Jahreskosten
+            fallen zu niedrig aus.
+          </p>
+          {werte.length > 0 && (
+            <table className="wt-vergleich">
+              <tbody>
+                {werte.map(([label, v]) => (
+                  <tr key={label}><th scope="row">{label}</th><td>{fmt.zahl(v)}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+          <p className="klein">
+            Nur normvergleichbare Geräte zeigen: oben bei „Vergleichsbasis“ <em>ηwh (ErP-Deklaration)</em> wählen.
+          </p>
         </>
       )}
     </Dialog>

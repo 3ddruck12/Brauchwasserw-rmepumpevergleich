@@ -440,7 +440,7 @@
       "marke": "Remko",
       "bauart": "bodenstehend",
       "volumen_l": 287.0,
-      "eta_wh": null,
+      "eta_wh": 142.2,
       "eff_klasse": "A+",
       "schallleistung_db": 53.8,
       "bereitschaftsverlust_kwh_tag": null,
@@ -450,7 +450,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "badexo.de (COP A14/W53)",
+      "quelle": "badexo.de (COP A14/W53) | ηwh 142,2 %: ErP-Datenblatt, Lastprofil XL, 1178 kWh/a; Remko Bedienungs-/Installationsanleitung RBW 302 Pro-PV – Außenluft A7; Innenluft A14: 163 % / 1030 kWh",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.91,
@@ -470,14 +470,16 @@
           "preis_eur": 2658.0
         }
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.91,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.555,
       "smart_home": {
         "wifi": "optional",
         "anschluesse": "PV-Kontakt (1 Eingang), WiFi-Stick optional",
         "app": "REMKO Smart-Web"
       },
-      "sg_ready": false
+      "sg_ready": false,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1178
     },
     {
       "id": "kermi-x-change-aqua-eco-l",
@@ -485,7 +487,7 @@
       "marke": "Kermi",
       "bauart": "bodenstehend",
       "volumen_l": 185.0,
-      "eta_wh": null,
+      "eta_wh": 118.0,
       "eff_klasse": "A+",
       "schallleistung_db": 56.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -495,7 +497,7 @@
       "kessel_material": "emailliert",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20/W10-53)",
+      "quelle": "HD24 (COP A20/W10-53) | ηwh 118 %: ErP-Datenblatt, Lastprofil L, 874 kWh/a; Kermi Produktdatenblatt W20519",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -506,13 +508,15 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.91,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.95,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "Smart-Grid- und PV-Eingang",
         "modbus": true
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 874
     },
     {
       "id": "austria-email-ag-wpa-303-eco-2",
@@ -554,7 +558,7 @@
       "marke": "LG",
       "bauart": "bodenstehend",
       "volumen_l": 270.0,
-      "eta_wh": null,
+      "eta_wh": 155.0,
       "eff_klasse": "A+",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -564,7 +568,7 @@
       "kessel_material": null,
       "anode": "Fremdstromanode (ICCP)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A15/W35)",
+      "quelle": "HD24 (COP A15/W35) | ηwh 155 %: ErP-Datenblatt, Lastprofil L, 646 kWh/a (Label rechnerisch 158.5 %); LG Produktdatenblatt WH27STR2.FA",
       "cop_a7": null,
       "cop_a15": 3.9,
       "cop_a14": null,
@@ -575,14 +579,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.9,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.875,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ",
         "anschluesse": "SG-Eingänge SG1/SG2 (4 Zustände)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 646
     },
     {
       "id": "ochsner-europa-333-genius",
@@ -671,7 +677,7 @@
       "marke": "LG",
       "bauart": "bodenstehend",
       "volumen_l": 270.0,
-      "eta_wh": null,
+      "eta_wh": 155.0,
       "eff_klasse": "A+",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -681,7 +687,7 @@
       "kessel_material": "Stahl emailliert (keramikbeschichtet)",
       "anode": "Fremdstromanode (Titan)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP 15 °C)",
+      "quelle": "HD24 (COP 15 °C) | ηwh 155 %: ErP-Datenblatt, Lastprofil L, 646 kWh/a (Label rechnerisch 158.5 %); LG Produktdatenblatt WH27S F5",
       "cop_a7": null,
       "cop_a15": 3.85,
       "cop_a14": null,
@@ -692,12 +698,14 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.85,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.875,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 646
     },
     {
       "id": "kronoterm-s-max-wp4-lf-502",
@@ -705,7 +713,7 @@
       "marke": "Kronoterm",
       "bauart": "bodenstehend",
       "volumen_l": 450.0,
-      "eta_wh": null,
+      "eta_wh": 145.3,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -715,7 +723,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "Kronoterm Prospekt (COP A20/W10-55, XXL)",
+      "quelle": "Kronoterm Prospekt (COP A20/W10-55, XXL) | ηwh 145,3 %: berechnet aus Energielabel (1153 kWh/a, Lastprofil XL); topten.eu – unsicher: topten.ch nennt XXL/1402 kWh, Index 146 %",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -726,15 +734,17 @@
         "variante": null,
         "flaeche_m2": 1.76
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.85,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.633,
       "sg_ready": true,
       "smart_home": {
         "modbus": true,
         "anschluesse": "Web-Modul optional",
         "wifi": "optional",
         "app": "CLOUD.KRONOTERM"
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1153
     },
     {
       "id": "remeha-azorra-ace-250-h",
@@ -742,7 +752,7 @@
       "marke": "Remeha",
       "bauart": "bodenstehend",
       "volumen_l": 243.0,
-      "eta_wh": null,
+      "eta_wh": 135.0,
       "eff_klasse": "A+",
       "schallleistung_db": 49.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -752,7 +762,7 @@
       "kessel_material": "emailliert (Keramikbeschichtung)",
       "anode": "Titan-Kathodenschutzanode",
       "ehpa_guetesiegel": null,
-      "quelle": "unidomo.de (COP A20/Raumluft, XL; A7: 3,30) · WT 0,93 m²",
+      "quelle": "unidomo.de (COP A20/Raumluft, XL; A7: 3,30) · WT 0,93 m² | ηwh 135 %: ErP-Datenblatt, Lastprofil XL, 1242 kWh/a; EPREL 1815332 – kälter 114 %, wärmer 152 %",
       "cop_a7": 3.3,
       "cop_a15": null,
       "cop_a14": null,
@@ -763,14 +773,16 @@
         "variante": "H",
         "flaeche_m2": 0.93
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.84,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.375,
       "smart_home": {
         "wifi": "optional",
         "app": "Remeha Home",
         "anschluesse": "Smart-Grid-/PV-Kontakt (2 Eingänge)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1242
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-260-u-02-306179",
@@ -778,7 +790,7 @@
       "marke": "Tesy",
       "bauart": "bodenstehend",
       "volumen_l": 260.0,
-      "eta_wh": null,
+      "eta_wh": 145.4,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -788,7 +800,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode (Ø 33 × 400 mm)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (CoP DHW)",
+      "quelle": "HD24 (CoP DHW) | ηwh 145,4 %: berechnet aus Energielabel (1152 kWh/a, Lastprofil XL); tesy.com Produktseite / Label 306179",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -807,12 +819,14 @@
           "preis_eur": 1589.0
         }
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.8,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.635,
       "smart_home": {
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1152
     },
     {
       "id": "elco-aerotop-dhw-3-200",
@@ -1087,7 +1101,7 @@
       "marke": "Styleboiler",
       "bauart": "bodenstehend",
       "volumen_l": 207.0,
-      "eta_wh": null,
+      "eta_wh": 153.3,
       "eff_klasse": "A+",
       "schallleistung_db": 51.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1097,7 +1111,7 @@
       "kessel_material": "Edelstahl (Duplex 2205)",
       "anode": "Fremdstromanode (Titan)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP Hersteller)",
+      "quelle": "HD24 (COP Hersteller) | ηwh 153,3 %: ErP-Datenblatt, Lastprofil L, 668 kWh/a; Styleboiler Datenblatt Futura Eco X 2025 – Außenluft 7 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1117,13 +1131,15 @@
           "preis_eur": 1659.0
         }
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.69,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.833,
       "smart_home": {
         "wifi": true,
         "app": "Smart Life",
         "anschluesse": "Digitaleingang (PV)"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 668
     },
     {
       "id": "austria-email-wpa-450-eco",
@@ -1165,7 +1181,7 @@
       "marke": "Wolf",
       "bauart": "bodenstehend",
       "volumen_l": 270.0,
-      "eta_wh": null,
+      "eta_wh": 129.0,
       "eff_klasse": "A+",
       "schallleistung_db": 58.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1175,7 +1191,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP L20/W10-55) – Kältemittel lt. HD24 R290, Vorgängerserie R134a",
+      "quelle": "HD24 (COP L20/W10-55) – Kältemittel lt. HD24 R290, Vorgängerserie R134a | ηwh 129 %: ErP-Datenblatt, Lastprofil XL, 1294 kWh/a; Wolf Produktdatenblatt 2486539 – R290-Ausführung M3; ältere R134a-Ausführung 151 %",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1195,15 +1211,17 @@
           "preis_eur": 2749.0
         }
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.67,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.225,
       "sg_ready": true,
       "smart_home": {
         "wifi": "optional",
         "app": "myWOLF",
         "anschluesse": "Modbus RTU (RS485), PV-/Energiemanager-Kontakt, WOLF Link optional",
         "modbus": true
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1294
     },
     {
       "id": "vaillant-arostor-plus-vwl-b-200-6",
@@ -1211,7 +1229,7 @@
       "marke": "Vaillant",
       "bauart": "bodenstehend",
       "volumen_l": 202.0,
-      "eta_wh": null,
+      "eta_wh": 132.0,
       "eff_klasse": "A+",
       "schallleistung_db": 54.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1221,7 +1239,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesium-Schutzanode (von außen messbar)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A14/W55)",
+      "quelle": "HD24 (COP A14/W55) | ηwh 132 %: ErP-Datenblatt, Lastprofil L, 774 kWh/a; Vaillant Produktdatenblatt 8000033199 – kälter 100 %, wärmer 154 %",
       "cop_a7": 3.09,
       "cop_a15": null,
       "cop_a14": 3.66,
@@ -1244,12 +1262,14 @@
           "cop_a7"
         ]
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.66,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.3,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "Smart-Grid-/PV-Steckverbindung"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 774
     },
     {
       "id": "bosch-bw270-bw270",
@@ -1329,7 +1349,7 @@
       "marke": "Remeha",
       "bauart": "bodenstehend",
       "volumen_l": 196.0,
-      "eta_wh": null,
+      "eta_wh": 128.0,
       "eff_klasse": "A+",
       "schallleistung_db": 49.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1339,7 +1359,7 @@
       "kessel_material": "emailliert (Keramikbeschichtung)",
       "anode": "Titan-Kathodenschutzanode",
       "ehpa_guetesiegel": null,
-      "quelle": "heizung-billiger.de (COP A20/W35; A15/W10: 3,25; A7: 3,09)",
+      "quelle": "heizung-billiger.de (COP A20/W35; A15/W10: 3,25; A7: 3,09) | ηwh 128 %: ErP-Datenblatt, Lastprofil L, 800 kWh/a; EPREL 1815329",
       "cop_a7": 3.09,
       "cop_a15": 3.25,
       "cop_a14": null,
@@ -1350,14 +1370,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.64,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.2,
       "smart_home": {
         "wifi": "optional",
         "app": "Remeha Home",
         "anschluesse": "Smart-Grid-/PV-Kontakt (2 Eingänge)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 800
     },
     {
       "id": "broetje-btw-200-b",
@@ -1365,7 +1387,7 @@
       "marke": "Brötje",
       "bauart": "bodenstehend",
       "volumen_l": 196.0,
-      "eta_wh": null,
+      "eta_wh": 128.0,
       "eff_klasse": "A+",
       "schallleistung_db": 49.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1375,7 +1397,7 @@
       "kessel_material": "emailliert (Keramikbeschichtung)",
       "anode": "Titan-Kathodenschutzanode",
       "ehpa_guetesiegel": null,
-      "quelle": "heat-store.de (COP A20/Raumluft; A7: 3,09)",
+      "quelle": "heat-store.de (COP A20/Raumluft; A7: 3,09) | ηwh 128 %: ErP-Datenblatt, Lastprofil L, 800 kWh/a; Brötje Produktdatenblatt 7785401",
       "cop_a7": 3.09,
       "cop_a15": null,
       "cop_a14": null,
@@ -1396,12 +1418,14 @@
           "preis_eur": 2945.41
         }
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.63,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.2,
       "smart_home": {
         "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 800
     },
     {
       "id": "broetje-btw-250-b",
@@ -1409,7 +1433,7 @@
       "marke": "Brötje",
       "bauart": "bodenstehend",
       "volumen_l": 251.0,
-      "eta_wh": null,
+      "eta_wh": 143.0,
       "eff_klasse": "A+",
       "schallleistung_db": 49.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1419,7 +1443,7 @@
       "kessel_material": "emailliert (Keramikbeschichtung)",
       "anode": "Titan-Kathodenschutzanode",
       "ehpa_guetesiegel": null,
-      "quelle": "broetje.de (COP A20/Raumluft, EN 16147; Außenluft: 3,48)",
+      "quelle": "broetje.de (COP A20/Raumluft, EN 16147; Außenluft: 3,48) | ηwh 143 %: ErP-Datenblatt, Lastprofil XL, 1172 kWh/a; Brötje Produktdatenblatt 7785403 – kälter 114 %, wärmer 157 %",
       "cop_a7": 3.48,
       "cop_a15": null,
       "cop_a14": null,
@@ -1439,12 +1463,14 @@
           "preis_eur": 3130.15
         }
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.63,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.575,
       "smart_home": {
         "anschluesse": "PV-/Smart-Grid-Eingänge (2, 4 Zustände)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1172
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-200-u-02-306209",
@@ -1452,7 +1478,7 @@
       "marke": "Tesy",
       "bauart": "bodenstehend",
       "volumen_l": 202.0,
-      "eta_wh": null,
+      "eta_wh": 145.8,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1462,7 +1488,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode (Ø 33 × 400 mm)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (CoP DHW)",
+      "quelle": "HD24 (CoP DHW) | ηwh 145,8 %: berechnet aus Energielabel (702 kWh/a, Lastprofil L); tesy.com Produktseite – Label-PDF nennt 736 kWh (→ 139 %)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1481,12 +1507,14 @@
           "preis_eur": 1559.0
         }
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.6,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.645,
       "smart_home": {
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 702
     },
     {
       "id": "weishaupt-wwp-t-300-wa",
@@ -1639,7 +1667,7 @@
       "marke": "AEG",
       "bauart": "bodenstehend",
       "volumen_l": 220.0,
-      "eta_wh": null,
+      "eta_wh": 148.0,
       "eff_klasse": "A+",
       "schallleistung_db": 60.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1649,7 +1677,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20)",
+      "quelle": "HD24 (COP A20) | ηwh 148 %: ErP-Datenblatt, Lastprofil L, 694 kWh/a; hornbach.de EEK-Produktdatenblatt – Innenluft",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1660,12 +1688,14 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.55,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.7,
       "smart_home": {
         "anschluesse": "PV-/EVU-Kontakt (2. Solltemperatur)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 694
     },
     {
       "id": "aeg-wpt-300-el",
@@ -1673,7 +1703,7 @@
       "marke": "AEG",
       "bauart": "bodenstehend",
       "volumen_l": 302.0,
-      "eta_wh": null,
+      "eta_wh": 144.0,
       "eff_klasse": "A+",
       "schallleistung_db": 60.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1683,7 +1713,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20)",
+      "quelle": "HD24 (COP A20) | ηwh 144 %: ErP-Datenblatt, Lastprofil XL, 1166 kWh/a; hornbach.de EEK-Produktdatenblatt – Innenluft",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1702,12 +1732,14 @@
           "preis_eur": 1998.0
         }
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.51,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.6,
       "smart_home": {
         "anschluesse": "PV-/EVU-Kontakt (2. Solltemperatur)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1166
     },
     {
       "id": "haier-hp200m7-f9",
@@ -1715,7 +1747,7 @@
       "marke": "Haier",
       "bauart": "bodenstehend",
       "volumen_l": 194.0,
-      "eta_wh": null,
+      "eta_wh": 146.0,
       "eff_klasse": "A+",
       "schallleistung_db": 50.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1725,7 +1757,7 @@
       "kessel_material": "emailliert",
       "anode": "elektronische Anode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24/Haier-Datenblatt (COP 14 °C) – Klasse lt. Haier A+, HD24 nennt fälschlich A+++",
+      "quelle": "HD24/Haier-Datenblatt (COP 14 °C) – Klasse lt. Haier A+, HD24 nennt fälschlich A+++ | ηwh 146 %: ErP-Datenblatt, Lastprofil L, 701 kWh/a; hornbach.de EEK-Produktdatenblatt Haier – Innenluft 14 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.5,
@@ -1745,14 +1777,16 @@
           "preis_eur": 1439.0
         }
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.5,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.65,
       "smart_home": {
         "wifi": true,
         "app": "hOn",
         "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 701
     },
     {
       "id": "lg-therma-v-wh20s-f5",
@@ -1760,7 +1794,7 @@
       "marke": "LG",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 144.0,
       "eff_klasse": "A+",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1770,7 +1804,7 @@
       "kessel_material": "Stahl emailliert (keramikbeschichtet)",
       "anode": "Fremdstromanode (Titan)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP 15 °C)",
+      "quelle": "HD24 (COP 15 °C) | ηwh 144 %: ErP-Datenblatt, Lastprofil L, 709 kWh/a; LG Produktdatenblatt WH20S F5",
       "cop_a7": null,
       "cop_a15": 3.5,
       "cop_a14": null,
@@ -1781,12 +1815,14 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.5,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.6,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 709
     },
     {
       "id": "lg-therma-v-wh20str2-fa",
@@ -1794,7 +1830,7 @@
       "marke": "LG",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 144.0,
       "eff_klasse": "A+",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1804,7 +1840,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A15/W35)",
+      "quelle": "HD24 (COP A15/W35) | ηwh 144 %: ErP-Datenblatt, Lastprofil L, 709 kWh/a; LG Produktdatenblatt WH20STR2.FA",
       "cop_a7": null,
       "cop_a15": 3.5,
       "cop_a14": null,
@@ -1815,14 +1851,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.5,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.6,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ",
         "anschluesse": "SG-Eingänge SG1/SG2 (4 Zustände)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 709
     },
     {
       "id": "kermi-x-change-aqua-eco-xl",
@@ -1830,7 +1868,7 @@
       "marke": "Kermi",
       "bauart": "bodenstehend",
       "volumen_l": 270.0,
-      "eta_wh": null,
+      "eta_wh": 124.0,
       "eff_klasse": "A+",
       "schallleistung_db": 56.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1840,7 +1878,7 @@
       "kessel_material": "emailliert",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20/W10-53)",
+      "quelle": "HD24 (COP A20/W10-53) | ηwh 124 %: ErP-Datenblatt, Lastprofil XL, 1435 kWh/a (Label rechnerisch 116.7 %); Kermi Produktdatenblatt W20520, EPREL 2365662 – Datenblatt in sich widersprüchlich (124 % passt rechnerisch zu ~1351 kWh)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1851,13 +1889,15 @@
         "variante": "XL",
         "flaeche_m2": 0.84
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.47,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.1,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "Smart-Grid- und PV-Eingang",
         "modbus": true
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1435
     },
     {
       "id": "haier-hp250m7-f9",
@@ -1865,7 +1905,7 @@
       "marke": "Haier",
       "bauart": "bodenstehend",
       "volumen_l": 250.0,
-      "eta_wh": null,
+      "eta_wh": 144.0,
       "eff_klasse": "A+",
       "schallleistung_db": 50.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -1875,7 +1915,7 @@
       "kessel_material": "emailliert",
       "anode": "elektronische Anode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24/Haier-Datenblatt (COP 14 °C) – Klasse lt. Haier A+, HD24 nennt fälschlich A+++ | baugleich als „Kwikot by Haier“ Kwikot HP250M7-F9 vertrieben (klimacorner.de: 1613.00 €)",
+      "quelle": "HD24/Haier-Datenblatt (COP 14 °C) – Klasse lt. Haier A+, HD24 nennt fälschlich A+++ | baugleich als „Kwikot by Haier“ Kwikot HP250M7-F9 vertrieben (klimacorner.de: 1613.00 €) | ηwh 144 %: ErP-Datenblatt, Lastprofil XL, 1162 kWh/a; hornbach.de EEK-Produktdatenblatt Haier – Innenluft 14 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.45,
@@ -1895,14 +1935,16 @@
           "preis_eur": 1549.0
         }
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.45,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.6,
       "smart_home": {
         "wifi": true,
         "app": "hOn",
         "anschluesse": "PV/SG-Eingang; RS485 (Modbus nur inoffiziell belegt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1162
     },
     {
       "id": "daikin-altherma-m-hw-260-ekhhe260cv37",
@@ -2397,7 +2439,7 @@
       "marke": "Alarko",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": null,
+      "eta_wh": 132.0,
       "eff_klasse": "A+",
       "schallleistung_db": 54.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2407,7 +2449,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
+      "quelle": "HD24 (COP EN16147 15/12 °C) | ηwh 132 %: ErP-Datenblatt, Lastprofil XL, 1267 kWh/a; Alarko R290-Katalog (heizungsdiscount24.de) – Außenluft 7 °C",
       "cop_a7": null,
       "cop_a15": 3.25,
       "cop_a14": null,
@@ -2427,15 +2469,17 @@
           "preis_eur": 1569.0
         }
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.25,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.3,
       "sg_ready": true,
       "smart_home": {
         "wifi": true,
         "app": "NetHome Plus",
         "modbus": true,
         "anschluesse": "SG-Port, RS485-Modbus"
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1267
     },
     {
       "id": "hisense-hi-water-ah-250u4gbb00",
@@ -2487,7 +2531,7 @@
       "marke": "Styleboiler",
       "bauart": "bodenstehend",
       "volumen_l": 285.0,
-      "eta_wh": null,
+      "eta_wh": 131.7,
       "eff_klasse": "A+",
       "schallleistung_db": 51.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2497,7 +2541,7 @@
       "kessel_material": "Edelstahl (Duplex 2205)",
       "anode": "Fremdstromanode (Titan)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP Hersteller)",
+      "quelle": "HD24 (COP Hersteller) | ηwh 131,7 %: ErP-Datenblatt, Lastprofil XL, 1272 kWh/a; Styleboiler Datenblatt Futura Eco X 2025 – Außenluft 7 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -2517,13 +2561,15 @@
           "preis_eur": 2049.0
         }
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.24,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.292,
       "smart_home": {
         "wifi": true,
         "app": "Smart Life",
         "anschluesse": "Digitaleingang (PV)"
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1272
     },
     {
       "id": "hofman-energy-avarma-190-300-l",
@@ -2531,7 +2577,7 @@
       "marke": "Hofman Energy",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": null,
+      "eta_wh": 131.7,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2541,7 +2587,7 @@
       "kessel_material": "Edelstahl (Duplex 2205)",
       "anode": "elektronische Anode",
       "ehpa_guetesiegel": null,
-      "quelle": "hofman-energy.com (COP DHW)",
+      "quelle": "hofman-energy.com (COP DHW) | ηwh 131,7 %: ErP-Datenblatt, Lastprofil XL, 1272 kWh/a; Hofman EPD HE-AI-190 – Innenluft, Smart-Control an",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -2552,15 +2598,17 @@
         "variante": "Register 2",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.24,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.292,
       "sg_ready": false,
       "smart_home": {
         "wifi": true,
         "app": "Smart Life",
         "modbus": true,
         "anschluesse": "1 Schalteingang (Remote/PV), Modbus RS485"
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1272
     },
     {
       "id": "austria-email-ag-ae-revolution-evo-3-200l-wt",
@@ -2726,7 +2774,7 @@
       "marke": "LG",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 132.0,
       "eff_klasse": "A+",
       "schallleistung_db": 53.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2736,7 +2784,7 @@
       "kessel_material": null,
       "anode": "Fremdstromanode (ICCP)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A15/W35)",
+      "quelle": "HD24 (COP A15/W35) | ηwh 132 %: ErP-Datenblatt, Lastprofil L, 770 kWh/a; LG Produktdatenblatt WH20ESF0.CA, EPREL 2326386",
       "cop_a7": null,
       "cop_a15": 3.2,
       "cop_a14": null,
@@ -2747,14 +2795,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.2,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.3,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ",
         "anschluesse": "SG Ready"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 770
     },
     {
       "id": "dimplex-dhw-250p",
@@ -2762,7 +2812,7 @@
       "marke": "Dimplex",
       "bauart": "bodenstehend",
       "volumen_l": 250.0,
-      "eta_wh": null,
+      "eta_wh": 133.0,
       "eff_klasse": "A+",
       "schallleistung_db": 56.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2772,7 +2822,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesium-Opferanode",
       "ehpa_guetesiegel": null,
-      "quelle": "Dimplex-Datenblatt (COP A15/W55, Lastprofil L)",
+      "quelle": "Dimplex-Datenblatt (COP A15/W55, Lastprofil L) | ηwh 133 %: ErP-Datenblatt, Lastprofil L, 763 kWh/a; Dimplex Energielabel-Datenblatt DHW 250P – Innenluft",
       "cop_a7": null,
       "cop_a15": 3.2,
       "cop_a14": null,
@@ -2783,13 +2833,15 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.2,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.325,
       "sg_ready": true,
       "smart_home": {
         "modbus": true,
         "anschluesse": "PV-Kontakt"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 763
     },
     {
       "id": "alarko-flr-hwh-190c",
@@ -2797,7 +2849,7 @@
       "marke": "Alarko",
       "bauart": "bodenstehend",
       "volumen_l": 190.0,
-      "eta_wh": null,
+      "eta_wh": 131.0,
       "eff_klasse": "A",
       "schallleistung_db": 56.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -2807,7 +2859,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
+      "quelle": "HD24 (COP EN16147 15/12 °C) | ηwh 131 %: ErP-Datenblatt, Lastprofil L, 780.8 kWh/a; Alarko R290-Katalog (heizungsdiscount24.de) – Außenluft 7 °C",
       "cop_a7": null,
       "cop_a15": 3.15,
       "cop_a14": null,
@@ -2827,15 +2879,17 @@
           "preis_eur": 1389.0
         }
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.15,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.275,
       "sg_ready": true,
       "smart_home": {
         "wifi": true,
         "app": "NetHome Plus",
         "modbus": true,
         "anschluesse": "SG-Port, RS485-Modbus"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 780.8
     },
     {
       "id": "vaillant-fluostor-vwh-b-270-1",
@@ -3017,7 +3071,7 @@
       "marke": "Hofman Energy",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 129.9,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3027,7 +3081,7 @@
       "kessel_material": "Edelstahl (Duplex 2205)",
       "anode": "elektronische Anode",
       "ehpa_guetesiegel": null,
-      "quelle": "hofman-energy.com (COP DHW)",
+      "quelle": "hofman-energy.com (COP DHW) | ηwh 129,9 %: ErP-Datenblatt, Lastprofil L, 788 kWh/a; Hofman EPD HE-AI-190 – Innenluft, Smart-Control an; Label-PDF nennt abweichende kWh",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3038,15 +3092,17 @@
         "variante": "Register 2",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.04,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.248,
       "sg_ready": false,
       "smart_home": {
         "wifi": true,
         "app": "Smart Life",
         "modbus": true,
         "anschluesse": "1 Schalteingang (Remote/PV), Modbus RS485"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 788
     },
     {
       "id": "hisense-hi-water-ah-200u4gab00",
@@ -3318,7 +3374,7 @@
       "marke": "Austria Email",
       "bauart": "wandhaengend",
       "volumen_l": 150.0,
-      "eta_wh": null,
+      "eta_wh": 130.8,
       "eff_klasse": "A+",
       "schallleistung_db": 37.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3328,7 +3384,7 @@
       "kessel_material": "emailliert",
       "anode": "ACI-Hybrid (Titan/Mg)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20)",
+      "quelle": "HD24 (COP A20) | ηwh 130,8 %: berechnet aus Energielabel (783 kWh/a, Lastprofil L); Austria Email Prospekt CALYPSO VM 2",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3339,14 +3395,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.82,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.27,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "PV-Funktion",
         "wifi": true,
         "app": "Cozytouch"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 783
     },
     {
       "id": "haier-hp150m8-9",
@@ -3354,7 +3412,7 @@
       "marke": "Haier",
       "bauart": "wandhaengend",
       "volumen_l": 149.0,
-      "eta_wh": null,
+      "eta_wh": 140.0,
       "eff_klasse": "A+",
       "schallleistung_db": 50.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3364,7 +3422,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP 14 °C) | baugleich als „Kwikot by Haier“ Kwikot HP150M8-9 vertrieben (klimacorner.de: 1338.00 €)",
+      "quelle": "HD24 (COP 14 °C) | baugleich als „Kwikot by Haier“ Kwikot HP150M8-9 vertrieben (klimacorner.de: 1338.00 €) | ηwh 140 %: ErP-Datenblatt, Lastprofil L, 732 kWh/a; hornbach.de EEK-Produktdatenblatt Haier – Innenluft 14 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.39,
@@ -3375,14 +3433,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.39,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.5,
       "smart_home": {
         "wifi": true,
         "app": "hOn",
         "anschluesse": "SG Ready / PV (Händlerangabe)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 732
     },
     {
       "id": "haier-hp110m8-9",
@@ -3390,7 +3450,7 @@
       "marke": "Haier",
       "bauart": "wandhaengend",
       "volumen_l": 102.0,
-      "eta_wh": null,
+      "eta_wh": 140.0,
       "eff_klasse": "A+",
       "schallleistung_db": 50.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3400,7 +3460,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP 14 °C) | baugleich als „Kwikot by Haier“ Kwikot HP110M8-9 vertrieben (klimacorner.de: 1113.00 €)",
+      "quelle": "HD24 (COP 14 °C) | baugleich als „Kwikot by Haier“ Kwikot HP110M8-9 vertrieben (klimacorner.de: 1113.00 €) | ηwh 140 %: ErP-Datenblatt, Lastprofil M, 367 kWh/a; hornbach.de EEK-Produktdatenblatt Haier – Innenluft 14 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.32,
@@ -3411,14 +3471,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.32,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.5,
       "smart_home": {
         "wifi": true,
         "app": "hOn",
         "anschluesse": "SG Ready / PV (Händlerangabe)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 367
     },
     {
       "id": "austria-email-calypso-vm-2-100-l",
@@ -3426,7 +3488,7 @@
       "marke": "Austria Email",
       "bauart": "wandhaengend",
       "volumen_l": 100.0,
-      "eta_wh": null,
+      "eta_wh": 112.6,
       "eff_klasse": "A+",
       "schallleistung_db": 37.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3436,7 +3498,7 @@
       "kessel_material": "emailliert",
       "anode": "ACI-Hybrid (Titan/Mg)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A14)",
+      "quelle": "HD24 (COP A14) | ηwh 112,6 %: berechnet aus Energielabel (456 kWh/a, Lastprofil M); Austria Email Prospekt CALYPSO VM 2",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.23,
@@ -3447,14 +3509,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.23,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.815,
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "PV-Funktion",
         "wifi": true,
         "app": "Cozytouch"
-      }
+      },
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 456
     },
     {
       "id": "haier-hp80m8-9",
@@ -3462,7 +3526,7 @@
       "marke": "Haier",
       "bauart": "wandhaengend",
       "volumen_l": 82.0,
-      "eta_wh": null,
+      "eta_wh": 129.0,
       "eff_klasse": "A+",
       "schallleistung_db": 50.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3472,7 +3536,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP 14 °C) | baugleich als „Kwikot by Haier“ Kwikot HP80M8-9 vertrieben (klimacorner.de: 1071.00 €)",
+      "quelle": "HD24 (COP 14 °C) | baugleich als „Kwikot by Haier“ Kwikot HP80M8-9 vertrieben (klimacorner.de: 1071.00 €) | ηwh 129 %: ErP-Datenblatt, Lastprofil M, 399 kWh/a; hornbach.de EEK-Produktdatenblatt Haier – Innenluft 14 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.07,
@@ -3483,14 +3547,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a14",
-      "scop_tabelle": 3.07,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.225,
       "smart_home": {
         "wifi": true,
         "app": "hOn",
         "anschluesse": "SG Ready / PV (Händlerangabe)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 399
     },
     {
       "id": "alarko-flr-hwh-150wh",
@@ -3498,7 +3564,7 @@
       "marke": "Alarko",
       "bauart": "wandhaengend",
       "volumen_l": 145.0,
-      "eta_wh": null,
+      "eta_wh": 122.0,
       "eff_klasse": "A",
       "schallleistung_db": 56.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3508,7 +3574,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
+      "quelle": "HD24 (COP EN16147 15/12 °C) | ηwh 122 %: ErP-Datenblatt, Lastprofil L; Alarko R290-Katalog; Lastprofil laut hornbach.at",
       "cop_a7": null,
       "cop_a15": 3.02,
       "cop_a14": null,
@@ -3519,12 +3585,13 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.02,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.05,
       "smart_home": {
         "wifi": true,
         "app": "NetHome Plus"
-      }
+      },
+      "lastprofil": "L"
     },
     {
       "id": "lg-therma-v-wh15esf0-ha",
@@ -3532,7 +3599,7 @@
       "marke": "LG",
       "bauart": "wandhaengend",
       "volumen_l": 150.0,
-      "eta_wh": null,
+      "eta_wh": 120.0,
       "eff_klasse": "A+",
       "schallleistung_db": 45.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3542,7 +3609,7 @@
       "kessel_material": null,
       "anode": "Fremdstrom- + Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A15/W35)",
+      "quelle": "HD24 (COP A15/W35) | ηwh 120 %: ErP-Datenblatt, Lastprofil L, 812 kWh/a (Label rechnerisch 126.1 %); LG Produktdatenblatt WH15ESF0.HA",
       "cop_a7": null,
       "cop_a15": 3.0,
       "cop_a14": null,
@@ -3553,14 +3620,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
+      "scop_basis": "eta_wh",
       "scop_tabelle": 3.0,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ",
         "anschluesse": "SG Ready"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 812
     },
     {
       "id": "panasonic-aquarea-p-dhw150ae5",
@@ -3604,7 +3673,7 @@
       "marke": "Panasonic",
       "bauart": "wandhaengend",
       "volumen_l": 100.0,
-      "eta_wh": null,
+      "eta_wh": 126.0,
       "eff_klasse": "A+",
       "schallleistung_db": 50.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3614,7 +3683,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode (Trockenkontrolle)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (SCOP Hersteller)",
+      "quelle": "HD24 (SCOP Hersteller) | ηwh 126 %: ErP-Datenblatt, Lastprofil M, 409 kWh/a; Panasonic Produktdatenblatt (heizungsdiscount24.de) – meinhausshop-Datenblatt nennt 117 %",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3625,14 +3694,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 2.8,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.15,
       "smart_home": {
         "wifi": "optional",
         "app": "Comfort Cloud",
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 409
     },
     {
       "id": "alarko-flr-hwh-80wh",
@@ -3640,7 +3711,7 @@
       "marke": "Alarko",
       "bauart": "wandhaengend",
       "volumen_l": 78.0,
-      "eta_wh": null,
+      "eta_wh": 112.0,
       "eff_klasse": "A",
       "schallleistung_db": 54.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3650,7 +3721,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
+      "quelle": "HD24 (COP EN16147 15/12 °C) | ηwh 112 %: ErP-Datenblatt, Lastprofil M; Alarko R290-Katalog; Lastprofil laut hornbach.at",
       "cop_a7": null,
       "cop_a15": 2.75,
       "cop_a14": null,
@@ -3661,12 +3732,13 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 2.75,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.8,
       "smart_home": {
         "wifi": true,
         "app": "NetHome Plus"
-      }
+      },
+      "lastprofil": "M"
     },
     {
       "id": "alarko-flr-hwh-100wh",
@@ -3674,7 +3746,7 @@
       "marke": "Alarko",
       "bauart": "wandhaengend",
       "volumen_l": 98.0,
-      "eta_wh": null,
+      "eta_wh": 111.0,
       "eff_klasse": "A",
       "schallleistung_db": 54.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3684,7 +3756,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP EN16147 15/12 °C)",
+      "quelle": "HD24 (COP EN16147 15/12 °C) | ηwh 111 %: ErP-Datenblatt, Lastprofil M; Alarko R290-Katalog; Lastprofil laut hornbach.at",
       "cop_a7": null,
       "cop_a15": 2.74,
       "cop_a14": null,
@@ -3695,12 +3767,13 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 2.74,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.775,
       "smart_home": {
         "wifi": true,
         "app": "NetHome Plus"
-      }
+      },
+      "lastprofil": "M"
     },
     {
       "id": "lg-therma-v-wh10esf0-ha",
@@ -3708,7 +3781,7 @@
       "marke": "LG",
       "bauart": "wandhaengend",
       "volumen_l": 100.0,
-      "eta_wh": null,
+      "eta_wh": 115.0,
       "eff_klasse": "A+",
       "schallleistung_db": 45.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -3718,7 +3791,7 @@
       "kessel_material": null,
       "anode": "Fremdstrom- + Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A15/W35)",
+      "quelle": "HD24 (COP A15/W35) | ηwh 115 %: ErP-Datenblatt, Lastprofil M, 438 kWh/a; LG Produktdatenblatt WH10ESF0.HA",
       "cop_a7": null,
       "cop_a15": 2.7,
       "cop_a14": null,
@@ -3729,14 +3802,16 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 2.7,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.875,
       "smart_home": {
         "wifi": true,
         "app": "ThinQ",
         "anschluesse": "SG Ready"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 438
     },
     {
       "id": "dimplex-dhw-100pwh",
@@ -3937,7 +4012,7 @@
       "marke": "KRONE",
       "bauart": "bodenstehend",
       "volumen_l": 200,
-      "eta_wh": null,
+      "eta_wh": 129.3,
       "eff_klasse": "A+",
       "schallleistung_db": 54,
       "bereitschaftsverlust_kwh_tag": 1.8,
@@ -3947,7 +4022,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "krone-klima.de BWS-125-200: COP 3,1 (EN 16147), A+, 1,5/0,41 kW, Schallleistung 54 dB(A), Warmhalteverlust 75 W, R290, 200 L | Preis: stoeppler-lage.de (breeze24: 2.739 €), Stand 09/2026",
+      "quelle": "krone-klima.de BWS-125-200: COP 3,1 (EN 16147), A+, 1,5/0,41 kW, Schallleistung 54 dB(A), Warmhalteverlust 75 W, R290, 200 L | Preis: stoeppler-lage.de (breeze24: 2.739 €), Stand 09/2026 | ηwh 129,3 %: berechnet aus Energielabel (792 kWh/a, Lastprofil L); krone-klima.de / breeze24.com",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3958,8 +4033,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.1,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.233,
       "waermeleistung_kw": 1.5,
       "waermeleistung": null,
       "el_leistung_kw": 0.41,
@@ -3971,7 +4046,9 @@
       "gewicht_kg": 122,
       "smart_home": {
         "wifi": true
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 792
     },
     {
       "id": "krone-bws-125-300-s",
@@ -3979,7 +4056,7 @@
       "marke": "KRONE",
       "bauart": "bodenstehend",
       "volumen_l": 300,
-      "eta_wh": null,
+      "eta_wh": 124.7,
       "eff_klasse": "A+",
       "schallleistung_db": 54,
       "bereitschaftsverlust_kwh_tag": 2.16,
@@ -3989,7 +4066,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "krone-klima.de BWS-125-300-S: COP 3,0 (EN 16147), A+, 1,5/0,41 kW, WT 1,5 m², Schallleistung 54 dB(A), Warmhalteverlust 90 W, R290, 300 L (280 netto) | Preis: stoeppler-lage.de (breeze24: 2.779 €), Stand 09/2026",
+      "quelle": "krone-klima.de BWS-125-300-S: COP 3,0 (EN 16147), A+, 1,5/0,41 kW, WT 1,5 m², Schallleistung 54 dB(A), Warmhalteverlust 90 W, R290, 300 L (280 netto) | Preis: stoeppler-lage.de (breeze24: 2.779 €), Stand 09/2026 | ηwh 124,7 %: berechnet aus Energielabel (1343 kWh/a, Lastprofil XL); krone-klima.de / breeze24.com",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -4000,8 +4077,8 @@
         "variante": "S",
         "flaeche_m2": 1.5
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.0,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.118,
       "waermeleistung_kw": 1.5,
       "waermeleistung": null,
       "el_leistung_kw": 0.41,
@@ -4013,7 +4090,9 @@
       "gewicht_kg": 149,
       "smart_home": {
         "wifi": true
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1343
     },
     {
       "id": "ed-ecodesign-100-wl",
@@ -4153,7 +4232,7 @@
       "marke": "ED EcoDesign",
       "bauart": "bodenstehend",
       "volumen_l": 166,
-      "eta_wh": null,
+      "eta_wh": 120.0,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": 0.41,
@@ -4163,7 +4242,7 @@
       "kessel_material": "Edelstahl 444",
       "anode": "keine (Edelstahl 444)",
       "ehpa_guetesiegel": null,
-      "quelle": "1ecodesign.com ED 100/180 RF: Wasser/Wasser aus Heizungsrücklauf, COP > 4, 166 L, R290, Stillstand 17 W | solarprofi-24.de / solarcamp24.de: Klasse A+, R290 125 g, Heizstab 1,5–2,0 kW (max. 3,0 kW), 2.599 €",
+      "quelle": "1ecodesign.com ED 100/180 RF: Wasser/Wasser aus Heizungsrücklauf, COP > 4, 166 L, R290, Stillstand 17 W | solarprofi-24.de / solarcamp24.de: Klasse A+, R290 125 g, Heizstab 1,5–2,0 kW (max. 3,0 kW), 2.599 € | ηwh 120,0 %: berechnet aus Energielabel (853 kWh/a, Lastprofil L); Energielabel ED 180 RF (solarprofi-24.de) – Wasser/Wasser (Heizungsrücklauf)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -4174,8 +4253,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 4.0,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.0,
       "waermeleistung_kw": null,
       "waermeleistung": null,
       "el_leistung_kw": null,
@@ -4189,7 +4268,9 @@
       "smart_home": {
         "modbus": true,
         "anschluesse": "Smart Grid Interface (1 Kontakt)"
-      }
+      },
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 853
     },
     {
       "id": "ed-ecodesign-300-wt",
@@ -4241,7 +4322,7 @@
       "marke": "ED EcoDesign",
       "bauart": "bodenstehend",
       "volumen_l": 296,
-      "eta_wh": null,
+      "eta_wh": 142.0,
       "eff_klasse": "A+",
       "schallleistung_db": 60.0,
       "bereitschaftsverlust_kwh_tag": 0.48,
@@ -4251,7 +4332,7 @@
       "kessel_material": "Edelstahl 444",
       "anode": "keine (Edelstahl)",
       "ehpa_guetesiegel": null,
-      "quelle": "1ecodesign.com ED 300-WT E: 296 L Edelstahl 444, serienmäßiger Wärmetauscher, Stillstand 20 W, −10 bis +35 °C | solarprofi-24.de: COP 3,46 bei L20/W10-55, Klasse A+, 60 dB(A), R134a 1,15 kg, Heizstab 2,0 kW, 2.950–3.399 €",
+      "quelle": "1ecodesign.com ED 300-WT E: 296 L Edelstahl 444, serienmäßiger Wärmetauscher, Stillstand 20 W, −10 bis +35 °C | solarprofi-24.de: COP 3,46 bei L20/W10-55, Klasse A+, 60 dB(A), R134a 1,15 kg, Heizstab 2,0 kW, 2.950–3.399 € | ηwh 142 %: ErP-Datenblatt, Lastprofil XL; Betriebsanleitung Baureihe ED 300 WTE",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -4262,8 +4343,8 @@
         "variante": "E",
         "flaeche_m2": 1.0
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.46,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.55,
       "waermeleistung_kw": 2.153,
       "waermeleistung": "2,153 kW Kompressor, max. 4,153 kW",
       "el_leistung_kw": null,
@@ -4277,7 +4358,8 @@
       "smart_home": {
         "modbus": true,
         "anschluesse": "Smart Grid Interface (1 Kontakt)"
-      }
+      },
+      "lastprofil": "XL"
     },
     {
       "id": "ed-ecodesign-310-wt-compact",
@@ -4330,7 +4412,7 @@
       "marke": "ED EcoDesign",
       "bauart": "bodenstehend",
       "volumen_l": 395,
-      "eta_wh": null,
+      "eta_wh": 127.0,
       "eff_klasse": "A",
       "schallleistung_db": 60.0,
       "bereitschaftsverlust_kwh_tag": 0.7,
@@ -4340,7 +4422,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesium-Signalanode (R 5/4\")",
       "ehpa_guetesiegel": null,
-      "quelle": "1ecodesign.com ED 400: 395 L emailliert, 1–2 WT, COP 3,62, Stillstand 29 W, −10 bis +35 °C | solarprofi-24.de (395 L): COP 3,15 bei L20/W10-55, Klasse A, 60 dB(A), R134a 1,4 kg, Heizstab 2,0 kW, 4.299 € – abweichend vom Flyerwert 3,62",
+      "quelle": "1ecodesign.com ED 400: 395 L emailliert, 1–2 WT, COP 3,62, Stillstand 29 W, −10 bis +35 °C | solarprofi-24.de (395 L): COP 3,15 bei L20/W10-55, Klasse A, 60 dB(A), R134a 1,4 kg, Heizstab 2,0 kW, 4.299 € – abweichend vom Flyerwert 3,62 | ηwh 127 %: ErP-Datenblatt, Lastprofil XXL; Betriebsanleitung Baureihe ED 400",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -4351,8 +4433,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.15,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.175,
       "waermeleistung_kw": 2.64,
       "waermeleistung": "2,64 kW Kompressor, max. 4,64 kW",
       "el_leistung_kw": 0.707,
@@ -4366,7 +4448,8 @@
       "smart_home": {
         "modbus": true,
         "anschluesse": "Smart Grid Interface (1 Kontakt)"
-      }
+      },
+      "lastprofil": "XXL"
     },
     {
       "id": "ed-ecodesign-400-wpz",
@@ -4665,7 +4748,7 @@
       "marke": "alpha innotec",
       "bauart": "bodenstehend",
       "volumen_l": 260,
-      "eta_wh": null,
+      "eta_wh": 150.0,
       "eff_klasse": "A+",
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -4675,7 +4758,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "alpha-innotec.de BWP-Serie / selfio.de: COP 3,7 bei A15/W45, 1,7 kW, Klasse A+, R134a, Heizstab und Wärmetauscher integriert, Lüftungsfunktion, 3.228,49 € (toms-car-hifi.de) bis 4.665,45 € (selfio.de); Schallleistungspegel nicht veröffentlicht",
+      "quelle": "alpha-innotec.de BWP-Serie / selfio.de: COP 3,7 bei A15/W45, 1,7 kW, Klasse A+, R134a, Heizstab und Wärmetauscher integriert, Lüftungsfunktion, 3.228,49 € (toms-car-hifi.de) bis 4.665,45 € (selfio.de); Schallleistungspegel nicht veröffentlicht | ηwh 150 %: ErP-Datenblatt, Lastprofil XL, 1115 kWh/a; selfio.de Produktdatenblatt BWP 260S – Innenluft",
       "cop_a7": null,
       "cop_a15": 3.7,
       "cop_a14": null,
@@ -4686,8 +4769,8 @@
         "variante": "S (Solarregister)",
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a15",
-      "scop_tabelle": 3.7,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.75,
       "waermeleistung_kw": 1.7,
       "waermeleistung": "1,7 kW (A15/W45)",
       "ww_max_c": 65,
@@ -4698,7 +4781,9 @@
         "wifi": true,
         "modbus": true,
         "anschluesse": "SG Ready (QA1), PV-Eingang 0–10 V"
-      }
+      },
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1115
     },
     {
       "id": "alpha-innotec-wwb-21",
@@ -4745,7 +4830,7 @@
       "marke": "Stiebel Eltron",
       "bauart": "bodenstehend",
       "volumen_l": 220.0,
-      "eta_wh": null,
+      "eta_wh": 130.0,
       "eff_klasse": "A+",
       "schallleistung_db": 52.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -4755,7 +4840,7 @@
       "kessel_material": "emailliert (Spezialemaillierung)",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": null,
-      "quelle": "stiebel-eltron.at Datenblatt WWK 221 electronic 230949: COP 3,28 (A20) / 3,07 (A7), Lastprofil L, A+, 1,8/1,3 kW, 52 dB(A) mit Luftkanal, WW 65 °C, V40 330 L | Preis: voelkner.de, Stand 09/2026",
+      "quelle": "stiebel-eltron.at Datenblatt WWK 221 electronic 230949: COP 3,28 (A20) / 3,07 (A7), Lastprofil L, A+, 1,8/1,3 kW, 52 dB(A) mit Luftkanal, WW 65 °C, V40 330 L | Preis: voelkner.de, Stand 09/2026 | ηwh 130 %: ErP-Datenblatt, Lastprofil L, 795 kWh/a; Stiebel Produktdatenblatt 230949 – Innenluft; Außenluft 126 % / 821 kWh",
       "cop_a7": 3.07,
       "cop_a15": null,
       "cop_a14": null,
@@ -4766,8 +4851,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 3.28,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.25,
       "waermeleistung_kw": 1.8,
       "waermeleistung": "1,8 kW (A20) / 1,3 kW (A7)",
       "ww_max_c": 65,
@@ -4778,7 +4863,8 @@
       "sg_ready": true,
       "lastprofil": "L",
       "abmessung_mm": "Ø 690 × 1501",
-      "gewicht_kg": 120
+      "gewicht_kg": 120,
+      "jahresstromverbrauch_kwh": 795
     },
     {
       "id": "stiebel-eltron-wwk-i-201-k-premium",
@@ -5033,7 +5119,7 @@
       "marke": "a-TroniX",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 150.1,
       "eff_klasse": "A++",
       "schallleistung_db": 55.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -5043,7 +5129,7 @@
       "kessel_material": "Edelstahl 316L",
       "anode": "keine (Edelstahl)",
       "ehpa_guetesiegel": null,
-      "quelle": "solarcamp24.de a-TroniX 200L (AKKU SYS, Halstenbek): COP 3,61 ohne Prüfbedingung, A++, R290, 55 dB(A), Edelstahl 316L, Heizstab integriert (Leistung nicht angegeben) | Preis: solarcamp24.de, Stand 09/2026",
+      "quelle": "solarcamp24.de a-TroniX 200L (AKKU SYS, Halstenbek): COP 3,61 ohne Prüfbedingung, A++, R290, 55 dB(A), Edelstahl 316L, Heizstab integriert (Leistung nicht angegeben) | Preis: solarcamp24.de, Stand 09/2026 | ηwh 150,1 %: ErP-Datenblatt, Lastprofil L; akkusys.shop Datenblatt AX 200L/300L – Innenluft 20/15 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -5054,8 +5140,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.61,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.752,
       "waermeleistung_kw": 1.56,
       "el_leistung_kw": null,
       "ww_max_c": 70,
@@ -5068,7 +5154,8 @@
         "anschluesse": "SG Ready / PV"
       },
       "waermeleistung": "1,56 kW",
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "L"
     },
     {
       "id": "a-tronix-300l",
@@ -5076,7 +5163,7 @@
       "marke": "a-TroniX",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": null,
+      "eta_wh": 156.2,
       "eff_klasse": "A+",
       "schallleistung_db": 56.0,
       "bereitschaftsverlust_kwh_tag": null,
@@ -5086,7 +5173,7 @@
       "kessel_material": "Edelstahl 316L",
       "anode": "keine (Edelstahl)",
       "ehpa_guetesiegel": null,
-      "quelle": "solarcamp24.de a-TroniX 300L (AKKU SYS, Halstenbek): COP 3,80 ohne Prüfbedingung, A+, R290, 56 dB(A), Edelstahl 316L | Preis: solarcamp24.de, Stand 09/2026",
+      "quelle": "solarcamp24.de a-TroniX 300L (AKKU SYS, Halstenbek): COP 3,80 ohne Prüfbedingung, A+, R290, 56 dB(A), Edelstahl 316L | Preis: solarcamp24.de, Stand 09/2026 | ηwh 156,2 %: ErP-Datenblatt, Lastprofil XL; akkusys.shop Datenblatt AX 200L/300L – Innenluft 20/15 °C",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -5097,8 +5184,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_unspezifisch",
-      "scop_tabelle": 3.8,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.905,
       "waermeleistung_kw": 1.58,
       "el_leistung_kw": null,
       "ww_max_c": 70,
@@ -5111,7 +5198,8 @@
         "anschluesse": "SG Ready / PV"
       },
       "waermeleistung": "1,58 kW",
-      "sg_ready": true
+      "sg_ready": true,
+      "lastprofil": "XL"
     },
     {
       "id": "elix-gm200",
@@ -5119,7 +5207,7 @@
       "marke": "Elix",
       "bauart": "bodenstehend",
       "volumen_l": 200.0,
-      "eta_wh": null,
+      "eta_wh": 140.6,
       "eff_klasse": null,
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -5129,7 +5217,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "solarcamp24.de Elix GM200: COP 4,0 bei 20 °C, 1.192 kWh/a, WP 394 W, Heizstab 2.500 W, R290, „<42 dB(A)“ (Schalldruck, kein Schallleistungspegel), emailliert | Preis: solarcamp24.de, Stand 09/2026",
+      "quelle": "solarcamp24.de Elix GM200: COP 4,0 bei 20 °C, 1.192 kWh/a, WP 394 W, Heizstab 2.500 W, R290, „<42 dB(A)“ (Schalldruck, kein Schallleistungspegel), emailliert | Preis: solarcamp24.de, Stand 09/2026 | ηwh 140,6 %: ErP-Datenblatt, Lastprofil XL, 1192 kWh/a; Elix Lastprofil-Prüfdokument (solarcamp24.de) – solarcamp24 nennt fälschlich Lastprofil M",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -5140,8 +5228,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 4.0,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.515,
       "waermeleistung_kw": null,
       "el_leistung_kw": 0.394,
       "ww_max_c": 75,
@@ -5154,7 +5242,8 @@
         "wifi": true,
         "app": "Smart Life"
       },
-      "jahresstromverbrauch_kwh": 1192
+      "jahresstromverbrauch_kwh": 1192,
+      "lastprofil": "XL"
     },
     {
       "id": "elix-gm300",
@@ -5162,7 +5251,7 @@
       "marke": "Elix",
       "bauart": "bodenstehend",
       "volumen_l": 300.0,
-      "eta_wh": null,
+      "eta_wh": 138.9,
       "eff_klasse": null,
       "schallleistung_db": null,
       "bereitschaftsverlust_kwh_tag": null,
@@ -5172,7 +5261,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "kaufland.at / solarcamp24.de Elix GM300: COP 4,0 bei 20 °C, 1.206 kWh/a, WP 394 W, Heizstab 2.500 W, R290 150 g, emailliert, Magnesiumanode | Preis: solarcamp24.de, Stand 09/2026",
+      "quelle": "kaufland.at / solarcamp24.de Elix GM300: COP 4,0 bei 20 °C, 1.206 kWh/a, WP 394 W, Heizstab 2.500 W, R290 150 g, emailliert, Magnesiumanode | Preis: solarcamp24.de, Stand 09/2026 | ηwh 138,9 %: ErP-Datenblatt, Lastprofil XL, 1206 kWh/a; Elix Lastprofil-Prüfdokument (solarcamp24.de)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -5183,8 +5272,8 @@
         "variante": null,
         "flaeche_m2": null
       },
-      "scop_basis": "cop_a20",
-      "scop_tabelle": 4.0,
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.473,
       "waermeleistung_kw": null,
       "el_leistung_kw": 0.394,
       "ww_max_c": null,
@@ -5197,7 +5286,8 @@
         "wifi": true,
         "app": "Smart Life"
       },
-      "jahresstromverbrauch_kwh": 1206
+      "jahresstromverbrauch_kwh": 1206,
+      "lastprofil": "XL"
     }
   ]
 }

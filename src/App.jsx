@@ -33,6 +33,7 @@ const ANSICHTEN = [
   { id: 'gross', label: 'große Speicher', filter: { bauart: 'bodenstehend', volumenklasse: 'gross', nurFavoriten: false } },
   { id: 'wand', label: 'Wandgeräte', filter: { bauart: 'wandhaengend', volumenklasse: 'alle', nurFavoriten: false } },
   { id: 'ohne_kessel', label: 'ohne Kessel', filter: { bauart: 'ohne_kessel', volumenklasse: 'alle', nurFavoriten: false } },
+  { id: 'split', label: 'Splitgeräte', filter: { bauart: 'split', volumenklasse: 'alle', nurFavoriten: false } },
   { id: 'favoriten', label: 'Favoriten', filter: { bauart: 'alle', volumenklasse: 'alle', nurFavoriten: true } },
 ]
 
@@ -213,6 +214,9 @@ export default function App() {
     setBauart(a.filter.bauart)
     setVolumenklasse(a.filter.volumenklasse)
     setNurFavoriten(a.filter.nurFavoriten)
+    if (a.filter.bauart === 'wandhaengend' || a.filter.bauart === 'ohne_kessel' || a.filter.bauart === 'split') {
+      setNurMitWt(false)
+    }
   }
 
   const starthilfeSchliessen = () => setStarthilfeOffen(false)
@@ -298,7 +302,7 @@ export default function App() {
           value={suche} onChange={(e) => setSuche(e.target.value)} />
         <select value={bauart} onChange={(e) => setBauart(e.target.value)}>
           <option value="alle">Bauart: alle</option>
-          {BAUARTEN.filter((b) => b.id !== 'split').map((b) => (
+          {BAUARTEN.map((b) => (
             <option key={b.id} value={b.id}>{b.label}</option>
           ))}
         </select>
@@ -352,10 +356,12 @@ export default function App() {
           <option value="2020">ab 2020</option>
           <option value="vor2020">vor 2020</option>
         </select>
-        <label className="haken">
-          <input type="checkbox" checked={nurMitWt} onChange={(e) => setNurMitWt(e.target.checked)} />
-          mit Wärmetauscher
-        </label>
+        {bauart !== 'wandhaengend' && bauart !== 'ohne_kessel' && bauart !== 'split' && (
+          <label className="haken">
+            <input type="checkbox" checked={nurMitWt} onChange={(e) => setNurMitWt(e.target.checked)} />
+            mit Wärmetauscher
+          </label>
+        )}
         <label className="haken">
           <input type="checkbox" checked={nurMitPreis} onChange={(e) => setNurMitPreis(e.target.checked)} />
           nur mit Preis

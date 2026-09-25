@@ -155,11 +155,44 @@ function OhneKessel() {
   )
 }
 
+function Split() {
+  const id = 'sp'
+  const tankCx = 90
+  const tankRx = 17
+  return (
+    <>
+      <Defs id={id} />
+      <ellipse cx="30" cy="148" rx="24" ry="4" fill={`url(#${id}-schatten)`} />
+      <ellipse cx={tankCx} cy="152" rx={tankRx + 5} ry="4.5" fill={`url(#${id}-schatten)`} />
+
+      <rect x="2" y="52" width="16" height="98" rx="2" fill="#d7dde3" />
+      <rect x="16" y="52" width="5" height="98" fill="#c2c9d0" />
+
+      <rect x="22" y="78" width="7" height="5" rx="1" fill="#6b7580" />
+      <rect x="22" y="112" width="7" height="5" rx="1" fill="#6b7580" />
+      <rect x="8" y="74" width="42" height="54" rx="5" fill={`url(#${id}-haube)`} />
+      <rect x="8" y="74" width="42" height="9" rx="4" fill={`url(#${id}-haube-oben)`} />
+      <Luefter cx="29" cy="105" r="13" id={id} />
+      <rect x="13" y="124" width="7" height="5" rx="1" fill="#4a535c" />
+      <rect x="38" y="124" width="7" height="5" rx="1" fill="#4a535c" />
+
+      <path d="M50 86 H62 C70 86 70 64 78 64" fill="none" stroke="#c47a3a" strokeWidth="2.6" strokeLinecap="round" />
+      <path d="M50 93 H60 C68 93 70 72 78 72" fill="none" stroke="#a35f2a" strokeWidth="2.6" strokeLinecap="round" />
+
+      <Fuesse cx={tankCx} y="146" rx={tankRx} />
+      <Speicher cx={tankCx} oben="58" hoehe="88" rx={tankRx} id={id} />
+      <rect x={tankCx - 10} y="50" width="20" height="11" rx="3" fill={`url(#${id}-haube)`} />
+      <rect x={tankCx - 3.5} y="53" width="7" height="3" rx="1" fill="#7ad0a8" opacity="0.85" />
+    </>
+  )
+}
+
 function Zeichnung({ art }) {
   return (
     <svg viewBox="0 0 120 160" className="typ-bild" role="presentation" aria-hidden="true">
       {art === 'wand' ? <Wandgeraet />
         : art === 'ohne_kessel' ? <OhneKessel />
+        : art === 'split' ? <Split />
         : <Stehend hoehe={art} />}
     </svg>
   )
@@ -179,6 +212,9 @@ const TYPEN = [
     text: 'Über 330 L. Mehrfamilienhaus oder hoher Zapfbedarf.' },
   { ansicht: 'ohne_kessel', art: 'ohne_kessel', titel: 'Ohne Speicher',
     text: 'Nur das Wärmepumpenmodul – an einen vorhandenen Speicher angeschlossen.',
+    ohneWt: true },
+  { ansicht: 'split', art: 'split', titel: 'Splitgerät',
+    text: 'Speicher innen, Verdichter draußen. Leiser im Aufstellraum, braucht eine Außeneinheit.',
     ohneWt: true },
 ]
 

@@ -37,7 +37,11 @@
         "wifi": true,
         "app": "MyStiebel",
         "anschluesse": "SG Ready (2 Eingänge), WLAN integriert"
-      }
+      },
+      "markteinfuehrung": "2024-09-02",
+      "eprel_nr": "2110813",
+      "eta_wh_kalt": 176.0,
+      "eta_wh_warm": 176.0
     },
     {
       "id": "ochsner-europa-n-200-ca",
@@ -73,7 +77,11 @@
         "anschluesse": "WLAN integriert, 2 Eingänge (SG Ready/EVU)",
         "wifi": true,
         "app": "OCHSNER EASY"
-      }
+      },
+      "markteinfuehrung": "2025-01-01",
+      "eprel_nr": "2627395",
+      "eta_wh_kalt": 176.0,
+      "eta_wh_warm": 176.0
     },
     {
       "id": "kronoterm-essenta-303",
@@ -113,7 +121,11 @@
         "anschluesse": "Modbus RTU (RS485), Bluetooth",
         "app": "CLOUD.KRONOTERM (angekündigt)"
       },
-      "lastprofil": "XL"
+      "lastprofil": "XL",
+      "markteinfuehrung": "2026-03-01",
+      "eprel_nr": "2659204",
+      "eta_wh_kalt": 163.0,
+      "eta_wh_warm": 163.0
     },
     {
       "id": "ochsner-europa-n-300-ca",
@@ -162,7 +174,11 @@
         "anschluesse": "WLAN integriert, 2 Eingänge (SG Ready/EVU)",
         "wifi": true,
         "app": "OCHSNER EASY"
-      }
+      },
+      "markteinfuehrung": "2026-01-01",
+      "eprel_nr": "2627658",
+      "eta_wh_kalt": 172.0,
+      "eta_wh_warm": 172.0
     },
     {
       "id": "stiebel-eltron-wwk-i-300-plus",
@@ -207,7 +223,11 @@
         "wifi": true,
         "app": "MyStiebel",
         "anschluesse": "SG Ready (2 Eingänge), WLAN integriert"
-      }
+      },
+      "markteinfuehrung": "2024-09-02",
+      "eprel_nr": "2110837",
+      "eta_wh_kalt": 172.0,
+      "eta_wh_warm": 172.0
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-r-290",
@@ -256,7 +276,11 @@
       "lastprofil": "XL",
       "ww_max_c": 70,
       "luft_min_c": -10,
-      "luft_max_c": 42
+      "luft_max_c": 42,
+      "markteinfuehrung": "2025-05-26",
+      "eprel_nr": "2516529",
+      "eta_wh_kalt": 125.0,
+      "eta_wh_warm": 157.0
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-ze-300l",
@@ -274,7 +298,7 @@
       "kessel_material": "emailliert (Ceraprotect)",
       "anode": "Magnesiumanode (elektr. überwacht)",
       "ehpa_guetesiegel": "21.02.2024",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Vorgänger-Generation: Datenblatt T2E-ze/T2H-ze R1234ze (GWP 7), nicht die aktuelle R290-Serie auf viessmann.de",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Vorgänger-Generation: Datenblatt T2E-ze/T2H-ze R1234ze (GWP 7), nicht die aktuelle R290-Serie auf viessmann.de | Markteinführung 2020-04 (belegt): haustec.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -299,7 +323,8 @@
       "smart_home": {
         "wifi": false,
         "anschluesse": "PV-Schaltkontakt; Modbus nur für Energiezähler; nicht ViCare-fähig"
-      }
+      },
+      "markteinfuehrung": "2020-04"
     },
     {
       "id": "austria-email-explorer-evo-3-270l",
@@ -317,7 +342,7 @@
       "kessel_material": "emailliert",
       "anode": "ACI-Hybrid (Titan/Mg)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor) – Klasse aus ηwh 164 % bei Lastprofil XL (Shop nannte A+)",
+      "quelle": "HD24 (ηwh_m × Faktor) – Klasse aus ηwh 164 % bei Lastprofil XL (Shop nannte A+) | Markteinführung 2025-08 (belegt): austria-email.de News",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -344,7 +369,8 @@
         "wifi": true,
         "app": "Cozytouch",
         "anschluesse": "PV-Kontakt"
-      }
+      },
+      "markteinfuehrung": "2025-08"
     },
     {
       "id": "elco-aerotop-dhw-3-250",
@@ -397,7 +423,11 @@
         "wifi": true,
         "app": "REMOCON NET"
       },
-      "jahresstromverbrauch_kwh": 1162
+      "jahresstromverbrauch_kwh": 1162,
+      "markteinfuehrung": "2025-12-10",
+      "eprel_nr": "2563382",
+      "eta_wh_kalt": 116.0,
+      "eta_wh_warm": 166.0
     },
     {
       "id": "boesch-mcb270-l",
@@ -440,7 +470,11 @@
       "smart_home": {
         "anschluesse": "PV-Funktion / SmartGrid-Ready"
       },
-      "lastprofil": "XL"
+      "lastprofil": "XL",
+      "markteinfuehrung": "2026-03-09",
+      "eprel_nr": "2650808",
+      "eta_wh_kalt": 119.0,
+      "eta_wh_warm": 156.0
     },
     {
       "id": "remko-rbw-302-pro-pv",
@@ -487,7 +521,11 @@
       },
       "sg_ready": false,
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1178
+      "jahresstromverbrauch_kwh": 1178,
+      "markteinfuehrung": "2024-03-07",
+      "eprel_nr": "2607518",
+      "eta_wh_kalt": 115.0,
+      "eta_wh_warm": 153.0
     },
     {
       "id": "kermi-x-change-aqua-eco-l",
@@ -505,7 +543,7 @@
       "kessel_material": "emailliert",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20/W10-53) | ηwh 118 %: ErP-Datenblatt, Lastprofil L, 874 kWh/a; Kermi Produktdatenblatt W20519",
+      "quelle": "HD24 (COP A20/W10-53) | ηwh 118 %: ErP-Datenblatt, Lastprofil L, 874 kWh/a; Kermi Produktdatenblatt W20519 | Markteinführung 2025-07 (belegt): haustec.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -524,7 +562,8 @@
         "modbus": true
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 874
+      "jahresstromverbrauch_kwh": 874,
+      "markteinfuehrung": "2025-07"
     },
     {
       "id": "austria-email-ag-wpa-303-eco-2",
@@ -596,7 +635,11 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 646
+      "jahresstromverbrauch_kwh": 646,
+      "markteinfuehrung": "2025-04-02",
+      "eprel_nr": "2317574",
+      "eta_wh_kalt": 155.0,
+      "eta_wh_warm": 155.0
     },
     {
       "id": "ochsner-europa-333-genius",
@@ -631,7 +674,11 @@
       "smart_home": {
         "modbus": true,
         "anschluesse": "Modbus (Gebäudeleittechnik), PV-Eigenstrom"
-      }
+      },
+      "markteinfuehrung": "2017-11-01",
+      "eprel_nr": "97745",
+      "eta_wh_kalt": 155.0,
+      "eta_wh_warm": 155.0
     },
     {
       "id": "vaillant-arostor-plus-vwl-b-260-6",
@@ -677,7 +724,9 @@
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "Smart-Grid-/PV-Steckverbindung"
-      }
+      },
+      "markteinfuehrung": "2025-08-01",
+      "eprel_nr": "2501179"
     },
     {
       "id": "lg-therma-v-wh27s-f5",
@@ -713,7 +762,11 @@
         "app": "ThinQ"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 646
+      "jahresstromverbrauch_kwh": 646,
+      "markteinfuehrung": "2020-11-22",
+      "eprel_nr": "402009",
+      "eta_wh_kalt": 155.0,
+      "eta_wh_warm": 155.0
     },
     {
       "id": "kronoterm-s-max-wp4-lf-502",
@@ -752,7 +805,11 @@
         "app": "CLOUD.KRONOTERM"
       },
       "lastprofil": "XXL",
-      "jahresstromverbrauch_kwh": 1153
+      "jahresstromverbrauch_kwh": 1153,
+      "markteinfuehrung": "2016-05-09",
+      "eprel_nr": "363629",
+      "eta_wh_kalt": 156.0,
+      "eta_wh_warm": 156.0
     },
     {
       "id": "remeha-azorra-ace-250-h",
@@ -790,7 +847,11 @@
       },
       "sg_ready": true,
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1242
+      "jahresstromverbrauch_kwh": 1242,
+      "markteinfuehrung": "2021-02-19",
+      "eprel_nr": "1815332",
+      "eta_wh_kalt": 114.0,
+      "eta_wh_warm": 152.0
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-260-u-02-306179",
@@ -834,7 +895,11 @@
       },
       "sg_ready": true,
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1152
+      "jahresstromverbrauch_kwh": 1152,
+      "markteinfuehrung": "2025-01-14",
+      "eprel_nr": "2367935",
+      "eta_wh_kalt": 120.0,
+      "eta_wh_warm": 162.0
     },
     {
       "id": "elco-aerotop-dhw-3-200",
@@ -877,7 +942,11 @@
         "wifi": true,
         "app": "REMOCON NET"
       },
-      "jahresstromverbrauch_kwh": 719
+      "jahresstromverbrauch_kwh": 719,
+      "markteinfuehrung": "2025-12-10",
+      "eprel_nr": "2563381",
+      "eta_wh_kalt": 100.0,
+      "eta_wh_warm": 158.0
     },
     {
       "id": "panasonic-aquarea-p-dhw260ae5",
@@ -922,7 +991,11 @@
         "app": "Comfort Cloud",
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2025-05-15",
+      "eprel_nr": "2415722",
+      "eta_wh_kalt": 120.0,
+      "eta_wh_warm": 162.0
     },
     {
       "id": "austria-email-explorer-evo-3-200l",
@@ -940,7 +1013,7 @@
       "kessel_material": "emailliert",
       "anode": "ACI-Hybrid (Titan/Mg)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor)",
+      "quelle": "HD24 (ηwh_m × Faktor) | Markteinführung 2025-08 (belegt): austria-email.de News",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -958,7 +1031,8 @@
         "wifi": true,
         "app": "Cozytouch",
         "anschluesse": "PV-Kontakt"
-      }
+      },
+      "markteinfuehrung": "2025-08"
     },
     {
       "id": "hoval-combival-wpr-300",
@@ -976,7 +1050,7 @@
       "kessel_material": null,
       "anode": null,
       "ehpa_guetesiegel": "07.04.2029",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | EPREL 2694672: Schwestervariante CombiVal WPRF (300) ohne fest eingebautes Register, ηwh 149 %, 60 dB, 1.126 kWh/a",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -993,7 +1067,11 @@
       "smart_home": {
         "modbus": "optional",
         "anschluesse": "PV / Smart Grid ready, LAN"
-      }
+      },
+      "markteinfuehrung": "2026-04-15",
+      "eprel_nr": "2694672",
+      "eta_wh_kalt": 149.0,
+      "eta_wh_warm": 149.0
     },
     {
       "id": "panasonic-aquarea-p-dhw200ae5",
@@ -1038,7 +1116,9 @@
         "app": "Comfort Cloud",
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2025-05-15",
+      "eprel_nr": "2415721"
     },
     {
       "id": "kwb-empaair-220-kwb-empaair-220",
@@ -1086,7 +1166,7 @@
       "kessel_material": "emailliert (Spezialemaillierung)",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": "18.11.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de (Stand 2025, Auslaufmodell), Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de (Stand 2025, Auslaufmodell), Stand 09/2026 | Markteinführung 2013-07 (belegt): baulinks.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1102,7 +1182,8 @@
       "smart_home": {
         "anschluesse": "PV-/EVU-Kontakt"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2013-07"
     },
     {
       "id": "styleboiler-futura-eco-x-200",
@@ -1148,7 +1229,11 @@
         "anschluesse": "Digitaleingang (PV)"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 668
+      "jahresstromverbrauch_kwh": 668,
+      "markteinfuehrung": "2025-10-01",
+      "eprel_nr": "2663727",
+      "eta_wh_kalt": 139.0,
+      "eta_wh_warm": 198.0
     },
     {
       "id": "austria-email-wpa-450-eco",
@@ -1200,7 +1285,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP L20/W10-55) – Kältemittel lt. HD24 R290, Vorgängerserie R134a | ηwh 129 %: ErP-Datenblatt, Lastprofil XL, 1294 kWh/a; Wolf Produktdatenblatt 2486539 – R290-Ausführung M3; ältere R134a-Ausführung 151 %",
+      "quelle": "HD24 (COP L20/W10-55) – Kältemittel lt. HD24 R290, Vorgängerserie R134a | ηwh 129 %: ErP-Datenblatt, Lastprofil XL, 1294 kWh/a; Wolf Produktdatenblatt 2486539 – R290-Ausführung M3; ältere R134a-Ausführung 151 % | Markteinführung 2022-08 (belegt): deinenergieportal.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1230,7 +1315,8 @@
         "modbus": true
       },
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1294
+      "jahresstromverbrauch_kwh": 1294,
+      "markteinfuehrung": "2022-08"
     },
     {
       "id": "vaillant-arostor-plus-vwl-b-200-6",
@@ -1278,7 +1364,11 @@
         "anschluesse": "Smart-Grid-/PV-Steckverbindung"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 774
+      "jahresstromverbrauch_kwh": 774,
+      "markteinfuehrung": "2025-08-01",
+      "eprel_nr": "2501175",
+      "eta_wh_kalt": 100.0,
+      "eta_wh_warm": 154.0
     },
     {
       "id": "bosch-bw270-bw270",
@@ -1296,7 +1386,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": "19.10.2023",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Markteinführung 2017-12 (abgeleitet): Stand Buderus-Flyer BW270",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1314,7 +1404,8 @@
         "wifi": "optional",
         "app": "HomeCom Easy",
         "anschluesse": "PV-Eingang"
-      }
+      },
+      "markteinfuehrung": "2017-12"
     },
     {
       "id": "buderus-bw270-bw270",
@@ -1332,7 +1423,7 @@
       "kessel_material": "emailliert",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": "19.10.2023",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Markteinführung 2017-12 (abgeleitet): Stand Buderus-Flyer BW270",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1350,7 +1441,8 @@
         "wifi": "optional",
         "app": "HomeCom Easy",
         "anschluesse": "PV-Eingang"
-      }
+      },
+      "markteinfuehrung": "2017-12"
     },
     {
       "id": "remeha-azorra-ace-200-e",
@@ -1393,7 +1485,9 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 800
+      "jahresstromverbrauch_kwh": 800,
+      "markteinfuehrung": "2022-03-09",
+      "eprel_nr": "2493311"
     },
     {
       "id": "broetje-btw-200-b",
@@ -1439,7 +1533,11 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 800
+      "jahresstromverbrauch_kwh": 800,
+      "markteinfuehrung": "2022-04-01",
+      "eprel_nr": "2263594",
+      "eta_wh_kalt": 97.0,
+      "eta_wh_warm": 138.0
     },
     {
       "id": "broetje-btw-250-b",
@@ -1484,7 +1582,11 @@
       },
       "sg_ready": true,
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1172
+      "jahresstromverbrauch_kwh": 1172,
+      "markteinfuehrung": "2022-04-01",
+      "eprel_nr": "2263597",
+      "eta_wh_kalt": 113.0,
+      "eta_wh_warm": 157.0
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-200-u-02-306209",
@@ -1633,7 +1735,11 @@
         "flaeche_m2": null
       },
       "scop_basis": "eta_wh",
-      "scop_tabelle": 3.6
+      "scop_tabelle": 3.6,
+      "markteinfuehrung": "2018-01-01",
+      "eprel_nr": "337213",
+      "eta_wh_kalt": 144.0,
+      "eta_wh_warm": 144.0
     },
     {
       "id": "stiebel-eltron-wwk-300-electronic",
@@ -1651,7 +1757,7 @@
       "kessel_material": "emailliert (Spezialemaillierung)",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": "18.11.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de (Stand 2025, Auslaufmodell), Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: geizhals.de (Stand 2025, Auslaufmodell), Stand 09/2026 | Markteinführung 2013-07 (belegt): baulinks.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1676,7 +1782,8 @@
       "smart_home": {
         "anschluesse": "PV-/EVU-Kontakt"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2013-07"
     },
     {
       "id": "aeg-wpt-220-el",
@@ -1712,7 +1819,11 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 694
+      "jahresstromverbrauch_kwh": 694,
+      "markteinfuehrung": "2014-01-02",
+      "eprel_nr": "158515",
+      "eta_wh_kalt": 148.0,
+      "eta_wh_warm": 148.0
     },
     {
       "id": "aeg-wpt-300-el",
@@ -1756,7 +1867,9 @@
       },
       "sg_ready": true,
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1166
+      "jahresstromverbrauch_kwh": 1166,
+      "markteinfuehrung": "2014-01-02",
+      "eprel_nr": "158514"
     },
     {
       "id": "haier-hp200m7-f9",
@@ -1803,7 +1916,9 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 701
+      "jahresstromverbrauch_kwh": 701,
+      "markteinfuehrung": "2023-11-30",
+      "eprel_nr": "2391062"
     },
     {
       "id": "lg-therma-v-wh20s-f5",
@@ -1839,7 +1954,11 @@
         "app": "ThinQ"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 709
+      "jahresstromverbrauch_kwh": 709,
+      "markteinfuehrung": "2021-03-01",
+      "eprel_nr": "1568549",
+      "eta_wh_kalt": 144.0,
+      "eta_wh_warm": 144.0
     },
     {
       "id": "lg-therma-v-wh20str2-fa",
@@ -1895,7 +2014,7 @@
       "kessel_material": "emailliert",
       "anode": "Fremdstromanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20/W10-53) | ηwh 124 %: ErP-Datenblatt, Lastprofil XL, 1435 kWh/a (Label rechnerisch 116.7 %); Kermi Produktdatenblatt W20520, EPREL 2365662 – Datenblatt in sich widersprüchlich (124 % passt rechnerisch zu ~1351 kWh)",
+      "quelle": "HD24 (COP A20/W10-53) | ηwh 124 %: ErP-Datenblatt, Lastprofil XL, 1435 kWh/a (Label rechnerisch 116.7 %); Kermi Produktdatenblatt W20520, EPREL 2365662 – Datenblatt in sich widersprüchlich (124 % passt rechnerisch zu ~1351 kWh) | Markteinführung 2025-07 (belegt): haustec.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -1914,7 +2033,8 @@
         "modbus": true
       },
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1435
+      "jahresstromverbrauch_kwh": 1435,
+      "markteinfuehrung": "2025-07"
     },
     {
       "id": "haier-hp250m7-f9",
@@ -1961,7 +2081,9 @@
       },
       "sg_ready": true,
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1162
+      "jahresstromverbrauch_kwh": 1162,
+      "markteinfuehrung": "2023-11-30",
+      "eprel_nr": "2391249"
     },
     {
       "id": "daikin-altherma-m-hw-260-ekhhe260cv37",
@@ -2006,7 +2128,11 @@
         "app": "Onecta",
         "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2022-02-25",
+      "eprel_nr": "1531413",
+      "eta_wh_kalt": 112.0,
+      "eta_wh_warm": 160.0
     },
     {
       "id": "boesch-mcb270",
@@ -2048,7 +2174,9 @@
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "PV-Funktion / SmartGrid-Ready"
-      }
+      },
+      "markteinfuehrung": "2025-04-01",
+      "eprel_nr": "2254535"
     },
     {
       "id": "viessmann-vitocal-262-a-t2w-r290",
@@ -2097,7 +2225,8 @@
       "gewicht_kg": 44,
       "lastprofil": "XL",
       "jahresstromverbrauch_kwh": 1225,
-      "mischwassermenge_v40_l": 459
+      "mischwassermenge_v40_l": 459,
+      "markteinfuehrung": "2025-05-26"
     },
     {
       "id": "viessmann-vitocal-161-a-wwk-161-a02",
@@ -2115,7 +2244,7 @@
       "kessel_material": "emailliert (Ceraprotect)",
       "anode": null,
       "ehpa_guetesiegel": "06.11.2019",
-      "quelle": "GET-DB (ηwh_m × Faktor)",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Markteinführung 2013 (abgeleitet): red-dot.org",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -2139,7 +2268,8 @@
       "smart_home": {
         "anschluesse": "PV über Energiezähler (Modbus, Zubehör)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2013"
     },
     {
       "id": "daikin-altherma-m-hw-200-ekhhe200cv37",
@@ -2184,7 +2314,11 @@
         "app": "Onecta",
         "anschluesse": "Smart-Grid-/PV-Eingang, WLAN-Karte optional"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2022-02-25",
+      "eprel_nr": "1531407",
+      "eta_wh_kalt": 106.0,
+      "eta_wh_warm": 162.0
     },
     {
       "id": "junkers-bosch-compress-5000-dw-cs5001dw-260",
@@ -2229,7 +2363,11 @@
         "wifi": "optional",
         "app": "HomeCom Easy",
         "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
+      },
+      "markteinfuehrung": "2022-03-30",
+      "eprel_nr": "2472048",
+      "eta_wh_kalt": 114.0,
+      "eta_wh_warm": 147.0
     },
     {
       "id": "buderus-wpt260-4-as-logatherm",
@@ -2265,7 +2403,11 @@
         "wifi": "optional",
         "app": "HomeCom Easy",
         "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
+      },
+      "markteinfuehrung": "2022-03-30",
+      "eprel_nr": "2472054",
+      "eta_wh_kalt": 114.0,
+      "eta_wh_warm": 147.0
     },
     {
       "id": "herz-commotherm-bwp-300",
@@ -2329,7 +2471,11 @@
       },
       "scop_basis": "eta_wh",
       "scop_tabelle": 3.85,
-      "lastprofil": "XL"
+      "lastprofil": "XL",
+      "markteinfuehrung": "2020-04-01",
+      "eprel_nr": "338022",
+      "eta_wh_kalt": 154.0,
+      "eta_wh_warm": 154.0
     },
     {
       "id": "boesch-mcb200",
@@ -2363,7 +2509,11 @@
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "PV-Funktion / SmartGrid-Ready"
-      }
+      },
+      "markteinfuehrung": "2025-04-01",
+      "eprel_nr": "2254566",
+      "eta_wh_kalt": 115.0,
+      "eta_wh_warm": 147.0
     },
     {
       "id": "stiebel-eltron-wwk-301-electronic",
@@ -2406,7 +2556,9 @@
       "smart_home": {
         "anschluesse": "PV-/EVU-Kontakt"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2014-03-03",
+      "eprel_nr": "158504"
     },
     {
       "id": "viessmann-vitocal-060-a-t0e-ze-250l",
@@ -2503,7 +2655,8 @@
       "luft_max_c": 35,
       "abmessung_mm": "734 × 634 × 1780",
       "gewicht_kg": 145,
-      "jahresstromverbrauch_kwh": 1085
+      "jahresstromverbrauch_kwh": 1085,
+      "markteinfuehrung": "2025-04-01"
     },
     {
       "id": "viessmann-vitocal-060-a-t0e-r290-178",
@@ -2546,7 +2699,8 @@
       "luft_max_c": 35,
       "abmessung_mm": "661 × 584 × 1559",
       "gewicht_kg": 95,
-      "jahresstromverbrauch_kwh": 695
+      "jahresstromverbrauch_kwh": 695,
+      "markteinfuehrung": "2025-04-01"
     },
     {
       "id": "viessmann-vitocal-060-ad-t0w-r290-80",
@@ -2588,7 +2742,8 @@
       "luft_max_c": 35,
       "abmessung_mm": "547 × 492 × 1184",
       "gewicht_kg": 51,
-      "jahresstromverbrauch_kwh": 398
+      "jahresstromverbrauch_kwh": 398,
+      "markteinfuehrung": "2025-12-01"
     },
     {
       "id": "viessmann-vitocal-060-ad-t0w-r290-110",
@@ -2630,7 +2785,8 @@
       "luft_max_c": 35,
       "abmessung_mm": "547 × 492 × 1334",
       "gewicht_kg": 54,
-      "jahresstromverbrauch_kwh": 378
+      "jahresstromverbrauch_kwh": 378,
+      "markteinfuehrung": "2025-12-01"
     },
     {
       "id": "viessmann-vitocal-060-ad-t0w-r290-150",
@@ -2672,7 +2828,8 @@
       "luft_max_c": 35,
       "abmessung_mm": "547 × 492 × 1694",
       "gewicht_kg": 64,
-      "jahresstromverbrauch_kwh": 443
+      "jahresstromverbrauch_kwh": 443,
+      "markteinfuehrung": "2025-12-01"
     },
     {
       "id": "alarko-flr-hwh-300c",
@@ -2764,7 +2921,11 @@
         "app": "ConnectLife",
         "anschluesse": "SG-Ready-Eingang"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2025-01-01",
+      "eprel_nr": "2296728",
+      "eta_wh_kalt": 130.0,
+      "eta_wh_warm": 130.0
     },
     {
       "id": "styleboiler-futura-eco-x-300",
@@ -2810,7 +2971,9 @@
         "anschluesse": "Digitaleingang (PV)"
       },
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1272
+      "jahresstromverbrauch_kwh": 1272,
+      "markteinfuehrung": "2025-10-01",
+      "eprel_nr": "2664151"
     },
     {
       "id": "hofman-energy-avarma-190-300-l",
@@ -2849,7 +3012,11 @@
         "anschluesse": "1 Schalteingang (Remote/PV), Modbus RS485"
       },
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1272
+      "jahresstromverbrauch_kwh": 1272,
+      "markteinfuehrung": "2025-10-01",
+      "eprel_nr": "2494494",
+      "eta_wh_kalt": 107.0,
+      "eta_wh_warm": 138.0
     },
     {
       "id": "austria-email-ag-ae-revolution-evo-3-200l-wt",
@@ -2928,7 +3095,11 @@
       "smart_home": {
         "modbus": true,
         "anschluesse": "PV-Kontakt"
-      }
+      },
+      "markteinfuehrung": "2023-06-01",
+      "eprel_nr": "1561768",
+      "eta_wh_kalt": 116.0,
+      "eta_wh_warm": 145.0
     },
     {
       "id": "ochsner-europa-mini-iwp",
@@ -2970,7 +3141,11 @@
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "Kontakte E2 (EVU) / E3 (Smart Grid)"
-      }
+      },
+      "markteinfuehrung": "2017-09-26",
+      "eprel_nr": "97789",
+      "eta_wh_kalt": 129.0,
+      "eta_wh_warm": 129.0
     },
     {
       "id": "wolf-fhs-180-s",
@@ -2988,7 +3163,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (ηwh_m × Faktor) – Kältemittel lt. HD24 R290, Vorgängerserie R134a",
+      "quelle": "HD24 (ηwh_m × Faktor) – Kältemittel lt. HD24 R290, Vorgängerserie R134a | Markteinführung 2022-08 (belegt): deinenergieportal.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3007,7 +3182,8 @@
         "app": "myWOLF",
         "anschluesse": "Modbus RTU (RS485), PV-/Energiemanager-Kontakt, WOLF Link optional",
         "modbus": true
-      }
+      },
+      "markteinfuehrung": "2022-08"
     },
     {
       "id": "lg-therma-v-wh20esf0-ca",
@@ -3045,7 +3221,11 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 770
+      "jahresstromverbrauch_kwh": 770,
+      "markteinfuehrung": "2025-04-10",
+      "eprel_nr": "2326386",
+      "eta_wh_kalt": 132.0,
+      "eta_wh_warm": 132.0
     },
     {
       "id": "dimplex-dhw-250p",
@@ -3082,7 +3262,11 @@
         "anschluesse": "PV-Kontakt"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 763
+      "jahresstromverbrauch_kwh": 763,
+      "markteinfuehrung": "2022-07-01",
+      "eprel_nr": "1200552",
+      "eta_wh_kalt": 133.0,
+      "eta_wh_warm": 133.0
     },
     {
       "id": "alarko-flr-hwh-190c",
@@ -3148,7 +3332,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": "21.02.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: heizungsdiscount24.de, Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: heizungsdiscount24.de, Stand 09/2026 | Markteinführung 2023-03 (abgeleitet): vaillant-group.com (Baureihe)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3164,7 +3348,8 @@
       "smart_home": {
         "anschluesse": "2 PV-Kontakte (2 Stufen)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2023-03"
     },
     {
       "id": "saunier-duval-magna-aqua-270-3c",
@@ -3200,7 +3385,11 @@
         "app": "MiGo",
         "anschluesse": "2 Kontakteingänge (Niedertarif/PV)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2019-07-01",
+      "eprel_nr": "1532864",
+      "eta_wh_kalt": 120.0,
+      "eta_wh_warm": 147.0
     },
     {
       "id": "vaillant-arostor-vwl-bm-270-5",
@@ -3252,7 +3441,7 @@
       "kessel_material": "Edelstahl",
       "anode": null,
       "ehpa_guetesiegel": null,
-      "quelle": "oekofen.com (COP 20/15 °C) · WT 1 m²",
+      "quelle": "oekofen.com (COP 20/15 °C) · WT 1 m² | Markteinführung 2025-06 (belegt): shk-journal.de",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3270,7 +3459,8 @@
         "app": "myEnergy365",
         "modbus": "optional",
         "anschluesse": "Kommunikation mit ÖkoFEN-Pelletkessel"
-      }
+      },
+      "markteinfuehrung": "2025-06"
     },
     {
       "id": "vaillant-fluostor-vwh-b-200-1",
@@ -3288,7 +3478,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": "21.02.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: heizungsdiscount24.de / geizhals.de, Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: heizungsdiscount24.de / geizhals.de, Stand 09/2026 | Markteinführung 2023-03 (abgeleitet): vaillant-group.com (Baureihe)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3304,7 +3494,8 @@
       "smart_home": {
         "anschluesse": "2 PV-Kontakte (2 Stufen)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2023-03"
     },
     {
       "id": "hofman-energy-avarma-190-200-l",
@@ -3343,7 +3534,11 @@
         "anschluesse": "1 Schalteingang (Remote/PV), Modbus RS485"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 788
+      "jahresstromverbrauch_kwh": 788,
+      "markteinfuehrung": "2025-10-01",
+      "eprel_nr": "2494463",
+      "eta_wh_kalt": 104.0,
+      "eta_wh_warm": 134.0
     },
     {
       "id": "hisense-hi-water-ah-200u4gab00",
@@ -3379,7 +3574,11 @@
         "app": "ConnectLife",
         "anschluesse": "SG-Ready-Eingang"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2025-01-01",
+      "eprel_nr": "2296691",
+      "eta_wh_kalt": 121.0,
+      "eta_wh_warm": 121.0
     },
     {
       "id": "ovum-opw-170",
@@ -3494,7 +3693,11 @@
         "wifi": "optional",
         "app": "HomeCom Easy",
         "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
+      },
+      "markteinfuehrung": "2022-03-30",
+      "eprel_nr": "2472046",
+      "eta_wh_kalt": 105.0,
+      "eta_wh_warm": 146.0
     },
     {
       "id": "buderus-wpt200-4-a-logatherm",
@@ -3539,7 +3742,11 @@
         "wifi": "optional",
         "app": "HomeCom Easy",
         "anschluesse": "PV-Kontakt (EIN/AUS)"
-      }
+      },
+      "markteinfuehrung": "2022-03-30",
+      "eprel_nr": "2472051",
+      "eta_wh_kalt": 105.0,
+      "eta_wh_warm": 146.0
     },
     {
       "id": "ochsner-europa-mini-iwpl",
@@ -3573,7 +3780,11 @@
       "sg_ready": false,
       "smart_home": {
         "anschluesse": "keine Kommunikationsschnittstellen"
-      }
+      },
+      "markteinfuehrung": "2017-09-26",
+      "eprel_nr": "97776",
+      "eta_wh_kalt": 120.0,
+      "eta_wh_warm": 120.0
     },
     {
       "id": "ochsner-europa-250-dk",
@@ -3607,7 +3818,11 @@
       "sg_ready": true,
       "smart_home": {
         "anschluesse": "keine Schnittstellen im Datenblatt"
-      }
+      },
+      "markteinfuehrung": "2017-09-26",
+      "eprel_nr": "103832",
+      "eta_wh_kalt": 115.0,
+      "eta_wh_warm": 115.0
     },
     {
       "id": "austria-email-calypso-vm-2-150-l",
@@ -3625,7 +3840,7 @@
       "kessel_material": "emailliert",
       "anode": "ACI-Hybrid (Titan/Mg)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A20) | ηwh 130,8 %: berechnet aus Energielabel (783 kWh/a, Lastprofil L); Austria Email Prospekt CALYPSO VM 2",
+      "quelle": "HD24 (COP A20) | ηwh 130,8 %: berechnet aus Energielabel (783 kWh/a, Lastprofil L); Austria Email Prospekt CALYPSO VM 2 | Markteinführung 2025-08 (belegt): austria-email.de News",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -3645,7 +3860,8 @@
         "app": "Cozytouch"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 783
+      "jahresstromverbrauch_kwh": 783,
+      "markteinfuehrung": "2025-08"
     },
     {
       "id": "haier-hp150m8-9",
@@ -3683,7 +3899,9 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 732
+      "jahresstromverbrauch_kwh": 732,
+      "markteinfuehrung": "2023-12-18",
+      "eprel_nr": "2391032"
     },
     {
       "id": "haier-hp110m8-9",
@@ -3721,7 +3939,9 @@
       },
       "sg_ready": true,
       "lastprofil": "M",
-      "jahresstromverbrauch_kwh": 367
+      "jahresstromverbrauch_kwh": 367,
+      "markteinfuehrung": "2023-12-18",
+      "eprel_nr": "2378888"
     },
     {
       "id": "austria-email-calypso-vm-2-100-l",
@@ -3739,7 +3959,7 @@
       "kessel_material": "emailliert",
       "anode": "ACI-Hybrid (Titan/Mg)",
       "ehpa_guetesiegel": null,
-      "quelle": "HD24 (COP A14) | ηwh 112,6 %: berechnet aus Energielabel (456 kWh/a, Lastprofil M); Austria Email Prospekt CALYPSO VM 2",
+      "quelle": "HD24 (COP A14) | ηwh 112,6 %: berechnet aus Energielabel (456 kWh/a, Lastprofil M); Austria Email Prospekt CALYPSO VM 2 | Markteinführung 2025-08 (belegt): austria-email.de News",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": 3.23,
@@ -3759,7 +3979,8 @@
         "app": "Cozytouch"
       },
       "lastprofil": "M",
-      "jahresstromverbrauch_kwh": 456
+      "jahresstromverbrauch_kwh": 456,
+      "markteinfuehrung": "2025-08"
     },
     {
       "id": "haier-hp80m8-9",
@@ -3797,7 +4018,9 @@
       },
       "sg_ready": true,
       "lastprofil": "M",
-      "jahresstromverbrauch_kwh": 399
+      "jahresstromverbrauch_kwh": 399,
+      "markteinfuehrung": "2023-12-18",
+      "eprel_nr": "2246982"
     },
     {
       "id": "alarko-flr-hwh-150wh",
@@ -3870,7 +4093,11 @@
       },
       "sg_ready": true,
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 812
+      "jahresstromverbrauch_kwh": 812,
+      "markteinfuehrung": "2025-04-10",
+      "eprel_nr": "2326352",
+      "eta_wh_kalt": 108.0,
+      "eta_wh_warm": 148.0
     },
     {
       "id": "panasonic-aquarea-p-dhw150ae5",
@@ -3906,7 +4133,9 @@
         "app": "Comfort Cloud",
         "anschluesse": "PV/SG-Eingang (1 Kontakt)"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2025-11-01",
+      "eprel_nr": "2519925"
     },
     {
       "id": "panasonic-aquarea-p-dhw100ae5",
@@ -3944,7 +4173,11 @@
       },
       "sg_ready": true,
       "lastprofil": "M",
-      "jahresstromverbrauch_kwh": 409
+      "jahresstromverbrauch_kwh": 409,
+      "markteinfuehrung": "2025-11-01",
+      "eprel_nr": "2519924",
+      "eta_wh_kalt": 105.0,
+      "eta_wh_warm": 142.0
     },
     {
       "id": "alarko-flr-hwh-80wh",
@@ -4052,7 +4285,11 @@
       },
       "sg_ready": true,
       "lastprofil": "M",
-      "jahresstromverbrauch_kwh": 438
+      "jahresstromverbrauch_kwh": 438,
+      "markteinfuehrung": "2025-04-10",
+      "eprel_nr": "2326342",
+      "eta_wh_kalt": 95.0,
+      "eta_wh_warm": 135.0
     },
     {
       "id": "dimplex-dhw-100pwh",
@@ -4089,7 +4326,11 @@
         "anschluesse": "PV-Kontakt"
       },
       "lastprofil": "M",
-      "jahresstromverbrauch_kwh": 519
+      "jahresstromverbrauch_kwh": 519,
+      "markteinfuehrung": "2024-01-01",
+      "eprel_nr": "1859804",
+      "eta_wh_kalt": 83.0,
+      "eta_wh_warm": 110.0
     },
     {
       "id": "vaillant-fluostor-vwh-b-150-1",
@@ -4107,7 +4348,7 @@
       "kessel_material": "emaillierter Stahl",
       "anode": "Magnesiumanode",
       "ehpa_guetesiegel": "21.02.2027",
-      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: heizungsdiscount24.de, Stand 09/2026",
+      "quelle": "GET-DB (ηwh_m × Faktor) | Preis: heizungsdiscount24.de, Stand 09/2026 | Markteinführung 2023-03 (belegt): vaillant-group.com",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -4123,7 +4364,8 @@
       "smart_home": {
         "anschluesse": "PV-Eingang"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2023-03"
     },
     {
       "id": "stiebel-eltron-wws-20",
@@ -4818,7 +5060,11 @@
       "smart_home": {
         "app": "KWB Comfort Online",
         "anschluesse": "Ansteuerung über KWB-Regelung, PV-Überschuss"
-      }
+      },
+      "markteinfuehrung": "2023-07-01",
+      "eprel_nr": "1680960",
+      "eta_wh_kalt": 129.0,
+      "eta_wh_warm": 129.0
     },
     {
       "id": "kwb-empaair-revolution-evo-3-200",
@@ -4985,7 +5231,11 @@
         "anschluesse": "SG Ready (QA1), PV-Eingang 0–10 V"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 703
+      "jahresstromverbrauch_kwh": 703,
+      "markteinfuehrung": "2018-04-01",
+      "eprel_nr": "405252",
+      "eta_wh_kalt": 131.0,
+      "eta_wh_warm": 165.0
     },
     {
       "id": "alpha-innotec-bwp-260s",
@@ -5028,7 +5278,11 @@
         "anschluesse": "SG Ready (QA1), PV-Eingang 0–10 V"
       },
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1115
+      "jahresstromverbrauch_kwh": 1115,
+      "markteinfuehrung": "2018-04-01",
+      "eprel_nr": "405253",
+      "eta_wh_kalt": 127.0,
+      "eta_wh_warm": 174.0
     },
     {
       "id": "alpha-innotec-wwb-21",
@@ -5069,7 +5323,11 @@
         "anschluesse": "LAN"
       },
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 630
+      "jahresstromverbrauch_kwh": 630,
+      "markteinfuehrung": "2020-01-01",
+      "eprel_nr": "405254",
+      "eta_wh_kalt": 163.0,
+      "eta_wh_warm": 163.0
     },
     {
       "id": "stiebel-eltron-wwk-221-electronic",
@@ -5111,7 +5369,9 @@
       "lastprofil": "L",
       "abmessung_mm": "Ø 690 × 1501",
       "gewicht_kg": 120,
-      "jahresstromverbrauch_kwh": 795
+      "jahresstromverbrauch_kwh": 795,
+      "markteinfuehrung": "2014-03-03",
+      "eprel_nr": "165168"
     },
     {
       "id": "stiebel-eltron-wwk-i-201-k-premium",
@@ -5129,7 +5389,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Titananode",
       "ehpa_guetesiegel": null,
-      "quelle": "heizbude.de 207266: 200 L, A+, Lastprofil L, Stahl emailliert, Titananode, R290 0,2 kg, WW bis 75 °C, Luft −10 bis +43 °C, 1476 × 650 × 745 mm, 95 kg, 2.698,92 € | Stiebel-Presse: Außenluftkanal, MyStiebel, PV-Ready – EN-16147-COP und Schall noch nicht im Herstellerdatenblatt",
+      "quelle": "heizbude.de 207266: 200 L, A+, Lastprofil L, Stahl emailliert, Titananode, R290 0,2 kg, WW bis 75 °C, Luft −10 bis +43 °C, 1476 × 650 × 745 mm, 95 kg, 2.698,92 € | Stiebel-Presse: Außenluftkanal, MyStiebel, PV-Ready – EN-16147-COP und Schall noch nicht im Herstellerdatenblatt | Markteinführung 2026 (angekündigt): Stiebel-Pressemitteilung (Ende 2026)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -5153,7 +5413,8 @@
         "app": "MyStiebel",
         "anschluesse": "Außenluft über Luftkanal, PV-Ready"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2026"
     },
     {
       "id": "stiebel-eltron-wwk-i-301-k-premium",
@@ -5171,7 +5432,7 @@
       "kessel_material": "Stahl emailliert",
       "anode": "Titananode",
       "ehpa_guetesiegel": null,
-      "quelle": "heizbude.de 207267: 300 L, R290, Außenluft, PV-Ready, 2.929,40 € | analog 201 K Premium: Stahl emailliert, Titananode, MyStiebel – EN-16147-COP und Schall noch nicht im Herstellerdatenblatt",
+      "quelle": "heizbude.de 207267: 300 L, R290, Außenluft, PV-Ready, 2.929,40 € | analog 201 K Premium: Stahl emailliert, Titananode, MyStiebel – EN-16147-COP und Schall noch nicht im Herstellerdatenblatt | Markteinführung 2026 (angekündigt): Stiebel-Pressemitteilung (Ende 2026)",
       "cop_a7": null,
       "cop_a15": null,
       "cop_a14": null,
@@ -5193,7 +5454,8 @@
         "app": "MyStiebel",
         "anschluesse": "Außenluft über Luftkanal, PV-Ready"
       },
-      "sg_ready": true
+      "sg_ready": true,
+      "markteinfuehrung": "2026"
     },
     {
       "id": "sunex-drops-4-1",
@@ -5237,7 +5499,11 @@
       },
       "waermeleistung": "1,5 kW (A20/W10-55)",
       "lastprofil": "L",
-      "jahresstromverbrauch_kwh": 1062
+      "jahresstromverbrauch_kwh": 1062,
+      "markteinfuehrung": "2015-12-07",
+      "eprel_nr": "2769272",
+      "eta_wh_kalt": 96.0,
+      "eta_wh_warm": 96.0
     },
     {
       "id": "sunex-drops-4-2",
@@ -5281,7 +5547,11 @@
       },
       "waermeleistung": "2,85 kW (A15/W10-55)",
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1302
+      "jahresstromverbrauch_kwh": 1302,
+      "markteinfuehrung": "2017-04-18",
+      "eprel_nr": "2766562",
+      "eta_wh_kalt": 129.0,
+      "eta_wh_warm": 129.0
     },
     {
       "id": "sunex-drops-eco",
@@ -5322,7 +5592,11 @@
       "gewicht_kg": 57,
       "waermeleistung": "3,06 kW (A15/W10-55), 3,7 kW (A20)",
       "lastprofil": "XL",
-      "jahresstromverbrauch_kwh": 1169
+      "jahresstromverbrauch_kwh": 1169,
+      "markteinfuehrung": "2020-05-28",
+      "eprel_nr": "2364460",
+      "eta_wh_kalt": 143.0,
+      "eta_wh_warm": 143.0
     },
     {
       "id": "sunex-drops-pro",
@@ -5496,7 +5770,11 @@
         "app": "Smart Life"
       },
       "jahresstromverbrauch_kwh": 1192,
-      "lastprofil": "XL"
+      "lastprofil": "XL",
+      "markteinfuehrung": "2024-11-27",
+      "eprel_nr": "2414286",
+      "eta_wh_kalt": 141.0,
+      "eta_wh_warm": 141.0
     },
     {
       "id": "elix-gm300",
@@ -5540,7 +5818,343 @@
         "app": "Smart Life"
       },
       "jahresstromverbrauch_kwh": 1206,
-      "lastprofil": "XL"
+      "lastprofil": "XL",
+      "markteinfuehrung": "2024-11-27",
+      "eprel_nr": "2414379",
+      "eta_wh_kalt": 139.0,
+      "eta_wh_warm": 139.0
+    },
+    {
+      "id": "viessmann-dhw-booster-hp-170",
+      "name": "Viessmann DHW Booster HP 170L",
+      "marke": "Viessmann",
+      "bauart": "bodenstehend",
+      "volumen_l": 170.0,
+      "eta_wh": 176.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": 45.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": 2917.9,
+      "heizstab_w": 1200,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesium-Schutzanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 2211111 (ηwh 176 %, M, 292 kWh/a, 45 dB); Viessmann-Datenblatt DHW Booster HP (Z024663): Wasser/Wasser-WP, Quelle ist der Rücklauf eines Niedertemperatur-Heizkreises (18–50 °C) – kein Luftgerät, COP 4,09 bei 25 °C Quellwasser (Profil M) | Preis: heizman24.de, Stand 09/2026",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": 4.09,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 4.4,
+      "sg_ready": true,
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 292,
+      "markteinfuehrung": "2022-11-14",
+      "eprel_nr": "2211111",
+      "eta_wh_kalt": 176.0,
+      "eta_wh_warm": 176.0,
+      "smart_home": {
+        "anschluesse": "PV-/Smart-Grid-Kontakt, Niedertarif-Kontakt"
+      },
+      "abmessung_mm": "Ø 530 × 1700",
+      "gewicht_kg": 64,
+      "ww_max_c": 65
+    },
+    {
+      "id": "saunier-duval-ha-b-200-6",
+      "name": "Saunier Duval Magna Aqua HA B 200/6",
+      "marke": "Saunier Duval",
+      "bauart": "bodenstehend",
+      "volumen_l": 200.0,
+      "eta_wh": 132.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": null,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 2501176 / 2501178 (BM); Saunier-Duval-Installationsanleitung Magna Aqua/6 (ES): COP A7/W55 3,15, A14 3,66 – baugleich Vaillant aroSTOR plus; in DE nicht im Handel (AT, FR, ES, IT), kein DE-Preis",
+      "cop_a7": 3.15,
+      "cop_a15": null,
+      "cop_a14": 3.66,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "BM",
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Saunier Duval Magna Aqua HA BM 200/6",
+          "volumen_l": 194.0,
+          "eta_wh": 130.0,
+          "eff_klasse": "A+",
+          "cop_a7": 3.09,
+          "cop_a14": 3.56,
+          "kaeltemittel": "R-290"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.3,
+      "sg_ready": true,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 774,
+      "markteinfuehrung": "2025-08-01",
+      "eprel_nr": "2501176",
+      "eta_wh_kalt": 100.0,
+      "eta_wh_warm": 154.0,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-/PV-Kontakt, Kontakt für Zusatz-Wärmeerzeuger"
+      },
+      "abmessung_mm": "Ø 630 × 1621",
+      "gewicht_kg": 81.6,
+      "luft_min_c": -7,
+      "luft_max_c": 43
+    },
+    {
+      "id": "saunier-duval-ha-b-260-6",
+      "name": "Saunier Duval Magna Aqua HA B 260/6",
+      "marke": "Saunier Duval",
+      "bauart": "bodenstehend",
+      "volumen_l": 260.0,
+      "eta_wh": 142.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": null,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 2501181 / 2501182 (BM); Saunier-Duval-Installationsanleitung Magna Aqua/6 (ES): COP A7/W55 3,43, A14 3,86 – baugleich Vaillant aroSTOR plus; in DE nicht im Handel (AT, FR, ES, IT), kein DE-Preis",
+      "cop_a7": 3.43,
+      "cop_a15": null,
+      "cop_a14": 3.86,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "BM",
+        "flaeche_m2": 1.05,
+        "variante_modell": {
+          "name": "Saunier Duval Magna Aqua HA BM 260/6",
+          "volumen_l": 252.0,
+          "eta_wh": 138.0,
+          "eff_klasse": "A+",
+          "cop_a7": 3.33,
+          "cop_a14": 3.79,
+          "kaeltemittel": "R-290"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.55,
+      "sg_ready": true,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1178,
+      "markteinfuehrung": "2025-08-01",
+      "eprel_nr": "2501181",
+      "eta_wh_kalt": 106.0,
+      "eta_wh_warm": 160.0,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-/PV-Kontakt, Kontakt für Zusatz-Wärmeerzeuger"
+      },
+      "abmessung_mm": "Ø 630 × 1911",
+      "gewicht_kg": 91.0,
+      "luft_min_c": -7,
+      "luft_max_c": 43
+    },
+    {
+      "id": "kronoterm-wp2-lf-202e",
+      "name": "Kronoterm WP2 LF-202E (ECO 200)",
+      "marke": "Kronoterm",
+      "bauart": "bodenstehend",
+      "volumen_l": 200.0,
+      "eta_wh": 165.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": 58.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesium-Schutzanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 363627 (ηwh 165 %, L, 621 kWh/a, 58 dB); Kronoterm-Broschüre DE 02/2025, topten.eu (COP 4,0 A20); E = Ausstattungslinie ECO; in DE kein Händlerangebot gefunden (Vertrieb CH über Wolf)",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": 4.0,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": null,
+        "flaeche_m2": 0.91
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 4.125,
+      "sg_ready": null,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 621,
+      "markteinfuehrung": "2016-03-07",
+      "eprel_nr": "363627",
+      "eta_wh_kalt": 165.0,
+      "eta_wh_warm": 165.0,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Water.KRONOTERM",
+        "anschluesse": "PV-Eingang, Zirkulation; App über Web-Modul"
+      },
+      "abmessung_mm": "Ø 635 × 1700",
+      "gewicht_kg": 128,
+      "luft_min_c": -7,
+      "luft_max_c": 40
+    },
+    {
+      "id": "kronoterm-wp2-lf-302e",
+      "name": "Kronoterm WP2 LF-302E (ECO 300)",
+      "marke": "Kronoterm",
+      "bauart": "bodenstehend",
+      "volumen_l": 270.0,
+      "eta_wh": 163.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": 58.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": "Stahl emailliert",
+      "anode": "Magnesium-Schutzanode",
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 363628 (ηwh 163 %, XL, 1026 kWh/a, 58 dB); Kronoterm-Broschüre DE 02/2025, topten.ch (COP 4,0 A20); Schwestermodell LF-302S (SILVER) 156 %; in DE kein Händlerangebot gefunden",
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": 4.0,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": null,
+        "flaeche_m2": 1.2
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 4.075,
+      "sg_ready": null,
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1026,
+      "markteinfuehrung": "2016-03-07",
+      "eprel_nr": "363628",
+      "eta_wh_kalt": 163.0,
+      "eta_wh_warm": 163.0,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "Water.KRONOTERM",
+        "anschluesse": "PV-Eingang, Zirkulation; App über Web-Modul"
+      },
+      "abmessung_mm": "Ø 635 × 2030",
+      "gewicht_kg": 145,
+      "luft_min_c": -7,
+      "luft_max_c": 40,
+      "mischwassermenge_v40_l": 376
+    },
+    {
+      "id": "buderus-logatherm-wpt156-80",
+      "name": "Buderus Logatherm WPT156 80 l (wandhängend)",
+      "marke": "Buderus",
+      "bauart": "wandhaengend",
+      "volumen_l": 80.0,
+      "eta_wh": 114.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": 47.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": null,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 2686545 (Art. 7724000203, Zuordnung über Profil und Nummernschema, baugleich Bosch CS5001DW 80 W); Buderus-Presse 09/2026: Markteinführung DE Q4 2026, COP bis 3,6 (A7/W55); noch kein Händlerpreis",
+      "cop_a7": 3.6,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 2.85,
+      "sg_ready": null,
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 451,
+      "markteinfuehrung": "2026-03-30",
+      "eprel_nr": "2686545",
+      "eta_wh_kalt": 98.0,
+      "eta_wh_warm": 124.0,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "MyBuderus",
+        "anschluesse": "PV-Funktion integriert"
+      },
+      "luft_min_c": -7,
+      "luft_max_c": 43,
+      "ww_max_c": 70
+    },
+    {
+      "id": "buderus-logatherm-wpt156-150",
+      "name": "Buderus Logatherm WPT156 150 l (wandhängend)",
+      "marke": "Buderus",
+      "bauart": "wandhaengend",
+      "volumen_l": 150.0,
+      "eta_wh": 134.0,
+      "eff_klasse": "A+",
+      "schallleistung_db": 47.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": null,
+      "kessel_material": null,
+      "anode": null,
+      "ehpa_guetesiegel": null,
+      "quelle": "EPREL 2686547 (Art. 7724000206, Zuordnung über Profil und Nummernschema, baugleich Bosch CS5001DW 150 W); Buderus-Presse 09/2026: Markteinführung DE Q4 2026, COP bis 3,6 (A7/W55); noch kein Händlerpreis",
+      "cop_a7": 3.6,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.35,
+      "sg_ready": null,
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 766,
+      "markteinfuehrung": "2026-03-30",
+      "eprel_nr": "2686547",
+      "eta_wh_kalt": 104.0,
+      "eta_wh_warm": 151.0,
+      "smart_home": {
+        "wifi": "optional",
+        "app": "MyBuderus",
+        "anschluesse": "PV-Funktion integriert"
+      },
+      "luft_min_c": -7,
+      "luft_max_c": 43,
+      "ww_max_c": 70
     }
   ]
 }

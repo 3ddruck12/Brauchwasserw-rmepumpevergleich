@@ -343,6 +343,35 @@
               "$ref": "#/$defs/textOderNull"
             }
           }
+        },
+        "markteinfuehrung": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+          "description": "Erstes Inverkehrbringen (EPREL onMarketFirstStartDate), JJJJ, JJJJ-MM oder JJJJ-MM-TT"
+        },
+        "eprel_nr": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "EPREL-Registriernummer"
+        },
+        "eta_wh_kalt": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "ηwh bei kälterem Klima (EPREL)"
+        },
+        "eta_wh_warm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "ηwh bei wärmerem Klima (EPREL)"
         }
       }
     }

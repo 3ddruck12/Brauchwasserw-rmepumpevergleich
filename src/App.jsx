@@ -4,6 +4,7 @@ import {
   bauartLabel, luftbereich, kaeltemittelLaeuftAus, sgReadyText, smartHomeText,
   erpVergleichbar, alsCsv, alsXlsx, alsPdf, herunterladen,
 } from './lib.js'
+import Spenden from './Spenden.jsx'
 import Starthilfe from './Starthilfe.jsx'
 
 const SPEICHER_SCHLUESSEL = 'bwwp-favoriten'
@@ -85,6 +86,7 @@ export default function App() {
   const [nurMitWt, setNurMitWt] = useState(false)
   const [nurMitPreis, setNurMitPreis] = useState(false)
   const [nurFavoriten, setNurFavoriten] = useState(false)
+  const [seitJahr, setSeitJahr] = useState('alle')
 
   const [sortierung, setSortierung] = useState({ spalte: 'leistung', ab: true })
   const [vergleich, setVergleich] = useState([])
@@ -142,9 +144,14 @@ export default function App() {
       if (nurMitWt && m.waermetauscher?.vorhanden !== true) return false
       if (nurMitPreis && m.preis_eur == null) return false
       if (nurFavoriten && !favoriten.includes(m.id)) return false
+      if (seitJahr !== 'alle') {
+        const jahr = parseInt((m.markteinfuehrung || '').slice(0, 4), 10)
+        if (!jahr) return false
+        if (seitJahr === 'vor2020' ? jahr >= 2020 : jahr < Number(seitJahr)) return false
+      }
       return true
     })
-  }, [daten, suche, bauart, volumenklasse, kaeltemittel, nurMitWt, nurMitPreis, nurFavoriten, favoriten])
+  }, [daten, suche, bauart, volumenklasse, kaeltemittel, nurMitWt, nurMitPreis, nurFavoriten, favoriten, seitJahr])
 
   const sortiert = useMemo(() => {
     const nurErP = basis === 'auto' || basis === 'eta_wh'
@@ -334,6 +341,17 @@ export default function App() {
           <option value="auf">Preis: aufsteigend</option>
           <option value="ab">Preis: absteigend</option>
         </select>
+        <select aria-label="Markteinführung" value={seitJahr} onChange={(e) => setSeitJahr(e.target.value)}
+          title="Erstes Inverkehrbringen laut EPREL bzw. Hersteller. Geräte ohne bekanntes Datum werden bei aktivem Filter ausgeblendet.">
+          <option value="alle">Markteinführung: alle</option>
+          <option value="2026">ab 2026</option>
+          <option value="2025">ab 2025</option>
+          <option value="2024">ab 2024</option>
+          <option value="2023">ab 2023</option>
+          <option value="2022">ab 2022</option>
+          <option value="2020">ab 2020</option>
+          <option value="vor2020">vor 2020</option>
+        </select>
         <label className="haken">
           <input type="checkbox" checked={nurMitWt} onChange={(e) => setNurMitWt(e.target.checked)} />
           mit Wärmetauscher
@@ -408,6 +426,8 @@ export default function App() {
           </tbody>
         </table>
       </div>
+
+      <Spenden blockiert={starthilfeOffen} />
 
       <footer>
         <button type="button" className="fuss-link" onClick={() => setHinweiseOffen(true)}>Infos</button>
@@ -582,7 +602,10 @@ function spaltenZelle(m, id, extra) {
       return (
         <>
           <span className="modellname">{m.name}</span>
-          <span className="marke">{m.marke} · {bauartLabel(m.bauart)}</span>
+          <span className="marke">
+            {m.marke} · {bauartLabel(m.bauart)}
+            {m.markteinfuehrung && <> · seit {markteinText(m.markteinfuehrung)}</>}
+          </span>
         </>
       )
     case 'volumen_l': return fmt.liter(m.volumen_l)
@@ -715,6 +738,12 @@ const BASIS_TEXT = {
   cop_a20: 'bei 20 °C Lufttemperatur (A20)', cop_a15: 'bei 15 °C Lufttemperatur (A15)',
   cop_a14: 'bei 14 °C Lufttemperatur (A14)', cop_a7: 'bei 7 °C Lufttemperatur (A7)',
   cop_unspezifisch: 'ohne Angabe der Prüfbedingung',
+}
+
+function markteinText(d) {
+  if (!d) return null
+  const [j, mo] = d.split('-')
+  return mo ? `${mo}/${j}` : j
 }
 
 function haFuer(m, liste) {
@@ -968,6 +997,7 @@ function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen,
     ['Wärmetauscher', (m) => wtZelle(m)],
     ['SG Ready', (m) => fmt.text(sgReadyText(m))],
     ['Smart Home', (m) => fmt.text(smartHomeText(m))],
+    ['Markteinführung', (m) => fmt.text(markteinText(m.markteinfuehrung))],
     ['Heizstab', (m) => fmt.watt(m.heizstab_w)],
     ['Kesselmaterial', (m) => fmt.text(m.kessel_material)],
     ['Anode', (m) => fmt.text(m.anode)],

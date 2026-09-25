@@ -483,3 +483,41 @@ footer {
 .ha-status { font-size: 0.72rem; padding: 1px 8px; border-radius: 10px; background: var(--akzent-hell); color: var(--akzent); white-space: nowrap; }
 .ha-status.ha-core { background: #e3f6fd; color: #0b6e99; }
 .ha-status.ha-modbus, .ha-status.ha-lokal { background: var(--flaeche); color: var(--gedaempft); border: 1px solid var(--rand); }
+
+/* ---------- Spenden-Hinweis unten rechts ---------- */
+.spende-karte {
+  position: fixed; right: 16px; bottom: 16px; z-index: 40;
+  width: min(340px, calc(100vw - 32px));
+  background: var(--grund); color: var(--text);
+  border: 1px solid var(--rand); border-radius: 12px;
+  padding: 16px 16px 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+  animation: spende-rein 0.35s ease-out;
+}
+@keyframes spende-rein { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .spende-karte { animation: none; } }
+.spende-kopf { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; padding-right: 24px; }
+.spende-kopf h2 { font-size: 1rem; margin: 0; }
+.spende-karte p { margin: 0 0 12px; font-size: 0.86rem; line-height: 1.45; color: var(--gedaempft); }
+.spende-karte .spende-klein { font-size: 0.72rem; margin: 8px 0 0; }
+.spende-zu {
+  position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; padding: 0;
+  border: none; background: none; font-size: 1.3rem; line-height: 1; color: var(--gedaempft);
+}
+.spende-zu:hover { color: var(--akzent); }
+.spende-paypal {
+  display: block; text-align: center; font-weight: 700; text-decoration: none;
+  background: #ffc439; color: #1a1a1a; border-radius: 999px; padding: 10px 14px;
+}
+.spende-paypal:hover { background: #f2b52e; }
+.spende-herz { width: 1.3em; height: 1.3em; flex-shrink: 0; }
+.spende-herz path { fill: #e0457b; }
+.spende-knopf {
+  position: fixed; right: 16px; bottom: 16px; z-index: 40;
+  width: 44px; height: 44px; padding: 0; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--grund); border: 1px solid var(--rand);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+.spende-knopf:hover { border-color: #e0457b; }
+.spende-knopf .spende-herz { width: 1.4em; height: 1.4em; }

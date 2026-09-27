@@ -527,3 +527,9 @@ footer {
 .baugleich [title] { cursor: help; }
 .baugleich-treffer { font-style: normal; font-weight: 600; color: var(--text, inherit);
   background: color-mix(in srgb, #ffd54a 45%, transparent); border-radius: 3px; padding: 0 2px; }
+
+/* In Deutschland nicht erhältlich: ausgegraut am Ende */
+tr.nicht-de > td { opacity: 0.5; }
+tr.nicht-de:hover > td { opacity: 0.85; }
+.nicht-de-tag { display: inline-block; margin-top: 3px; font-size: 0.7rem; font-weight: 600;
+  padding: 1px 6px; border-radius: 999px; border: 1px solid var(--gedaempft); color: var(--gedaempft); cursor: help; }

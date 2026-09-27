@@ -404,6 +404,20 @@
               }
             }
           }
+        },
+        "de_markt": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "false = in Deutschland nicht erhältlich; Zeile wird ausgegraut ans Ende sortiert"
+        },
+        "de_markt_hinweis": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Begründung zu de_markt"
         }
       }
     }

@@ -175,6 +175,9 @@ export default function App() {
       }
     }
     return [...gefiltert].sort((a, b) => {
+      const ad = a.de_markt === false ? 1 : 0
+      const bd = b.de_markt === false ? 1 : 0
+      if (ad !== bd) return ad - bd        // in DE nicht erhältlich immer ans Ende
       if (nurErP && (sortierung.spalte === 'leistung' || sortierung.spalte === 'jahreskosten')) {
         const ae = erpVergleichbar(a) ? 0 : 1
         const be = erpVergleichbar(b) ? 0 : 1
@@ -404,7 +407,10 @@ export default function App() {
               const { wert, basis: b } = leistungszahl(m, basis, scopFaktor)
               const k = kosten(wert, strompreis, bedarf)
               return (
-                <tr key={m.id} className={wert == null || ((basis === 'auto' || basis === 'eta_wh') && !erpVergleichbar(m)) ? 'ohne-wert' : ''}>
+                <tr key={m.id} className={[
+                  wert == null || ((basis === 'auto' || basis === 'eta_wh') && !erpVergleichbar(m)) ? 'ohne-wert' : '',
+                  m.de_markt === false ? 'nicht-de' : '',
+                ].join(' ').trim()}>
                   <td className="schmal">
                     <button className={`stern ${favoriten.includes(m.id) ? 'aktiv' : ''}`}
                       onClick={() => favUmschalten(m.id)} title="Als Favorit merken">★</button>
@@ -614,6 +620,9 @@ function spaltenZelle(m, id, extra) {
             {m.markteinfuehrung && <> · seit {markteinText(m.markteinfuehrung)}</>}
           </span>
           <BaugleichZeile m={m} suchbegriff={extra?.suchbegriff} />
+          {m.de_markt === false && (
+            <span className="nicht-de-tag" title={m.de_markt_hinweis || undefined}>in Deutschland nicht erhältlich</span>
+          )}
         </>
       )
     case 'volumen_l': return fmt.liter(m.volumen_l)

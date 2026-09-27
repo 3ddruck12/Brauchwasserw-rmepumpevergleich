@@ -372,6 +372,38 @@
             "null"
           ],
           "description": "ηwh bei wärmerem Klima (EPREL)"
+        },
+        "baugleich": {
+          "type": "array",
+          "description": "Baugleiche Geräte anderer Marken (nur als Hinweis, keine eigene Zeile). Die Suche findet das Original auch über diese Namen.",
+          "items": {
+            "type": "object",
+            "required": [
+              "marke",
+              "name"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "marke": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "eprel_nr": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "hinweis": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
         }
       }
     }

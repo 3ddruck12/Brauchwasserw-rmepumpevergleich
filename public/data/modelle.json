@@ -41,7 +41,14 @@
       "markteinfuehrung": "2024-09-02",
       "eprel_nr": "2110813",
       "eta_wh_kalt": 176.0,
-      "eta_wh_warm": 176.0
+      "eta_wh_warm": 176.0,
+      "baugleich": [
+        {
+          "marke": "tecalor",
+          "name": "TTA 200.1 comfort",
+          "eprel_nr": "2110842"
+        }
+      ]
     },
     {
       "id": "ochsner-europa-n-200-ca",
@@ -227,7 +234,14 @@
       "markteinfuehrung": "2024-09-02",
       "eprel_nr": "2110837",
       "eta_wh_kalt": 172.0,
-      "eta_wh_warm": 172.0
+      "eta_wh_warm": 172.0,
+      "baugleich": [
+        {
+          "marke": "tecalor",
+          "name": "TTA 300.1 comfort",
+          "eprel_nr": "2110843"
+        }
+      ]
     },
     {
       "id": "viessmann-vitocal-262-a-t2e-r-290",
@@ -427,7 +441,20 @@
       "markteinfuehrung": "2025-12-10",
       "eprel_nr": "2563382",
       "eta_wh_kalt": 116.0,
-      "eta_wh_warm": 166.0
+      "eta_wh_warm": 166.0,
+      "baugleich": [
+        {
+          "marke": "Ariston",
+          "name": "NUOS PLUS S2 WI-FI 250 FS",
+          "eprel_nr": "2563385",
+          "hinweis": "SYS-Ausführung mit Wärmetauscher"
+        },
+        {
+          "marke": "ATAG",
+          "name": "ENERGION NUOS PLUS S2 WI-FI 250 FS",
+          "eprel_nr": "2563391"
+        }
+      ]
     },
     {
       "id": "boesch-mcb270-l",
@@ -678,7 +705,14 @@
       "markteinfuehrung": "2017-11-01",
       "eprel_nr": "97745",
       "eta_wh_kalt": 155.0,
-      "eta_wh_warm": 155.0
+      "eta_wh_warm": 155.0,
+      "baugleich": [
+        {
+          "marke": "Roth",
+          "name": "AuraUnit TW 330 PV",
+          "eprel_nr": "620121"
+        }
+      ]
     },
     {
       "id": "vaillant-arostor-plus-vwl-b-260-6",
@@ -851,7 +885,19 @@
       "markteinfuehrung": "2021-02-19",
       "eprel_nr": "1815332",
       "eta_wh_kalt": 114.0,
-      "eta_wh_warm": 152.0
+      "eta_wh_warm": 152.0,
+      "baugleich": [
+        {
+          "marke": "De Dietrich",
+          "name": "ELENSIO 250H",
+          "eprel_nr": "1315777"
+        },
+        {
+          "marke": "Paradigma",
+          "name": "Libra Easy 250 H",
+          "eprel_nr": "2458441"
+        }
+      ]
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-260-u-02-306179",
@@ -1071,7 +1117,14 @@
       "markteinfuehrung": "2026-04-15",
       "eprel_nr": "2694672",
       "eta_wh_kalt": 149.0,
-      "eta_wh_warm": 149.0
+      "eta_wh_warm": 149.0,
+      "baugleich": [
+        {
+          "marke": "HDG",
+          "name": "BRWP 300",
+          "eprel_nr": "2473236"
+        }
+      ]
     },
     {
       "id": "panasonic-aquarea-p-dhw200ae5",
@@ -1487,7 +1540,20 @@
       "lastprofil": "L",
       "jahresstromverbrauch_kwh": 800,
       "markteinfuehrung": "2022-03-09",
-      "eprel_nr": "2493311"
+      "eprel_nr": "2493311",
+      "baugleich": [
+        {
+          "marke": "De Dietrich",
+          "name": "ELENSIO 200",
+          "eprel_nr": "1315773"
+        },
+        {
+          "marke": "De Dietrich",
+          "name": "ELENSIO 200H",
+          "eprel_nr": "1315774",
+          "hinweis": "mit Wärmetauscher"
+        }
+      ]
     },
     {
       "id": "broetje-btw-200-b",
@@ -1586,7 +1652,14 @@
       "markteinfuehrung": "2022-04-01",
       "eprel_nr": "2263597",
       "eta_wh_kalt": 113.0,
-      "eta_wh_warm": 157.0
+      "eta_wh_warm": 157.0,
+      "baugleich": [
+        {
+          "marke": "De Dietrich",
+          "name": "ELENSIO 250",
+          "eprel_nr": "1315775"
+        }
+      ]
     },
     {
       "id": "tesy-aquathermica-pro-hpwh-4-11-fs-200-u-02-306209",
@@ -1705,7 +1778,14 @@
         "wifi": true,
         "app": "Cozytouch",
         "anschluesse": "PV-Kontakt"
-      }
+      },
+      "baugleich": [
+        {
+          "marke": "Herz",
+          "name": "REVOLUTION EVO3 230 L",
+          "hinweis": "laut herz-energie.at: 230 L, 1 Register + Heizstab, Cozytouch"
+        }
+      ]
     },
     {
       "id": "kwb-empaair-300-r-kwb-empaair-300-r",
@@ -2083,7 +2163,15 @@
       "lastprofil": "XL",
       "jahresstromverbrauch_kwh": 1162,
       "markteinfuehrung": "2023-11-30",
-      "eprel_nr": "2391249"
+      "eprel_nr": "2391249",
+      "baugleich": [
+        {
+          "marke": "Windhager",
+          "name": "AWA 250",
+          "eprel_nr": "2468117",
+          "hinweis": "entspricht der WT-Ausführung HP250M7C-F9; Label mit Profil L: ηwh 138 %"
+        }
+      ]
     },
     {
       "id": "daikin-altherma-m-hw-260-ekhhe260cv37",
@@ -2558,7 +2646,20 @@
       },
       "sg_ready": true,
       "markteinfuehrung": "2014-03-03",
-      "eprel_nr": "158504"
+      "eprel_nr": "158504",
+      "baugleich": [
+        {
+          "marke": "tecalor",
+          "name": "TTA 301 electronic",
+          "eprel_nr": "158500"
+        },
+        {
+          "marke": "tecalor",
+          "name": "TTA 301 electronic SOL",
+          "eprel_nr": "158501",
+          "hinweis": "mit Wärmetauscher"
+        }
+      ]
     },
     {
       "id": "viessmann-vitocal-060-a-t0e-ze-250l",
@@ -3822,7 +3923,14 @@
       "markteinfuehrung": "2017-09-26",
       "eprel_nr": "103832",
       "eta_wh_kalt": 115.0,
-      "eta_wh_warm": 115.0
+      "eta_wh_warm": 115.0,
+      "baugleich": [
+        {
+          "marke": "Roth",
+          "name": "AuraUnit TW 250",
+          "eprel_nr": "619975"
+        }
+      ]
     },
     {
       "id": "austria-email-calypso-vm-2-150-l",
@@ -5235,7 +5343,26 @@
       "markteinfuehrung": "2018-04-01",
       "eprel_nr": "405252",
       "eta_wh_kalt": 131.0,
-      "eta_wh_warm": 165.0
+      "eta_wh_warm": 165.0,
+      "baugleich": [
+        {
+          "marke": "Novelan",
+          "name": "BW-S19",
+          "eprel_nr": "405255"
+        },
+        {
+          "marke": "NIBE",
+          "name": "MT-WH21-019-F",
+          "eprel_nr": "2105503",
+          "hinweis": "-FS mit Solar-/PV-Wärmetauscher"
+        },
+        {
+          "marke": "Toshiba",
+          "name": "HWS-G1901CNMR-E",
+          "eprel_nr": "188918",
+          "hinweis": "ältere Estia-Generation"
+        }
+      ]
     },
     {
       "id": "alpha-innotec-bwp-260s",
@@ -5282,7 +5409,21 @@
       "markteinfuehrung": "2018-04-01",
       "eprel_nr": "405253",
       "eta_wh_kalt": 127.0,
-      "eta_wh_warm": 174.0
+      "eta_wh_warm": 174.0,
+      "baugleich": [
+        {
+          "marke": "NIBE",
+          "name": "MT-WH21-026-F",
+          "eprel_nr": "2105506",
+          "hinweis": "-FS mit Solar-/PV-Wärmetauscher"
+        },
+        {
+          "marke": "Toshiba",
+          "name": "HWS-G2601CNMR-E",
+          "eprel_nr": "188922",
+          "hinweis": "ältere Estia-Generation"
+        }
+      ]
     },
     {
       "id": "alpha-innotec-wwb-21",
@@ -5327,7 +5468,19 @@
       "markteinfuehrung": "2020-01-01",
       "eprel_nr": "405254",
       "eta_wh_kalt": 163.0,
-      "eta_wh_warm": 163.0
+      "eta_wh_warm": 163.0,
+      "baugleich": [
+        {
+          "marke": "Novelan",
+          "name": "WIB 19 Booster",
+          "eprel_nr": "405257"
+        },
+        {
+          "marke": "NIBE",
+          "name": "MT-MB21-019-FV-E",
+          "eprel_nr": "2320802"
+        }
+      ]
     },
     {
       "id": "stiebel-eltron-wwk-221-electronic",
@@ -5371,7 +5524,14 @@
       "gewicht_kg": 120,
       "jahresstromverbrauch_kwh": 795,
       "markteinfuehrung": "2014-03-03",
-      "eprel_nr": "165168"
+      "eprel_nr": "165168",
+      "baugleich": [
+        {
+          "marke": "tecalor",
+          "name": "TTA 221 electronic",
+          "eprel_nr": "158499"
+        }
+      ]
     },
     {
       "id": "stiebel-eltron-wwk-i-201-k-premium",
@@ -5551,7 +5711,14 @@
       "markteinfuehrung": "2017-04-18",
       "eprel_nr": "2766562",
       "eta_wh_kalt": 129.0,
-      "eta_wh_warm": 129.0
+      "eta_wh_warm": 129.0,
+      "baugleich": [
+        {
+          "marke": "HDG",
+          "name": "K-WP 4.2",
+          "eprel_nr": "2487451"
+        }
+      ]
     },
     {
       "id": "sunex-drops-eco",
@@ -6155,6 +6322,456 @@
       "luft_min_c": -7,
       "luft_max_c": 43,
       "ww_max_c": 70
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 58.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": 2000,
+      "kessel_material": "emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "TCM201ZG",
+        "flaeche_m2": 1.1,
+        "variante_modell": {
+          "name": "Gorenje TCM201ZG",
+          "volumen_l": 200.0,
+          "eta_wh": 176.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 58.0,
+          "kaeltemittel": "R-134a"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 4.45,
+      "sg_ready": null,
+      "id": "gorenje-tcm200zg",
+      "name": "Gorenje TCM 200 (TCM200ZG)",
+      "marke": "Gorenje",
+      "volumen_l": 200.0,
+      "eta_wh": 178.0,
+      "eff_klasse": "A+",
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 576,
+      "markteinfuehrung": "2018-04-03",
+      "eprel_nr": "77269",
+      "eta_wh_kalt": 178.0,
+      "eta_wh_warm": 178.0,
+      "smart_home": {
+        "anschluesse": "PV-Kontakt"
+      },
+      "quelle": "EPREL 77269 / WT-Variante 77268 (ηwh 178 % bzw. 176 %, L, 576 kWh/a, 58 dB); Gorenje-Anleitung TCM 200–300 (R134a 0,95 kg, Heizstab 2 kW, emailliert, Mg-Anode, WT 1,1 m²) | kalt = warm → Umluftmessung | kein DE-Händlerpreis gefunden"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 59.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": 2000,
+      "kessel_material": "emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "TCM306ZG",
+        "flaeche_m2": 1.1,
+        "variante_modell": {
+          "name": "Gorenje TCM306ZG",
+          "volumen_l": 285.0,
+          "eta_wh": 179.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 59.0,
+          "kaeltemittel": "R-134a"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 4.475,
+      "sg_ready": null,
+      "id": "gorenje-tcm300zg",
+      "name": "Gorenje TCM 300 (TCM300ZG)",
+      "marke": "Gorenje",
+      "volumen_l": 285.0,
+      "eta_wh": 179.0,
+      "eff_klasse": "A+",
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 935,
+      "markteinfuehrung": "2018-04-20",
+      "eprel_nr": "77252",
+      "eta_wh_kalt": 179.0,
+      "eta_wh_warm": 179.0,
+      "smart_home": {
+        "anschluesse": "PV-Kontakt"
+      },
+      "quelle": "EPREL 77252 / WT-Variante 77254 (ηwh 179 %, XL, 935 kWh/a, 59 dB); Gorenje-Anleitung TCM 200–300 (285 L, R134a 1,1 kg, Heizstab 2 kW) | kalt = warm → Umluftmessung | kein DE-Händlerpreis gefunden"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 59.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": 2000,
+      "kessel_material": "emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "TC201TZGNT",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Gorenje TC201TZGNT",
+          "volumen_l": 208.0,
+          "eta_wh": 127.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 59.0,
+          "kaeltemittel": "R-134a"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.2,
+      "sg_ready": null,
+      "id": "gorenje-tc200tzgnt",
+      "name": "Gorenje TC 200 (TC200TZGNT)",
+      "marke": "Gorenje",
+      "volumen_l": 208.0,
+      "eta_wh": 128.0,
+      "eff_klasse": "A+",
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 797,
+      "markteinfuehrung": "2018-12-21",
+      "eprel_nr": "62904",
+      "eta_wh_kalt": 102.0,
+      "eta_wh_warm": 145.0,
+      "smart_home": {
+        "anschluesse": "potenzialfreier PV-Kontakt"
+      },
+      "luft_min_c": -7,
+      "quelle": "EPREL 62904 / WT-Variante 64239 (ηwh 128 %, L, 797 kWh/a, 59 dB); Gorenje-Anleitung TC 200–300 Co 10/2019 (208 L, R134a 1,1 kg, 2 kW, Kanal Ø160, NT bis −7 °C) | baugleich TIKI HPTC200ZGNT | kein DE-Händlerpreis gefunden"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 59.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-134a",
+      "preis_eur": null,
+      "heizstab_w": 2000,
+      "kessel_material": "emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "TC301TZGNT",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Gorenje TC301TZGNT",
+          "volumen_l": 295.0,
+          "eta_wh": 134.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 59.0,
+          "kaeltemittel": "R-134a"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.4,
+      "sg_ready": null,
+      "id": "gorenje-tc300tzgnt",
+      "name": "Gorenje TC 300 (TC300TZGNT)",
+      "marke": "Gorenje",
+      "volumen_l": 295.0,
+      "eta_wh": 136.0,
+      "eff_klasse": "A+",
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1231,
+      "markteinfuehrung": "2018-12-21",
+      "eprel_nr": "64246",
+      "eta_wh_kalt": 109.0,
+      "eta_wh_warm": 152.0,
+      "smart_home": {
+        "anschluesse": "potenzialfreier PV-Kontakt"
+      },
+      "luft_min_c": -7,
+      "quelle": "EPREL 64246 / WT-Variante 64243 (ηwh 136 %, XL, 1231 kWh/a, 59 dB); Gorenje-Anleitung TC 200–300 Co 10/2019 (295 L) | TC302 mit 2 WT | baugleich TIKI HPTC300ZGNT, Waterkotte EcoWell 300 (ausgelaufen) | kein DE-Händlerpreis gefunden"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 53.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": null,
+      "preis_eur": 3833.55,
+      "heizstab_w": null,
+      "kessel_material": "emailliert",
+      "anode": "Signalanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": 3.61,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.075,
+      "sg_ready": true,
+      "id": "froeling-bwp-300-pv",
+      "name": "Fröling BWP 300 PV",
+      "marke": "Fröling",
+      "volumen_l": 258.0,
+      "eta_wh": 123.0,
+      "eff_klasse": "A",
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1361,
+      "markteinfuehrung": "2017-04-03",
+      "eprel_nr": "102688",
+      "eta_wh_kalt": 123.0,
+      "eta_wh_warm": 123.0,
+      "smart_home": {
+        "anschluesse": "Smart-Grid-Schnittstelle (PV)"
+      },
+      "quelle": "EPREL 102688 „BWP 300 - 15706A“ (ηwh 123 %, XL, 1361 kWh/a, 53 dB, Klasse A); Shops: Art. 15707, 258 L, COP 3,61 (L20/W10-55), Signalanode, WT R1\" | Preis: wolf-online-shop.de, Stand 09/2026 | Kältemittel/Heizstab unbekannt"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 60.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-1234ze",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": "emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": true,
+        "variante": "HWS-G2501ENHMV-E",
+        "flaeche_m2": null,
+        "variante_modell": {
+          "name": "Toshiba Estia HWS-G2501ENHMV-E",
+          "volumen_l": 251.0,
+          "eta_wh": 165.0,
+          "eff_klasse": "A+",
+          "schallleistung_db": 59.0,
+          "kaeltemittel": "R-1234ze"
+        }
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.925,
+      "sg_ready": null,
+      "id": "toshiba-estia-hws-g2501cnhmv-e",
+      "name": "Toshiba Estia HWS-G2501CNHMV-E",
+      "marke": "Toshiba",
+      "volumen_l": 254.0,
+      "eta_wh": 157.0,
+      "eff_klasse": "A+",
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 652,
+      "markteinfuehrung": "2024-09-02",
+      "eprel_nr": "2610159",
+      "eta_wh_kalt": 157.0,
+      "eta_wh_warm": 157.0,
+      "smart_home": {
+        "anschluesse": "PV-Signal; Smart-Grid-Kit 7988493 optional"
+      },
+      "quelle": "EPREL 2610159 / WT-Variante 2610158 (ηwh 157 % bzw. 165 %, L, 652 kWh/a) | kalt = warm → Umluftmessung | WT-Variante: Heizstab nur als Zubehör | Toshiba Technisches Bulletin BT-01/2026 (R1234ze 1,35 kg, 1,5 kW, Kanal Ø160) – Verfügbarkeit laut Bulletin ab 02/2026, EPREL nennt 09/2024 | baugleich Carrier AquaSnap 250 DHW-HP 1.7 kW | kein DE-Händlerpreis gefunden"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 61.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-1234ze",
+      "preis_eur": null,
+      "heizstab_w": 1500,
+      "kessel_material": "emailliert",
+      "anode": "Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.375,
+      "sg_ready": null,
+      "id": "toshiba-estia-hws-g1801cnhmv-e",
+      "name": "Toshiba Estia HWS-G1801CNHMV-E",
+      "marke": "Toshiba",
+      "volumen_l": 178.0,
+      "eta_wh": 135.0,
+      "eff_klasse": "A+",
+      "lastprofil": "M",
+      "jahresstromverbrauch_kwh": 382,
+      "markteinfuehrung": "2024-09-02",
+      "eprel_nr": "2610160",
+      "eta_wh_kalt": 135.0,
+      "eta_wh_warm": 135.0,
+      "smart_home": {
+        "anschluesse": "PV-Signal; Smart-Grid-Kit 7988493 optional"
+      },
+      "quelle": "EPREL 2610160 (ηwh 135 %, M, 382 kWh/a, 61 dB; zweite Registrierung 2602968 mit 120 % / 58 dB, Außenluft) | kalt = warm → Umluftmessung | Toshiba Bulletin BT-01/2026 (178 L, R1234ze 1,15 kg, 1,5 kW) – Verfügbarkeit laut Bulletin ab 02/2026 | kein DE-Händlerpreis gefunden (IT ca. 2.458 €)"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 49.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1800,
+      "kessel_material": "emailliert",
+      "anode": "Aktivanode + Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": 3.8,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.925,
+      "sg_ready": null,
+      "id": "ariston-nuos-fit-s2-wifi-250-fs",
+      "name": "Ariston NUOS FIT S2 WI-FI 250 FS",
+      "marke": "Ariston",
+      "volumen_l": 250.0,
+      "eta_wh": 157.0,
+      "eff_klasse": "A+",
+      "lastprofil": "XL",
+      "jahresstromverbrauch_kwh": 1069,
+      "markteinfuehrung": "2025-07-01",
+      "eprel_nr": "2414946",
+      "eta_wh_kalt": 157.0,
+      "eta_wh_warm": 157.0,
+      "smart_home": {
+        "wifi": true,
+        "app": "Ariston NET",
+        "anschluesse": "PV-kompatibel"
+      },
+      "quelle": "EPREL 2414946 (ηwh 157 %, XL, 1069 kWh/a, 49 dB) | kalt = warm → Umluftmessung | ariston.com/pl (R290, 1,8 kW, Aktivanode) | kein DE-Händlerpreis gefunden (FR ca. 1.100 €)"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 49.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1800,
+      "kessel_material": "emailliert",
+      "anode": "Aktivanode + Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": 3.35,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.475,
+      "sg_ready": null,
+      "id": "ariston-nuos-fit-s2-wifi-200-fs",
+      "name": "Ariston NUOS FIT S2 WI-FI 200 FS",
+      "marke": "Ariston",
+      "volumen_l": 200.0,
+      "eta_wh": 139.0,
+      "eff_klasse": "A+",
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 738,
+      "markteinfuehrung": "2025-07-01",
+      "eprel_nr": "2414944",
+      "eta_wh_kalt": 139.0,
+      "eta_wh_warm": 139.0,
+      "smart_home": {
+        "wifi": true,
+        "app": "Ariston NET",
+        "anschluesse": "PV-kompatibel"
+      },
+      "quelle": "EPREL 2414944 (ηwh 139 %, L, 738 kWh/a, 49 dB) | kalt = warm → Umluftmessung | ariston.com/pl (R290, 1,8 kW) | kein DE-Händlerpreis gefunden (FR ca. 1.040 €)"
+    },
+    {
+      "bauart": "bodenstehend",
+      "schallleistung_db": 48.0,
+      "bereitschaftsverlust_kwh_tag": null,
+      "kaeltemittel": "R-290",
+      "preis_eur": null,
+      "heizstab_w": 1800,
+      "kessel_material": "emailliert",
+      "anode": "ProTech-Aktivanode + Magnesiumanode",
+      "ehpa_guetesiegel": null,
+      "cop_a7": null,
+      "cop_a15": null,
+      "cop_a14": null,
+      "cop_a20": null,
+      "cop_unspezifisch": null,
+      "waermetauscher": {
+        "vorhanden": false,
+        "variante": null,
+        "flaeche_m2": null
+      },
+      "scop_basis": "eta_wh",
+      "scop_tabelle": 3.275,
+      "sg_ready": null,
+      "id": "ariston-nuos-plus-s2-wifi-200d-fs",
+      "name": "Ariston NUOS PLUS S2 WI-FI 200D FS",
+      "marke": "Ariston",
+      "volumen_l": 200.0,
+      "eta_wh": 131.0,
+      "eff_klasse": "A+",
+      "lastprofil": "L",
+      "jahresstromverbrauch_kwh": 781,
+      "markteinfuehrung": "2025-12-10",
+      "eprel_nr": "2580369",
+      "eta_wh_kalt": 97.0,
+      "eta_wh_warm": 146.0,
+      "luft_min_c": -10,
+      "luft_max_c": 42,
+      "smart_home": {
+        "wifi": true,
+        "app": "Ariston NET",
+        "anschluesse": "PV-Eingang, BusBridgeNet"
+      },
+      "quelle": "EPREL 2580369 (ηwh 131 %, L, 781 kWh/a, 48 dB) | Datenblatt NUOS PLUS S2 FS (R290, 1,8 kW, Luft −10…42 °C) | 250-L-Modell baugleich ELCO AEROTOP DHW.3 250 | kein DE-Händlerpreis gefunden"
     }
   ]
 }

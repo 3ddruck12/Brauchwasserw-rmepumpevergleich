@@ -521,3 +521,9 @@ footer {
 }
 .spende-knopf:hover { border-color: #e0457b; }
 .spende-knopf .spende-herz { width: 1.4em; height: 1.4em; }
+
+/* Baugleiche Geräte anderer Marken */
+.baugleich { display: block; font-size: 0.74rem; color: var(--gedaempft); font-style: italic; margin-top: 2px; }
+.baugleich [title] { cursor: help; }
+.baugleich-treffer { font-style: normal; font-weight: 600; color: var(--text, inherit);
+  background: color-mix(in srgb, #ffd54a 45%, transparent); border-radius: 3px; padding: 0 2px; }

@@ -138,7 +138,7 @@ export default function App() {
     const klasse = VOLUMENKLASSEN.find((v) => v.id === volumenklasse)
     const suchbegriff = suche.trim().toLowerCase()
     return daten.modelle.filter((m) => {
-      if (suchbegriff && !`${m.name} ${m.marke}`.toLowerCase().includes(suchbegriff)) return false
+      if (suchbegriff && !suchText(m).includes(suchbegriff)) return false
       if (bauart !== 'alle' && m.bauart !== bauart) return false
       if (volumenklasse !== 'alle' && !klasse.test(m.volumen_l)) return false
       if (kaeltemittel !== 'alle' && m.kaeltemittel !== kaeltemittel) return false
@@ -423,6 +423,7 @@ export default function App() {
                         onEtaInfo: b === 'eta_wh' ? () => setEtaInfo({ m, wert }) : null,
                         onShInfo: () => setShInfo(m),
                         ha: haFuer(m, haDaten),
+                        suchbegriff: suche.trim().toLowerCase(),
                       })}
                     </td>
                   ))}
@@ -612,6 +613,7 @@ function spaltenZelle(m, id, extra) {
             {m.marke} · {bauartLabel(m.bauart)}
             {m.markteinfuehrung && <> · seit {markteinText(m.markteinfuehrung)}</>}
           </span>
+          <BaugleichZeile m={m} suchbegriff={extra?.suchbegriff} />
         </>
       )
     case 'volumen_l': return fmt.liter(m.volumen_l)
@@ -744,6 +746,31 @@ const BASIS_TEXT = {
   cop_a20: 'bei 20 °C Lufttemperatur (A20)', cop_a15: 'bei 15 °C Lufttemperatur (A15)',
   cop_a14: 'bei 14 °C Lufttemperatur (A14)', cop_a7: 'bei 7 °C Lufttemperatur (A7)',
   cop_unspezifisch: 'ohne Angabe der Prüfbedingung',
+}
+
+function suchText(m) {
+  const bg = (m.baugleich || []).map((b) => `${b.marke} ${b.name}`).join(' ')
+  return `${m.name} ${m.marke} ${bg}`.toLowerCase()
+}
+
+function BaugleichZeile({ m, suchbegriff }) {
+  if (!m.baugleich?.length) return null
+  return (
+    <span className="baugleich">
+      baugleich:{' '}
+      {m.baugleich.map((b, i) => {
+        const text = `${b.marke} ${b.name}`
+        const treffer = suchbegriff && text.toLowerCase().includes(suchbegriff)
+        return (
+          <span key={i}>
+            {i > 0 && ', '}
+            <span className={treffer ? 'baugleich-treffer' : undefined}
+              title={b.hinweis || undefined}>{text}{b.hinweis ? ' *' : ''}</span>
+          </span>
+        )
+      })}
+    </span>
+  )
 }
 
 function markteinText(d) {
@@ -1004,6 +1031,7 @@ function Vergleich({ modelle, basis, scopFaktor, strompreis, bedarf, schliessen,
     ['SG Ready', (m) => fmt.text(sgReadyText(m))],
     ['Smart Home', (m) => fmt.text(smartHomeText(m))],
     ['Markteinführung', (m) => fmt.text(markteinText(m.markteinfuehrung))],
+    ['Baugleich', (m) => fmt.text((m.baugleich || []).map((b) => `${b.marke} ${b.name}`).join(', '))],
     ['Heizstab', (m) => fmt.watt(m.heizstab_w)],
     ['Kesselmaterial', (m) => fmt.text(m.kessel_material)],
     ['Anode', (m) => fmt.text(m.anode)],
